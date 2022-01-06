@@ -1,0 +1,52 @@
+﻿
+Desafio Automação - APIs REST
+
+Ferramentas permitidas: SoapUI, Postman ou código fonte com alguma biblioteca que manipula APIs como o RestSharp, RestAssured.
+
+400 Pontos
+1) Implementar 50 scripts de testes que manipulem uma aplicação cuja interface é uma API REST. 
+2) --Alguns scripts devem ler dados de uma planilha Excel para implementar Data-Driven.
+3) --Notem que 50 scripts podem cobrir mais de 50 casos de testes se usarmos Data-Driven. Em outras palavras, implementar 50 CTs usando data-driven não é a mesma coisa que implementar 50 scripts.
+4) --O projeto deve tratar autenticação. Exemplo: OAuth2.
+5) --Pelo menos um teste deve fazer a validação usando REGEX (Expressões Regulares).
+6) Pelo menos um script deve usar código Groovy / Node.js ou outra linguagem para fazer scripts.
+Exemplos:
+Para reutilizar um passo de outro teste. 
+Para calcular o CPF.
+Iterar em uma lista de valores retornados em uma chamada.
+Fazer asserts.
+
+800 Pontos (Metas 1 até 4 + as metas abaixo)
+7) --O projeto deverá gerar um relatório de testes automaticamente.
+8) --Implementar pelo menos dois ambientes (desenvolvimento / homologação)
+9) A massa de testes deve ser preparada neste projeto, seja com scripts carregando massa nova no BD ou com restore de banco de dados.
+Se usar WireMock (http://wiremock.org/) a massa será tratada implicitamente.
+10) Executar testes em paralelo. Pelo menos duas threads (25 testes cada).
+11) Testes deverão ser agendados pelo Azure DevOps, Gitlab-CI, Jenkins, CircleCI, TFS ou outra ferramenta de CI que preferir.
+
+
+
+
+
+
+Dicas
+
+Guia de Boas Práticas:
+Checklist REST API Testing https://docs.google.com/spreadsheets/d/15ycll2U72ryxm5tzojmuQsHBvpdH5sSgQhkWwwuQrCY/edit?usp=sharing
+Possíveis SUT (software under test) para o desafio:
+O Mantis tem uma API REST embutida:
+https://blog.mantishub.com/category/api/
+https://documenter.getpostman.com/view/29959/mantis-bug-tracker-rest-api/7Lt6zkP#b09a8b9d-5466-48f7-89dc-4be7414d7059
+https://auth0.com - Criar uma conta free
+https://developers.digitalocean.com/ - Cuidado para não gastar dinheiro com o Digital Ocean.
+https://jsonplaceholder.typicode.com/
+Criar um projeto usando o Firebase do Google
+http://wiremock.org/ - Mock de API REST
+https://reqres.in/
+Listagem de várias APIs públicas. Atenção para ser API REST. https://any-api.com/
+Outra Listagem de várias APIs públicas - https://github.com/toddmotto/public-apis
+
+
+
+
+
