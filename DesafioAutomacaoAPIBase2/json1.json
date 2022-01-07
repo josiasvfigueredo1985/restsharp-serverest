@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start-server": "npx serverest@latest",
+    "ci": "start-server-and-test start-server http://localhost:3000"
+  }
+}
