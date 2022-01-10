@@ -23,7 +23,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             }
         }
 
-        public static List<TestCaseData> ReturnDataUsingDataBase()
+        public static List<TestCaseData> RetornaDadosUsandoBancoDados()
         {
             string query = File.ReadAllText(GeneralHelpers.ReturnProjectPath() + "Queries/BuscaIdProdutos.sql");
             var testCases = DataDrivenHelpers.ReturnDataUsingDataBase(query);

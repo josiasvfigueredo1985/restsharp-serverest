@@ -173,6 +173,8 @@ C:\Users\Josias\source\repos\DesafioAutomacaoAPIRest_Dev\DesafioAutomacaoAPIBase
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIRest_Dev\DesafioAutomacaoAPIBase2\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.pdb
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIRest_Dev\DesafioAutomacaoAPIBase2\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.genruntimeconfig.cache
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\testhost.exe
+C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
@@ -180,8 +182,6 @@ C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBas
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\testcentric.engine.metadata.dll
-C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\testhost.dll
-C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.exe
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.deps.json
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.runtimeconfig.json

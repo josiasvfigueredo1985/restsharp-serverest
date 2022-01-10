@@ -24,7 +24,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             int quantidade = 1;
             GetCarrinhos get = new GetCarrinhos();
 
-            //Excluir o carrinhos
+            //Excluir os carrinhos
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             CarrinhosStep.DeletarCarrinhoConcluirCompra();
 
@@ -46,6 +46,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
         public void CadastrarCarrinho()
         {
             string mensagem = "Cadastro realizado com sucesso";
+            //Criar produto para cadastrar no carrinho
             var responseProd = ProdutosStep.CriarProduto();
             dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content);
             var idProd = jsonProd._id.Value;
@@ -59,7 +60,6 @@ namespace DesafioAutomacaoAPIBase2.Tests
             IRestResponse response = post.ExecuteRequest();
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
-
             Console.WriteLine(response.Content);
 
             Assert.IsTrue(response.IsSuccessful);
@@ -69,6 +69,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
             DeleteProduto del = new DeleteProduto(idProd);
+            del.ExecuteRequest();
         }
 
         [Test]
@@ -103,30 +104,75 @@ namespace DesafioAutomacaoAPIBase2.Tests
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
             DeleteProduto del = new DeleteProduto(idProd);
-        }
-
-        [Test]
-        public void EditarCarrinho()
-        {
-
-
-
+            del.ExecuteRequest();
         }
 
         [Test]
         public void ExcluirCarrinhoCancelarCompra()
         {
+            string mensagem = "Registro excluído com sucesso. Estoque dos produtos reabastecido";
+            //Criar produto para inserir no carrinho
+            var responseProd = ProdutosStep.CriarProduto();
+            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content);
+            var idProd = jsonProd._id.Value;
 
+            // Deletar carrinhos criados anteriormente
+            CarrinhosStep.DeletarCarrinhoCancelarCompra();
+            CarrinhosStep.DeletarCarrinhoConcluirCompra();
 
+            // Criar novo carrinho
+            PostCarrinho post = new PostCarrinho();
+            post.SetJsonBody(idProd, 1);
+            IRestResponse responseCarrinho = post.ExecuteRequest();
 
+            //Deletar carrinho
+            DeleteCancelarCompra cancelarCompra = new DeleteCancelarCompra();
+            IRestResponse response = cancelarCompra.ExecuteRequest();
+
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+
+            Console.WriteLine("Response cancelar compra carrinho: "+jsonData);
+
+            Assert.IsTrue((int)response.StatusCode == 200);
+            Assert.IsTrue(response.IsSuccessful);
+            Assert.IsTrue(mensagem == jsonData.message.Value);
+
+            //Deletar produto após deletar o carrinho
+            DeleteProduto del = new DeleteProduto(idProd);
         }
 
         [Test]
         public void ExcluirCarrinhoConcluirCompra()
         {
+            string mensagem = "Registro excluído com sucesso";
+            //Criar produto para inserir no carrinho
+            var responseProd = ProdutosStep.CriarProduto();
+            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content);
+            var idProd = jsonProd._id.Value;
 
+            // Deletar carrinhos criados anteriormente
+            CarrinhosStep.DeletarCarrinhoCancelarCompra();
+            CarrinhosStep.DeletarCarrinhoConcluirCompra();
 
+            // Criar novo carrinho
+            PostCarrinho post = new PostCarrinho();
+            post.SetJsonBody(idProd, 1);
+            IRestResponse responseCarrinho = post.ExecuteRequest();
 
+            //Deletar carrinho
+            DeleteConcluirCompra concluiCompra = new DeleteConcluirCompra();
+            IRestResponse response = concluiCompra.ExecuteRequest();
+
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+
+            Console.WriteLine("Response concluir compra carrinho: " + jsonData);
+
+            Assert.IsTrue((int)response.StatusCode == 200);
+            Assert.IsTrue(response.IsSuccessful);
+            Assert.IsTrue(mensagem == jsonData.message.Value);
+
+            //Deletar produto após deletar o carrinho
+            DeleteProduto del = new DeleteProduto(idProd);
         }
         #endregion
 
@@ -208,16 +254,18 @@ namespace DesafioAutomacaoAPIBase2.Tests
         [Test]
         public void BuscarCarrinhoPorIDInexistente()
         {
+            string id = "idInexistente";
+            string mensagem = "Carrinho não encontrado";
 
+            GetCarrinhoPorId get = new GetCarrinhoPorId(id);
+            IRestResponse response = get.ExecuteRequest();
 
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+            Console.WriteLine("Response buscar carrinho por id inexistente: "+response.Content);
 
-        }
-        [Test]
-        public void ExcluirCarrinhoInexistente()
-        {
-
-
-
+            Assert.False(response.IsSuccessful);
+            Assert.IsTrue((int)response.StatusCode==400);
+            Assert.IsTrue(mensagem==jsonData.message.Value);
         }
         #endregion
     }

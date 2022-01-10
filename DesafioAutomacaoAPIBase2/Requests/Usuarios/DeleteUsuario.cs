@@ -10,7 +10,7 @@ namespace DesafioAutomacaoAPIBase2.Requests.Usuarios
     {
         public DeleteUsuario(string idUsuario)
         {
-            requestService = $"usuario/{idUsuario}";
+            requestService = $"usuarios/{idUsuario}";
             method = Method.DELETE;
             parameterTypeIsUrlSegment = false;
         }
