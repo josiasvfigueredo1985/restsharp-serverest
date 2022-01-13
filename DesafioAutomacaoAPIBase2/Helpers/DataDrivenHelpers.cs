@@ -62,16 +62,7 @@ public class DataDrivenHelpers
 
         foreach (DataRow row in idProdutos.Rows)
         {
-            if (row == null)
-            {
-                break;
-            }
-            else
-            {
-             //   var t = row[0];
                 testcase.Add(new TestCaseData(row[0].ToString()));
-            }
-           
         }
 
         return testcase;

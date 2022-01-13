@@ -8,6 +8,7 @@ using DesafioAutomacaoAPIBase2.Requests.Login;
 using DesafioAutomacaoAPIBase2.Helpers;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace DesafioAutomacaoAPIBase2.Steps
 {
@@ -115,6 +116,9 @@ namespace DesafioAutomacaoAPIBase2.Steps
                 }); ;
 
                 IRestResponse response = client.Execute(request);
+                dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+                JsonBuilder.UpdateParameterAppSettings("USER_ID", jsonData._id.Value);
+                
                 RealizarLogin();
             }
             catch (Exception e)

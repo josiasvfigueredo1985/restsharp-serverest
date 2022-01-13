@@ -87,25 +87,37 @@ namespace DesafioAutomacaoAPIBase2.Steps
         {
             DeleteUsuario delete = new DeleteUsuario(id);
             IRestResponse response = delete.ExecuteRequest();
+            // Deletar usuário do banco de dados
+            SolicitacaoDBSteps.DeletarUsuarioById(id);
             return response;
+        }
+
+        public static void DeletarUsuarioPorIdBancoDados(string id)
+        {
+            // Deletar usuário do banco de dados
+            SolicitacaoDBSteps.DeletarUsuarioById(id);
         }
 
         public static IRestResponse CriarUsuario()
         {
+            // Random r = new Random();
+            // string rnums = r.Next(1, 9999).ToString();
+
             string nome = "Pleonário Silvestre";
             string email = "pleo_1982@hotmail.com";
-            string password = "w1nn3r_1982";
+            string password = $"w1nn3r_1982";
             bool administrador = true;
 
             PostUsuario post = new PostUsuario();
-            post.SetJsonBody(nome,email,password,administrador);
+            post.SetJsonBody(nome, email, password, administrador);
             IRestResponse response = post.ExecuteRequest();
 
             dynamic jsonData = JObject.Parse(response.Content);
-            string idUsuario = jsonData._id;
+            string idUsuario = jsonData._id.Value;
 
             // Inserção dos dados do usuário criado em cada response na tabela "usuarios" no banco de dados
             SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador.ToString().ToLower(), idUsuario);
+
             return response;
         }
     }

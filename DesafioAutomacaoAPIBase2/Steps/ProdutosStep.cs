@@ -80,6 +80,13 @@ namespace DesafioAutomacaoAPIBase2.Steps
             return statusCode;
         }
 
+        public static IRestResponse DeletarProdutoById(string idProduto)
+        {
+            DeleteProduto delete = new DeleteProduto(idProduto);
+            var response = delete.ExecuteRequest();
+            return response;
+        }
+
         public static IRestResponse CriarProduto()
         {
             PostProduto postProduto = new PostProduto();
@@ -93,10 +100,35 @@ namespace DesafioAutomacaoAPIBase2.Steps
             //Criar um produto
             postProduto.SetJsonBody(nome, preco, descricao, qtde);
             IRestResponse response = postProduto.ExecuteRequest();
-            //dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+
             Console.WriteLine(response.Content);
+
             //Insere o id do produto cadastrado no banco para ser deletado por outros testes
-            //SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
+            SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
+
+            return response;
+        }
+
+
+        public static IRestResponse CriarProdutoUnico(string nomeAdicional)
+        {
+            PostProduto postProduto = new PostProduto();
+
+            string nome = "Notebook Dell Basic "+nomeAdicional;
+            string desc = "Notebook Dell Intel Core i3";
+            int preco = 2300;
+            int qtde = 1;
+
+            //Criar um produto
+            postProduto.SetJsonBody(nome, preco, desc, qtde);
+            IRestResponse response = postProduto.ExecuteRequest();
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+
+            Console.WriteLine(response.Content);
+
+            //Insere o id do produto cadastrado no banco para ser deletado por outros testes
+            SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
 
             return response;
         }
@@ -114,15 +146,6 @@ namespace DesafioAutomacaoAPIBase2.Steps
             PutProduto put = new PutProduto(jsonData._id);
             put.SetJsonBody(nome, preco, descricao, qtde);
             IRestResponse response = put.ExecuteRequest();
-
-            return response;
-        }
-
-        public static IRestResponse DeletarProduto()
-        {
-            dynamic jsonData = JObject.Parse(CriarProduto().Content);
-            DeleteProduto delete = new DeleteProduto(jsonData._id);
-            IRestResponse response = delete.ExecuteRequest();
 
             return response;
         }

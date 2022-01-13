@@ -16,7 +16,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
     class ProdutosTests : TestBase
     {
         #region Testes Positivos
-        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosNovosProduto"), Order(1)]
+        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosNovosProduto"),Order(1)]
         public void CadastrarProdutosDataDrivenExcel(string nome, string preco, string descricao, string quantidade)
         {
             PostProduto post = new PostProduto();
@@ -35,7 +35,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             Assert.AreEqual("Cadastro realizado com sucesso", jsonData.message.Value);
         }
 
-        [TestCaseSource(typeof(DataDrivenStep), "ReturnDataUsingDataBase"), Order(2)]
+        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosUsandoBancoDados")]
         public void DeletarProdutosDataDrivenBancoDados(string idProduto)
         {
             DeleteProduto delete = new DeleteProduto(idProduto);
@@ -51,10 +51,10 @@ namespace DesafioAutomacaoAPIBase2.Tests
             Assert.AreEqual("Registro excluído com sucesso", jsonData.message.Value);
         }
 
-
         [Test]
         public void ListarProdutosCadastrados()
         {
+            // Deleta todos os dados que podem haver no banco
             ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             int count = 11;
@@ -65,13 +65,15 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
+            //Deleta novamente os dados criados
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
             Assert.Multiple(() =>
             {
                 Assert.IsTrue(response.IsSuccessful);
                 Assert.AreEqual("OK", response.StatusCode.ToString());
                 Assert.IsTrue(count <= jsonData.quantidade.Value);
             });
-
         }
 
         [Test]
@@ -83,12 +85,10 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(jsonData);
 
-            Assert.IsTrue(mensagem == jsonData.message.Value);
-
             //Deletar produto criado
-            DeleteProduto delete = new DeleteProduto(jsonData._id.Value);
-            IRestResponse response = delete.ExecuteRequest();
-            Console.WriteLine(response.Content);
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
+            Assert.IsTrue(mensagem == jsonData.message.Value);
         }
 
         [Test]
@@ -106,6 +106,9 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content);
 
+            // Deletar todos os produtos já criados
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
             Assert.Multiple(() =>
             {
                 StringAssert.Contains("Notebook Asus Ryzen 5", jsonData.nome.Value);
@@ -114,11 +117,6 @@ namespace DesafioAutomacaoAPIBase2.Tests
                 Assert.IsTrue(jsonData.quantidade.Value == 1);
                 Assert.IsTrue(jsonData1._id.Value == jsonData._id.Value);
             });
-
-            //Deletar produto criado
-            DeleteProduto delete = new DeleteProduto(jsonData._id.Value);
-            IRestResponse response2 = delete.ExecuteRequest();
-            Console.WriteLine(response2.Content);
         }
 
         [Test]
@@ -141,12 +139,10 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content);
 
-            Assert.IsTrue(mensagem == jsonData.message.Value);
-
             //Deletar produto criado
-            DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response2 = delete.ExecuteRequest();
-            Console.WriteLine(response2.Content);
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
+            Assert.IsTrue(mensagem == jsonData.message.Value);
         }
 
         [Test]
@@ -169,19 +165,18 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content);
 
+            //Deletar produto criado
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
             Assert.IsTrue(response.IsSuccessful);
             Assert.IsTrue(mensagem == jsonData.message.Value);
-
-            //Deletar produto criado
-            DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response2 = delete.ExecuteRequest();
-            Console.WriteLine(response2.Content);
         }
 
         [Test]
         public void ExcluirProduto()
         {
             string mensagem = "Registro excluído com sucesso";
+
             //Criar produto
             IRestResponse response1 = ProdutosStep.CriarProduto();
             dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content);
@@ -194,6 +189,9 @@ namespace DesafioAutomacaoAPIBase2.Tests
             dynamic jsonData2 = JsonConvert.DeserializeObject(response2.Content);
 
             Console.WriteLine(response2.Content);
+
+            // Deletar todos os produtos já criados
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             Assert.IsTrue(response2.IsSuccessful);
             Assert.IsTrue(mensagem == jsonData2.message.Value);
@@ -216,7 +214,8 @@ namespace DesafioAutomacaoAPIBase2.Tests
             post.SetJsonBody(nome, preco, desc, qtd);
             var response1 = post.ExecuteRequest();
 
-            Console.WriteLine(response1.Content);
+            Console.WriteLine("Primeiro cadastro: " + response1.Content);
+
             // pegar id pra excluir produto criado
             dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content);
             var idProduto = jsonData1._id.Value;
@@ -225,48 +224,55 @@ namespace DesafioAutomacaoAPIBase2.Tests
             post.SetJsonBody(nome, preco, desc, qtd);
             var response2 = post.ExecuteRequest();
 
+            Console.WriteLine("Segundo cadastro: " + response2.Content);
+
             dynamic jsonData2 = JsonConvert.DeserializeObject(response2.Content);
+
+            // Deletar produto criado
+            ProdutosStep.DeletarProdutoById(idProduto);
 
             Assert.IsTrue(response2.StatusCode.ToString() == "BadRequest");
             Assert.IsTrue(mensagem == jsonData2.message.Value);
-
-            //Deletar produto criado
-            DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response3 = delete.ExecuteRequest();
-            Console.WriteLine(response3.Content);
         }
 
         [Test]
         public void EditarProdutoDuplicado()
         {
             string mensagem = "Já existe produto com esse nome";
+
+            string nomeAd = "Atualizado";
+            string nome = "Notebook Dell Basic";
+            string desc = "Notebook Dell Intel Core i3";
+            int preco = 2500;
+            int qtde = 1;
+
+            // Deletar todos os produtos já criados
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
+            // Criar produto com mesmo nome da atualização
+            ProdutosStep.CriarProdutoUnico("");
+
             //Criar produto para atualizar
-            IRestResponse response1 = ProdutosStep.CriarProduto();
+            IRestResponse response1 = ProdutosStep.CriarProdutoUnico(nomeAd);
             dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content);
-            var idProduto = jsonData1._id.Value;
+            string idProduto = jsonData1._id.Value;
 
-            //Atualizar produto 1x
+            //Atualizar produto com nome do produto criado anteriormente
             PutProduto put = new PutProduto(idProduto);
-            put.SetJsonBody("Notebook Dell Basic", 2500,
-                "Notebook Dell Intel Core i3", 1);
-            put.ExecuteRequest();
-
-            //Atualizar produto 2x
-            put.SetJsonBody("Notebook Dell Basic", 2500,
-                "Notebook Dell Intel Core i3", 1);
+            put.SetJsonBody(nome, preco, desc, qtde);
             IRestResponse response2 = put.ExecuteRequest();
 
             dynamic jsonData2 = JsonConvert.DeserializeObject(response2.Content);
 
             Console.WriteLine(response2.Content);
 
+            //Deletar produto criado
+            ProdutosStep.DeletarProdutoById(idProduto);
+            // Deletar todos os produtos já criados
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
             Assert.IsTrue(mensagem == jsonData2.message.Value);
             Assert.AreEqual("BadRequest", response2.StatusCode.ToString());
-
-            //Deletar produto criado
-            DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response3 = delete.ExecuteRequest();
-            Console.WriteLine(response3.Content);
         }
 
         [Test]
@@ -301,10 +307,15 @@ namespace DesafioAutomacaoAPIBase2.Tests
             Assert.IsTrue(response.IsSuccessful);
             Assert.IsTrue(mensagem == jsonData.message.Value);
         }
+
         [Test]
         public void ExcluirProdutoDeUmCarrinho()
         {
             string mensagem = "Não é permitido excluir produto que faz parte de carrinho";
+
+            // Deletar todos os produtos já criados
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
             // Criar produto
             IRestResponse response1 = ProdutosStep.CriarProduto();
             dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content);
@@ -318,14 +329,15 @@ namespace DesafioAutomacaoAPIBase2.Tests
             IRestResponse response = delete.ExecuteRequest();
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
-            Console.WriteLine("Mensagem ao tentar excluir produto: {0}",response.Content);
-
-            Assert.IsTrue((int)response.StatusCode == 400);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
+            Console.WriteLine("Mensagem ao tentar excluir produto: {0}", response.Content);
 
             //Excluir carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
-   
+            // Deletar todos os produtos já criados
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
+            Assert.IsTrue((int)response.StatusCode == 400);
+            Assert.IsTrue(jsonData.message.Value == mensagem);
         }
         #endregion
     }

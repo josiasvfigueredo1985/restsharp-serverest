@@ -337,7 +337,6 @@ C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBas
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.csproj.AssemblyReference.cache
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.AssemblyInfoInputs.cache
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.AssemblyInfo.cs
@@ -346,3 +345,4 @@ C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBas
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.pdb
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.genruntimeconfig.cache
+C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoAPIBase2.csproj.AssemblyReference.cache

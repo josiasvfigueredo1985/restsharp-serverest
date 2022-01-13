@@ -33,11 +33,11 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine($"Usuários cadastrados: {jsondata}");
 
-            Assert.True(response.IsSuccessful);
-            Assert.IsTrue(jsondata.quantidade.Value >= quantidade);
-
             //Deletar usuários cadastrados
             UsuarioStep.DeletarUsuariosCriados();
+
+            Assert.True(response.IsSuccessful);
+            Assert.IsTrue(jsondata.quantidade.Value >= quantidade);
         }
 
         [Test]
@@ -62,11 +62,12 @@ namespace DesafioAutomacaoAPIBase2.Tests
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
             Console.WriteLine(jsonData);
-            Assert.True(response.IsSuccessful);
-            Assert.IsTrue(jsonData.quantidade == qtd);
 
             //Deletar usuários cadastrados
             UsuarioStep.DeletarUsuariosCriados();
+
+            Assert.True(response.IsSuccessful);
+            Assert.IsTrue(jsonData.quantidade == qtd);
         }
 
         [Test]
@@ -79,7 +80,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             bool administrador = true;
 
             PostUsuario post = new PostUsuario();
-            post.SetJsonBody(nome,email,password,administrador);
+            post.SetJsonBody(nome, email, password, administrador);
 
             IRestResponse response = post.ExecuteRequest();
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
@@ -87,18 +88,21 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(jsonData);
 
-            Assert.True(response.IsSuccessful);
-            Assert.AreEqual(mensagem,jsonData.message.Value);
-
             //Deletar usuário cadastrado
             UsuarioStep.DeletarUsuarioPorId(id);
 
+            Assert.True(response.IsSuccessful);
+            Assert.AreEqual(mensagem, jsonData.message.Value);
         }
 
         [Test]
         public void BuscarUsuarioPorID()
         {
             string nome = "Pleonário Silvestre";
+
+            //Deletar usuários cadastrados
+            UsuarioStep.DeletarUsuariosCriados();
+
             //Criar usuário
             UsuarioStep.CriarUsuario();
 
@@ -114,11 +118,11 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(jsonData);
 
-            Assert.True(response.IsSuccessful);
-            Assert.AreEqual(nome,jsonData.nome.Value);
-     
             //Deletar usuários cadastrados
             UsuarioStep.DeletarUsuarioPorId(id);
+
+            Assert.True(response.IsSuccessful);
+            Assert.AreEqual(nome, jsonData.nome.Value);
         }
 
         [Test]
@@ -129,6 +133,9 @@ namespace DesafioAutomacaoAPIBase2.Tests
             string password = "adm2000";
             bool administrador = false;
 
+            //Deletar usuários cadastrados
+            UsuarioStep.DeletarUsuariosCriados();
+
             string mensagem = "Registro alterado com sucesso";
             //Criar usuário
             UsuarioStep.CriarUsuario();
@@ -137,24 +144,28 @@ namespace DesafioAutomacaoAPIBase2.Tests
             var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
             string id = dadosUsuario[4];
 
+            // Atualizar usuário
             PutUsuario put = new PutUsuario(id);
-            put.SetJsonBody(nome,email,password,administrador);
+            put.SetJsonBody(nome, email, password, administrador);
             IRestResponse response = put.ExecuteRequest();
 
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
             Console.WriteLine(jsonData);
 
-            Assert.AreEqual(mensagem,jsonData.message.Value);
-            Assert.True(response.IsSuccessful);
-
             // Deleta usuário criado
             UsuarioStep.DeletarUsuarioPorId(id);
+
+            Assert.AreEqual(mensagem, jsonData.message.Value);
+            Assert.True(response.IsSuccessful);
         }
 
         [Test]
         public void ExcluirUsuario()
         {
+            //Deletar usuários cadastrados
+            UsuarioStep.DeletarUsuariosCriados();
+
             string mensagem = "Registro excluído com sucesso";
             //Criar usuários 
             UsuarioStep.CriarUsuario();
@@ -171,11 +182,11 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(jsonData);
 
+            //Deleta usuário criado no banco de dados
+            UsuarioStep.DeletarUsuarioPorIdBancoDados(id);
+
             Assert.True(response.IsSuccessful);
             Assert.AreEqual(mensagem, jsonData.message.Value);
-
-            //Deletar usuários cadastrados
-            UsuarioStep.DeletarUsuariosCriados();
         }
         #endregion
 
@@ -184,41 +195,110 @@ namespace DesafioAutomacaoAPIBase2.Tests
         [Test]
         public void CadastrarUsuarioDuplicado()
         {
+            string mensagem = "Este email já está sendo usado";
+            string nome = "Valdonildo Clauzedias Santífico";
+            string email = "valdo_1973_@msn.com.br";
+            string pwd = "valdo_1975";
+            bool adm = false;
+            // Cadastrar 1x
+            PostUsuario post = new PostUsuario();
+            post.SetJsonBody(nome, email, pwd, adm);
 
+            IRestResponse response1 = post.ExecuteRequest();
+            dynamic jsonData = JsonConvert.DeserializeObject(response1.Content.ToString());
+            string id = jsonData._id.Value;
 
+            // Cadastrar 2x
+            IRestResponse response2 = post.ExecuteRequest();
+            dynamic jsonData2 = JsonConvert.DeserializeObject(response2.Content.ToString());
+            string msgAtual = jsonData2.message.Value;
 
-        }
+            // Excluir o usuário criado
+            UsuarioStep.DeletarUsuarioPorId(id);
 
-        [Test]
-        public void CadastrarUsuarioEmailInvalido()
-        {
-
-
-
+            Assert.AreEqual(mensagem, msgAtual);
+            Assert.True((int)response2.StatusCode == 400);
         }
 
         [Test]
         public void BuscarUsuarioPorIDInexistente()
         {
+            string id = "idInexistente";
+            string msg = "Usuário não encontrado";
 
+            GetUsuarioPorId get = new GetUsuarioPorId(id);
+            IRestResponse response = get.ExecuteRequest();
 
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
+            Assert.IsTrue((int)response.StatusCode == 400);
+            Assert.AreEqual(msg, jsonData.message.Value);
         }
 
         [Test]
-        public void EditarUsuarioInexistente()
+        public void EditarUsuarioEmailExistente()
         {
+            string msg = "Este email já está sendo usado";
+            string nome = "Joâo Silva";
+            string email = "pleo_1982@hotmail.com";
+            string pwd = "adm1234";
+            bool adm = false;
 
+            //Deletar usuários cadastrados
+            UsuarioStep.DeletarUsuariosCriados();
 
+            // Criar um usuário
+            dynamic idUsuarioCriado = JsonConvert.DeserializeObject(UsuarioStep.CriarUsuario().Content);
 
+            //Criar o usuário para atualizar
+            PostUsuario post = new PostUsuario();
+            post.SetJsonBody(nome, "atualizado" + email, pwd, adm);
+            var responsePost = post.ExecuteRequest();
+            dynamic jsonData1 = JsonConvert.DeserializeObject(responsePost.Content);
+            string id = jsonData1._id.Value;
+
+            // Atualizar com o mesmo email criado pelo step
+            PutUsuario put = new PutUsuario(id);
+            put.SetJsonBody(nome, email, pwd, adm);
+
+            IRestResponse response = put.ExecuteRequest();
+
+            Console.WriteLine(response.Content);
+
+            dynamic jsonData2 = JsonConvert.DeserializeObject(response.Content);
+
+            //Deletar os usuários criados
+            UsuarioStep.DeletarUsuarioPorId(id);
+            UsuarioStep.DeletarUsuarioPorId(idUsuarioCriado._id.Value);
+
+            Assert.IsTrue((int)response.StatusCode == 400);
+            Assert.AreEqual(msg, jsonData2.message.Value);
         }
 
         [Test]
-        public void ExcluirUsuarioIdInexistente()
+        public void ExcluirUsuarioComCarrinhoCadastrado()
         {
+            string msg = "Não é permitido excluir usuário com carrinho cadastrado";
+            string id = JsonBuilder.ReturnParameterAppSettings("USER_ID");
 
+            // Criar carrinho
+            dynamic jsonCar = JsonConvert.DeserializeObject(CarrinhosStep.CriarCarrinhoUnicoProduto().Content);
+            string idCar = jsonCar._id.Value;
 
+            // Tentar excluir o usuário
+            DeleteUsuario delete = new DeleteUsuario(id);
+            IRestResponse response = delete.ExecuteRequest();
 
+            Console.WriteLine(response.Content);
+
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
+
+            // Excluir carrinho criado
+            CarrinhosStep.DeletarCarrinhoCancelarCompra();
+
+            Assert.IsTrue((int)response.StatusCode == 400);
+            Assert.AreEqual(idCar,jsonData.idCarrinho.Value);
+            Assert.AreEqual(msg, jsonData.message.Value);
         }
         #endregion
     }

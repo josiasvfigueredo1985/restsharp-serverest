@@ -62,14 +62,14 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content);
 
-            Assert.IsTrue(response.IsSuccessful);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
-
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
             DeleteProduto del = new DeleteProduto(idProd);
             del.ExecuteRequest();
+
+            Assert.IsTrue(response.IsSuccessful);
+            Assert.IsTrue(jsonData.message.Value == mensagem);
         }
 
         [Test]
@@ -97,14 +97,14 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content);
 
-            Assert.IsTrue((int)response.StatusCode==200);
-            Assert.IsTrue(response.IsSuccessful);
-
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
             DeleteProduto del = new DeleteProduto(idProd);
             del.ExecuteRequest();
+
+            Assert.IsTrue((int)response.StatusCode==200);
+            Assert.IsTrue(response.IsSuccessful);
         }
 
         [Test]
@@ -133,12 +133,12 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine("Response cancelar compra carrinho: "+jsonData);
 
+            //Deletar produto após deletar o carrinho
+            DeleteProduto del = new DeleteProduto(idProd);
+
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.IsTrue(response.IsSuccessful);
             Assert.IsTrue(mensagem == jsonData.message.Value);
-
-            //Deletar produto após deletar o carrinho
-            DeleteProduto del = new DeleteProduto(idProd);
         }
 
         [Test]
@@ -167,12 +167,12 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine("Response concluir compra carrinho: " + jsonData);
 
+            //Deletar produto após deletar o carrinho
+            DeleteProduto del = new DeleteProduto(idProd);
+
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.IsTrue(response.IsSuccessful);
             Assert.IsTrue(mensagem == jsonData.message.Value);
-
-            //Deletar produto após deletar o carrinho
-            DeleteProduto del = new DeleteProduto(idProd);
         }
         #endregion
 
@@ -199,13 +199,13 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content);
 
-            Assert.IsTrue(response.IsSuccessful);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
-
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
             DeleteProduto del = new DeleteProduto(idProd);
+
+            Assert.IsTrue((int)response.StatusCode==400);
+            Assert.IsTrue(jsonData.message.Value == mensagem);
         }
 
         [Test]
@@ -241,14 +241,13 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content);
 
-            Assert.IsTrue((int)response.StatusCode==400);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
-
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
             DeleteProduto del = new DeleteProduto(idProd);
 
+            Assert.IsTrue((int)response.StatusCode==400);
+            Assert.IsTrue(jsonData.message.Value == mensagem);
         }
 
         [Test]
