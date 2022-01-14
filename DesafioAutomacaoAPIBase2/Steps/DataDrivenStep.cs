@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using DesafioAutomacaoAPIBase2.Helpers;
 using System.IO;
+using System.Data;
 
 namespace DesafioAutomacaoAPIBase2.Steps
 {
@@ -20,20 +21,6 @@ namespace DesafioAutomacaoAPIBase2.Steps
                 if (testCases != null)
                     foreach (TestCaseData testCaseData in testCases)
                         yield return testCaseData;
-            }
-        }
-
-        public static List<TestCaseData> RetornaDadosUsandoBancoDados()
-        {
-            string query = File.ReadAllText(GeneralHelpers.ReturnProjectPath() + "Queries/BuscaIdProdutos.sql");
-            var testCases = DataDrivenHelpers.ReturnDataUsingDataBase(query);
-            if (testCases.Count < 1)
-            {
-                return null;
-            }
-            else
-            {
-                return testCases;
             }
         }
     }

@@ -16,7 +16,8 @@ namespace DesafioAutomacaoAPIBase2.Tests
     class ProdutosTests : TestBase
     {
         #region Testes Positivos
-        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosNovosProduto"),Order(1)]
+
+        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosNovosProduto"), Order(1)]
         public void CadastrarProdutosDataDrivenExcel(string nome, string preco, string descricao, string quantidade)
         {
             PostProduto post = new PostProduto();
@@ -33,22 +34,6 @@ namespace DesafioAutomacaoAPIBase2.Tests
             Assert.IsTrue(response.IsSuccessful);
             Assert.AreEqual("Created", response.StatusCode.ToString());
             Assert.AreEqual("Cadastro realizado com sucesso", jsonData.message.Value);
-        }
-
-        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosUsandoBancoDados")]
-        public void DeletarProdutosDataDrivenBancoDados(string idProduto)
-        {
-            DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response = delete.ExecuteRequest();
-
-            //Deleta cada id do banco para não gerar um test case com argumentos inválidos
-            SolicitacaoDBSteps.DeletarIdProduto(idProduto);
-
-            dynamic jsonData = JObject.Parse(response.Content);
-
-            Assert.IsTrue(response.IsSuccessful);
-            Assert.AreEqual("OK", response.StatusCode.ToString());
-            Assert.AreEqual("Registro excluído com sucesso", jsonData.message.Value);
         }
 
         [Test]
@@ -124,6 +109,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
         {
             string mensagem = "Registro alterado com sucesso";
             Random r = new Random();
+
             //Criar produto para atualizar
             IRestResponse response1 = ProdutosStep.CriarProduto();
             dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content);
@@ -151,6 +137,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             string mensagem = "Cadastro realizado com sucesso";
             string idInexistente = "idInexistente";
             Random r = new Random();
+
             //Criar produto para atualizar
             ProdutosStep.CriarProduto();
 
@@ -315,6 +302,8 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             // Deletar todos os produtos já criados
             ProdutosStep.DeletarProdutosByIdsBancoDados();
+            //Excluir carrinhos criados
+            CarrinhosStep.DeletarCarrinhoCancelarCompra();
 
             // Criar produto
             IRestResponse response1 = ProdutosStep.CriarProduto();
@@ -329,7 +318,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             IRestResponse response = delete.ExecuteRequest();
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
-            Console.WriteLine("Mensagem ao tentar excluir produto: {0}", response.Content);
+            Console.WriteLine("Mensagem ao tentar excluir produto: " + response.Content);
 
             //Excluir carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();

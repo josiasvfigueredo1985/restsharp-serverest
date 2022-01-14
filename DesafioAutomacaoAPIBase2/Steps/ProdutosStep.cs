@@ -63,10 +63,10 @@ namespace DesafioAutomacaoAPIBase2.Steps
         public static List<string> DeletarProdutosByIdsBancoDados()
         {
             // Deleção dos produtos através dos Id´s que foram armazenados no banco de dados
-
             //Buscar e armazenar todos os ids dos produtos gerados
             List<string> idsProdutos = SolicitacaoDBSteps.BuscarIdsProdutos();
             List<string> statusCode = new List<string>();
+
             //Deletar por cada id criado
             foreach (var id in idsProdutos)
             {

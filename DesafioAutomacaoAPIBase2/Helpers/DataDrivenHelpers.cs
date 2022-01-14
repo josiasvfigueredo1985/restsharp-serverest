@@ -37,7 +37,6 @@ public class DataDrivenHelpers
                         row.Add(reader.GetValue(i).ToString());
 
                     ret.Add(new TestCaseData(row.ToArray()));
-
                 }
             }
             return ret;
@@ -46,25 +45,10 @@ public class DataDrivenHelpers
 
     public static String ConnectionStringExcel(string excelFilePath)
     {
-
         if (!File.Exists(excelFilePath))
             throw new Exception(string.Format("File name: {0}", excelFilePath), new FileNotFoundException());
         string connectionStr = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0 Xml;HDR=YES\";", excelFilePath);
 
         return connectionStr;
-    }
-
-    public static List<TestCaseData> ReturnDataUsingDataBase(string query)
-    {
-        var testcase = new List<TestCaseData>();
-        DataTable idProdutos = DBHelpers.RetornaDadosDataTableQuery(query);
-        Console.WriteLine(idProdutos);
-
-        foreach (DataRow row in idProdutos.Rows)
-        {
-                testcase.Add(new TestCaseData(row[0].ToString()));
-        }
-
-        return testcase;
     }
 }

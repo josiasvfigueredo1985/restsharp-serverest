@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MfocFCoAX50W4e8MkIbb380fCKzMH5v810ogsEOnpMeO1fY4D2eGLPSOHD+xgnrsRZbwy+VIEDpHCTH0jrWFaQ==",
+  "dgSpecHash": "uTh//Ks6uxWFdb+1jS2cLyNwAbJsv+oCdOUTI9VQaXKZ9PR9OvAYODqOvL7rEEK3Prrpuo8UlJknLuO2JspKOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Josias\\source\\repos\\DesafioAutomacaoAPIBase2_DEV\\DesafioAutomacaoAPIBase2\\DesafioAutomacaoAPIBase2.csproj",
   "expectedPackageFiles": [
@@ -168,8 +168,7 @@
     "C:\\Users\\Josias\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Josias\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Josias\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Josias\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Josias\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+    "C:\\Users\\Josias\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

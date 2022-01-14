@@ -37,9 +37,11 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine("Carrinho(s) cadastrado(s): {0}", response.Content);
 
+            //Deletar produto
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
+
             Assert.IsTrue(response.IsSuccessful);
             Assert.IsTrue(jsonData.quantidade.Value >= quantidade);
-
         }
 
         [Test]
@@ -65,8 +67,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
-            DeleteProduto del = new DeleteProduto(idProd);
-            del.ExecuteRequest();
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             Assert.IsTrue(response.IsSuccessful);
             Assert.IsTrue(jsonData.message.Value == mensagem);
@@ -100,8 +101,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
-            DeleteProduto del = new DeleteProduto(idProd);
-            del.ExecuteRequest();
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             Assert.IsTrue((int)response.StatusCode==200);
             Assert.IsTrue(response.IsSuccessful);
@@ -133,8 +133,8 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine("Response cancelar compra carrinho: "+jsonData);
 
-            //Deletar produto após deletar o carrinho
-            DeleteProduto del = new DeleteProduto(idProd);
+            //Deletar produto
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.IsTrue(response.IsSuccessful);
@@ -167,8 +167,8 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine("Response concluir compra carrinho: " + jsonData);
 
-            //Deletar produto após deletar o carrinho
-            DeleteProduto del = new DeleteProduto(idProd);
+            //Deletar produto
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.IsTrue(response.IsSuccessful);
@@ -202,7 +202,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
-            DeleteProduto del = new DeleteProduto(idProd);
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             Assert.IsTrue((int)response.StatusCode==400);
             Assert.IsTrue(jsonData.message.Value == mensagem);
@@ -211,7 +211,6 @@ namespace DesafioAutomacaoAPIBase2.Tests
         [Test]
         public void CadastrarCarrinhoComProdutoDuplicado()
         {
-
             string mensagem = "Não é permitido possuir produto duplicado";
             string jsonPath = GeneralHelpers.ReturnProjectPath() + "Jsons/CarrinhoDataSet.json";
             List<string> carrinhoDup = new List<string>();
@@ -244,7 +243,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             //Deletar carrinho
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             //Deletar produto
-            DeleteProduto del = new DeleteProduto(idProd);
+            ProdutosStep.DeletarProdutosByIdsBancoDados();
 
             Assert.IsTrue((int)response.StatusCode==400);
             Assert.IsTrue(jsonData.message.Value == mensagem);
