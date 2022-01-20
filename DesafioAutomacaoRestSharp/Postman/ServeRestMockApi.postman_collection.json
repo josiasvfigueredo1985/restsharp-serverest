@@ -1,0 +1,594 @@
+{
+	"info": {
+		"_postman_id": "20302b51-2f90-4291-991d-dc35a97808e8",
+		"name": "ServeRestMockApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pagamento Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"idPagamento\", jsonData.idPagamento);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dataPagamento\": \"{{$randomDateRecent}}\",\r\n  \"formaPagamento\": {\r\n    \"pix\": false,\r\n    \"boleto\": false,\r\n    \"credito\": {\r\n      \"credito_status\": true,\r\n      \"qteParcelas\": 12,\r\n      \"juros\": true\r\n    }\r\n  },\r\n  \"precoTotal\": 1200,\r\n  \"quantidadeTotal\": 1,\r\n  \"idUsuario\": \"{{$randomUUID}}\",\r\n  \"_id\": \"{{$randomUUID}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}pagamento/tipoPagamento",
+					"host": [
+						"{{baseURL}}pagamento"
+					],
+					"path": [
+						"tipoPagamento"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Credito Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataPagamento\": \"{{$randomDateRecent}}\",\r\n  \"formaPagamento\": {\r\n    \"pix\": false,\r\n    \"boleto\": false,\r\n    \"credito\": {\r\n      \"credito_status\": true,\r\n      \"qteParcelas\": 12,\r\n      \"juros\": true\r\n    }\r\n  },\r\n  \"precoTotal\": 1200,\r\n  \"quantidadeTotal\": 1,\r\n  \"idUsuario\": \"{{$randomUUID}}\",\r\n  \"_id\": \"{{$randomUUID}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://61b52c030e84b70017331a89.mockapi.io/pagamento/tipoPagamento",
+							"protocol": "https",
+							"host": [
+								"61b52c030e84b70017331a89",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"pagamento",
+								"tipoPagamento"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "347"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jan 2022 01:27:10 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dataPagamento\": \"Thu Jan 13 2022 10:40:27 GMT-0300 (Horário Padrão de Brasília)\",\n    \"formaPagamento\": {\n        \"pix\": false,\n        \"boleto\": false,\n        \"credito\": {\n            \"credito_status\": true,\n            \"qteParcelas\": 12,\n            \"juros\": true\n        }\n    },\n    \"precoTotal\": 1200,\n    \"quantidadeTotal\": 1,\n    \"idUsuario\": \"3b23f202-8bd1-4216-9921-4538dcf188ed\",\n    \"_id\": \"9f2929ca-ff74-458e-bc80-52d4bba7f153\",\n    \"idPagamento\": \"3\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Pagamento Get All",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}pagamento/tipoPagamento",
+					"host": [
+						"{{baseURL}}pagamento"
+					],
+					"path": [
+						"tipoPagamento"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Credito Get All",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://61b52c030e84b70017331a89.mockapi.io/pagamento/tipoPagamento",
+							"protocol": "https",
+							"host": [
+								"61b52c030e84b70017331a89",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"pagamento",
+								"tipoPagamento"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Etag",
+							"value": "\"-972466328\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jan 2022 23:42:00 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"dataPagamento\": \"19/01/2022\",\n        \"formaPagamento\": {\n            \"pix\": \"true\",\n            \"boleto\": \"false\",\n            \"credito\": {\n                \"credito_status\": \"false\",\n                \"qteParcelas\": \"0\",\n                \"juros\": \"false\"\n            }\n        },\n        \"precoTotal\": \"2300\",\n        \"quantidadeTotal\": \"1\",\n        \"idUsuario\": \"FdTMcMjL74zWIENd\",\n        \"_id\": \"FogcP4O3OVyLnYok\",\n        \"idPagamento\": \"1\"\n    },\n    {\n        \"dataPagamento\": null,\n        \"formaPagamento\": {\n            \"pix\": false,\n            \"boleto\": false,\n            \"credito\": {\n                \"credito_status\": false,\n                \"qteParcelas\": 0,\n                \"juros\": false\n            }\n        },\n        \"precoTotal\": 0,\n        \"quantidadeTotal\": 0,\n        \"idUsuario\": null,\n        \"_id\": null,\n        \"idPagamento\": \"2\"\n    },\n    {\n        \"dataPagamento\": null,\n        \"formaPagamento\": {\n            \"pix\": false,\n            \"boleto\": false,\n            \"credito\": {\n                \"credito_status\": false,\n                \"qteParcelas\": 0,\n                \"juros\": false\n            }\n        },\n        \"precoTotal\": 0,\n        \"quantidadeTotal\": 0,\n        \"idUsuario\": null,\n        \"_id\": null,\n        \"idPagamento\": \"3\"\n    },\n    {\n        \"dataPagamento\": null,\n        \"formaPagamento\": {\n            \"pix\": false,\n            \"boleto\": false,\n            \"credito\": {\n                \"credito_status\": false,\n                \"qteParcelas\": 0,\n                \"juros\": false\n            }\n        },\n        \"precoTotal\": 0,\n        \"quantidadeTotal\": 0,\n        \"idUsuario\": null,\n        \"_id\": null,\n        \"idPagamento\": \"4\"\n    },\n    {\n        \"dataPagamento\": null,\n        \"formaPagamento\": {\n            \"pix\": false,\n            \"boleto\": false,\n            \"credito\": {\n                \"credito_status\": false,\n                \"qteParcelas\": 0,\n                \"juros\": false\n            }\n        },\n        \"precoTotal\": 0,\n        \"quantidadeTotal\": 0,\n        \"idUsuario\": null,\n        \"_id\": null,\n        \"idPagamento\": \"5\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Pagamento Get By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}pagamento/tipoPagamento/:id",
+					"host": [
+						"{{baseURL}}pagamento"
+					],
+					"path": [
+						"tipoPagamento",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{idPagamento}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Credito Get By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://61b52c030e84b70017331a89.mockapi.io/pagamento/tipoPagamento/:id",
+							"protocol": "https",
+							"host": [
+								"61b52c030e84b70017331a89",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"pagamento",
+								"tipoPagamento",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "Etag",
+							"value": "\"891116898\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jan 2022 23:42:09 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dataPagamento\": \"19/01/2022\",\n    \"formaPagamento\": {\n        \"pix\": \"true\",\n        \"boleto\": \"false\",\n        \"credito\": {\n            \"credito_status\": \"false\",\n            \"qteParcelas\": \"0\",\n            \"juros\": \"false\"\n        }\n    },\n    \"precoTotal\": \"2300\",\n    \"quantidadeTotal\": \"1\",\n    \"idUsuario\": \"FdTMcMjL74zWIENd\",\n    \"_id\": \"FogcP4O3OVyLnYok\",\n    \"idPagamento\": \"1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Pagamento Update By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dataPagamento\": \"{{$randomDateRecent}}\",\r\n  \"formaPagamento\": {\r\n    \"pix\": false,\r\n    \"boleto\": true,\r\n    \"credito\": {\r\n      \"credito_status\": false,\r\n      \"qteParcelas\": 0,\r\n      \"juros\": false  \r\n    }\r\n  },\r\n  \"precoTotal\": 1200,\r\n  \"quantidadeTotal\": 1,\r\n  \"idUsuario\": \"{{$randomUUID}}\",\r\n  \"_id\": \"{{$randomUUID}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}pagamento/tipoPagamento/:id",
+					"host": [
+						"{{baseURL}}pagamento"
+					],
+					"path": [
+						"tipoPagamento",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{idPagamento}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Credito Update By Id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataPagamento\": \"{{$randomDateRecent}}\",\r\n  \"formaPagamento\": {\r\n    \"pix\": false,\r\n    \"boleto\": true,\r\n    \"credito\": {\r\n      \"credito_status\": false,\r\n      \"qteParcelas\": 0,\r\n      \"juros\": false  \r\n    }\r\n  },\r\n  \"precoTotal\": 1200,\r\n  \"quantidadeTotal\": 1,\r\n  \"idUsuario\": \"{{$randomUUID}}\",\r\n  \"_id\": \"{{$randomUUID}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://61b52c030e84b70017331a89.mockapi.io/pagamento/tipoPagamento/:id",
+							"protocol": "https",
+							"host": [
+								"61b52c030e84b70017331a89",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"pagamento",
+								"tipoPagamento",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jan 2022 23:42:27 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "\"Pagamento atualizado com sucesso!\""
+				}
+			]
+		},
+		{
+			"name": "Pagamento Delete By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}pagamento/tipoPagamento/:id",
+					"host": [
+						"{{baseURL}}pagamento"
+					],
+					"path": [
+						"tipoPagamento",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{idPagamento}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Pagamento Delete By Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://61b52c030e84b70017331a89.mockapi.io/pagamento/tipoPagamento/:id",
+							"protocol": "https",
+							"host": [
+								"61b52c030e84b70017331a89",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"pagamento",
+								"tipoPagamento",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jan 2022 23:42:35 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "\"Sua opção de pagamento foi excluída, retorne para o carrinho para prosseguir.\""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Requisição executada com sucesso!\", function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+					"});",
+					"",
+					"pm.test(\"Requisição executada com sucesso!\", function () {",
+					"    pm.expect(pm.response.status).to.be.oneOf([\"OK\", \"Created\"]);",
+					"});",
+					""
+				]
+			}
+		}
+	]
+}
