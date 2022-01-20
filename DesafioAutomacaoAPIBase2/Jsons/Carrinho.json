@@ -1,8 +1,0 @@
-{
-  "produtos": [
-    {
-      "idProduto": "$idProduto",
-      "quantidade": "$quantidade"
-    }
-  ]
-}
