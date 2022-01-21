@@ -46,7 +46,7 @@
             },
             "EPPlus": {
               "target": "Package",
-              "version": "[5.8.4, )"
+              "version": "[5.8.5, )"
             },
             "ExtentReports.Core": {
               "target": "Package",
@@ -62,19 +62,19 @@
             },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.2-mauipre.1.22054.8, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.2-mauipre.1.22054.8, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.0.0, )"
+              "version": "[17.1.0-preview-20211130-02, )"
             },
             "MySql.Data": {
               "target": "Package",
-              "version": "[8.0.27, )"
+              "version": "[8.0.28, )"
             },
             "NUnit": {
               "target": "Package",
@@ -84,7 +84,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.2.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -92,7 +92,7 @@
             },
             "Newtonsoft.Json.Schema": {
               "target": "Package",
-              "version": "[3.0.14, )"
+              "version": "[3.0.15-beta1, )"
             },
             "Node.js": {
               "target": "Package",
@@ -100,11 +100,11 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[106.15.0, )"
+              "version": "[107.1.1, )"
             },
             "System.Data.OleDb": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.2-mauipre.1.22054.8, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
