@@ -6,7 +6,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
 {
     public class LoginStep
     {
-        // Execução em hardcode para evitar erros de objetos não instanciados pela arquitetura
+        // Execução das request em hardcode para evitar erros de objetos não instanciados pela arquitetura
         public static string RetornaBearerToken()
         {
             //Executa delete para verificar a validade do token
@@ -84,7 +84,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
             var client = new RestClient($"{url}usuarios");
             var request = new RestRequest(Method.POST);
-            //request.AddHeader("Content-Type", "application/json");
+            request.AddHeader("Content-Type", "application/json");
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new
             {
