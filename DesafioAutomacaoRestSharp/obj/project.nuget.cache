@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E0DPB98zcKtrPR0hvnrFZlzKm7QhAvGF1hoMnQEz6heFnbUaiw2V7Xi7vCCkuwBshzDuItFR8h9elRDxPhBvOA==",
+  "dgSpecHash": "xCp04KQlnwt5TC3Wva7IQ8voS1Bo840iAmWtQeQmsSul4zTviynmYFse/UkiXFSbZdsY+0rgCa7JBrJXxPx/og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj",
+  "projectFilePath": "c:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josias\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Josias\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",

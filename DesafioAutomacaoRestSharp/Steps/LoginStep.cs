@@ -84,7 +84,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
             var client = new RestClient($"{url}usuarios");
             var request = new RestRequest(Method.POST);
-            //request.AddHeader("Content-Type", "application/json");
+            request.AddHeader("Content-Type", "application/json");
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new
             {

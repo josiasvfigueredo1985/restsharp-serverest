@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj": {}
+    "c:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj": {
+    "c:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj",
+        "projectUniqueName": "c:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj",
         "projectName": "DesafioAutomacaoRestSharp",
-        "projectPath": "C:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj",
+        "projectPath": "c:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp.csproj",
         "packagesPath": "C:\\Users\\Josias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\obj\\",
+        "outputPath": "c:\\Users\\Josias\\source\\repos\\DesafioAutomacaoRestSharp\\DesafioAutomacaoRestSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Josias\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,153 @@
+Produto excluído: {
+    "message": "Não é permitido excluir produto que faz parte de carrinho",
+    "idCarrinhos": [
+        "Fvea5Ad2YF4h6xAj",
+        "qbMqntef4iTOwWfg"
+    ]
+}
+Produto excluído: {
+    "message": "Não é permitido excluir produto que faz parte de carrinho",
+    "idCarrinhos": [
+        "qbMqntef4iTOwWfg"
+    ]
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "iDzza6TsVuQnUYD2"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "DLNNjGxsCXByJI94"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "APK0xXDeiHr93i62"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "DJXlF68XGtNYKQt1"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "ytE9bz6IOsVsFDto"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "enp4tmnQ1AX2FPAW"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "Fqv7X7p44cmNIJEX"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "ow2dP9SlW8fzNhAd"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "oMcqb6hYbiwsHWqh"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "ee6cAkUInRP5SsAu"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "gu5It58ICRBwkJlL"
+}
+{
+    "quantidade": 13,
+    "produtos": [
+        {
+            "nome": "Teclado Gamer TX  modelo 4440",
+            "preco": 150,
+            "descricao": "Teclado gamer",
+            "quantidade": 50,
+            "_id": "APK0xXDeiHr93i62"
+        },
+        {
+            "nome": "Logitech MX Vertical",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 381,
+            "_id": "BeeJh5lz3k6kSIzA"
+        },
+        {
+            "nome": "Fone bluetooth Master modelo 7183",
+            "preco": 250,
+            "descricao": "Fone bluetooth",
+            "quantidade": 150,
+            "_id": "DJXlF68XGtNYKQt1"
+        },
+        {
+            "nome": "LG monitor curvo WS modelo 8542",
+            "preco": 2500,
+            "descricao": "Monitor",
+            "quantidade": 10,
+            "_id": "DLNNjGxsCXByJI94"
+        },
+        {
+            "nome": "Desktop gamer AMD Fighter modelo 1487",
+            "preco": 3500,
+            "descricao": "PC Fighter gamer",
+            "quantidade": 5,
+            "_id": "Fqv7X7p44cmNIJEX"
+        },
+        {
+            "nome": "Samsung 60 polegadas",
+            "preco": 5240,
+            "descricao": "TV",
+            "quantidade": 49977,
+            "_id": "K6leHdftCeOJj8BJ"
+        },
+        {
+            "nome": "SSD externo 250 gb ProData modelo 6227",
+            "preco": 120,
+            "descricao": "SSD externo",
+            "quantidade": 50,
+            "_id": "ee6cAkUInRP5SsAu"
+        },
+        {
+            "nome": "Caixa de som PC Sound modelo 5072",
+            "preco": 520,
+            "descricao": "Caixa de som PC",
+            "quantidade": 320,
+            "_id": "enp4tmnQ1AX2FPAW"
+        },
+        {
+            "nome": "Kit Home Office 2022 modelo 8187",
+            "preco": 450,
+            "descricao": "Kit completo câmera, teclado, apoio de mão e headset básico",
+            "quantidade": 250,
+            "_id": "gu5It58ICRBwkJlL"
+        },
+        {
+            "nome": "Logitech MX Vertical modelo 4629",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 200,
+            "_id": "iDzza6TsVuQnUYD2"
+        },
+        {
+            "nome": "Câmera fullhd ViewAll PC modelo 8219",
+            "preco": 180,
+            "descricao": "Câmera video chamada full hd",
+            "quantidade": 40,
+            "_id": "oMcqb6hYbiwsHWqh"
+        },
+        {
+            "nome": "Desktop office AMD Basix modelo 5818",
+            "preco": 2500,
+            "descricao": "AMD Basix pc básico",
+            "quantidade": 15,
+            "_id": "ow2dP9SlW8fzNhAd"
+        },
+        {
+            "nome": "Headset gamer RZR modelo 5509",
+            "preco": 180,
+            "descricao": "Headset gamer",
+            "quantidade": 280,
+            "_id": "ytE9bz6IOsVsFDto"
+        }
+    ]
+}
