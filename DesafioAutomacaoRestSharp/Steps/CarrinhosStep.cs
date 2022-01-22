@@ -85,8 +85,9 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
         public static IRestResponse ConsultarCarrinho()
         {
-            dynamic jsonData = JsonConvert.DeserializeObject(CriarCarrinhoUnicoProduto().Content.ToString());
-            GetCarrinhoPorId get = new GetCarrinhoPorId(jsonData._id.Value);
+            dynamic jsonData = JsonConvert.DeserializeObject(CriarCarrinhoUnicoProduto().Content);
+            string id = jsonData._id.Value;
+            GetCarrinhoPorId get = new GetCarrinhoPorId(id);
             IRestResponse response = get.ExecuteRequest();
 
             // Console.WriteLine(response.Content.ToString());
