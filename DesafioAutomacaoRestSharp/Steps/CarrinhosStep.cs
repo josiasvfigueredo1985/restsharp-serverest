@@ -38,7 +38,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             // DeletarCarrinhoConcluirCompra();
 
             //Pegar o id gerado
-            dynamic jsonData = JsonConvert.DeserializeObject(ProdutosStep.CriarProduto().Content.ToString());
+            dynamic jsonData = JsonConvert.DeserializeObject(ProdutosStep.CriarProduto().Content);
             string idProduto = jsonData._id.Value;
 
             //Criar o novo carrinho com o id do produto
