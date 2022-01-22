@@ -1,0 +1,152 @@
+Produto excluído: {
+    "message": "Não é permitido excluir produto que faz parte de carrinho",
+    "idCarrinhos": [
+        "qbMqntef4iTOwWfg"
+    ]
+}
+Produto excluído: {
+    "message": "Não é permitido excluir produto que faz parte de carrinho",
+    "idCarrinhos": [
+        "qbMqntef4iTOwWfg"
+    ]
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "1BKASQMNtJ3Om965"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "4JN5iCy4JEqphh4X"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "SiGWZm5G4NPG3RJw"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "iGQDRZDmtklWA9Jx"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "6PkQKh8A50eCnypB"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "M5NJ5X1baCGQauqN"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "lMK2l8gJJ0nhKKTZ"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "c0Lj5ajL56I3kOHi"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "Ke5VWREXffPhv9KT"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "pSTvRAjpDrwpP5AZ"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "voFjYQUjzHlfS0Ff"
+}
+{
+    "quantidade": 13,
+    "produtos": [
+        {
+            "nome": "Logitech MX Vertical modelo 634",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 200,
+            "_id": "1BKASQMNtJ3Om965"
+        },
+        {
+            "nome": "LG monitor curvo WS modelo 3240",
+            "preco": 2500,
+            "descricao": "Monitor",
+            "quantidade": 10,
+            "_id": "4JN5iCy4JEqphh4X"
+        },
+        {
+            "nome": "Headset gamer RZR modelo 8206",
+            "preco": 180,
+            "descricao": "Headset gamer",
+            "quantidade": 280,
+            "_id": "6PkQKh8A50eCnypB"
+        },
+        {
+            "nome": "Logitech MX Vertical",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 382,
+            "_id": "BeeJh5lz3k6kSIzA"
+        },
+        {
+            "nome": "Samsung 60 polegadas",
+            "preco": 5240,
+            "descricao": "TV",
+            "quantidade": 49977,
+            "_id": "K6leHdftCeOJj8BJ"
+        },
+        {
+            "nome": "Câmera fullhd ViewAll PC modelo 8143",
+            "preco": 180,
+            "descricao": "Câmera video chamada full hd",
+            "quantidade": 40,
+            "_id": "Ke5VWREXffPhv9KT"
+        },
+        {
+            "nome": "Caixa de som PC Sound modelo 7713",
+            "preco": 520,
+            "descricao": "Caixa de som PC",
+            "quantidade": 320,
+            "_id": "M5NJ5X1baCGQauqN"
+        },
+        {
+            "nome": "Teclado Gamer TX  modelo 887",
+            "preco": 150,
+            "descricao": "Teclado gamer",
+            "quantidade": 50,
+            "_id": "SiGWZm5G4NPG3RJw"
+        },
+        {
+            "nome": "Desktop office AMD Basix modelo 4224",
+            "preco": 2500,
+            "descricao": "AMD Basix pc básico",
+            "quantidade": 15,
+            "_id": "c0Lj5ajL56I3kOHi"
+        },
+        {
+            "nome": "Fone bluetooth Master modelo 7596",
+            "preco": 250,
+            "descricao": "Fone bluetooth",
+            "quantidade": 150,
+            "_id": "iGQDRZDmtklWA9Jx"
+        },
+        {
+            "nome": "Desktop gamer AMD Fighter modelo 4470",
+            "preco": 3500,
+            "descricao": "PC Fighter gamer",
+            "quantidade": 5,
+            "_id": "lMK2l8gJJ0nhKKTZ"
+        },
+        {
+            "nome": "SSD externo 250 gb ProData modelo 1435",
+            "preco": 120,
+            "descricao": "SSD externo",
+            "quantidade": 50,
+            "_id": "pSTvRAjpDrwpP5AZ"
+        },
+        {
+            "nome": "Kit Home Office 2022 modelo 7499",
+            "preco": 450,
+            "descricao": "Kit completo câmera, teclado, apoio de mão e headset básico",
+            "quantidade": 250,
+            "_id": "voFjYQUjzHlfS0Ff"
+        }
+    ]
+}
