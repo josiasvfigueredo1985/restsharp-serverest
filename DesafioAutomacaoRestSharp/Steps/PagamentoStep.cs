@@ -86,7 +86,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
                 foreach (var id in jsonData[0].idPagamento.Value)
                 {
-                    DeletePagamento delete = new DeletePagamento(id);
+                    DeletePagamento delete = new DeletePagamento(Convert.ToString(id));
                     IRestResponse resp = delete.ExecuteRequest();
                     Console.WriteLine(resp.Content.ToString());
                 }
