@@ -70,29 +70,27 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
         public static void DeletarPagamentos()
         {
-            List<string> idsPagamentos = new List<string>();
             // Espera adicionada por conta do rate limit da API
-            Thread.Sleep(1500);
+            Thread.Sleep(1800);
+
             GetAllPagamento get = new GetAllPagamento();
             IRestResponse response = get.ExecuteRequest();
+
             string cont = Convert.ToString(response.Content);
+
             Console.WriteLine("Response Delete: " + cont);
-            dynamic jsonData = JArray.Parse(response.Content);
 
-            int a = jsonData.Count;
-            for (int i = 0; i < jsonData.Count; i++)
+            if (response.Content!= "[]")
             {
-                var idPagamentos = jsonData[i].idPagamento.Value;
-                idsPagamentos.Add(idPagamentos);
-            }
+                dynamic jsonData = JsonConvert.DeserializeObject<dynamic>(cont);
 
-            foreach (var id in idsPagamentos)
-            {
-                DeletePagamento delete = new DeletePagamento(id);
-                IRestResponse resp = delete.ExecuteRequest();
-                // Console.WriteLine(resp.Content.ToString());
+                foreach (var id in jsonData[0].idPagamento.Value)
+                {
+                    DeletePagamento delete = new DeletePagamento(id);
+                    IRestResponse resp = delete.ExecuteRequest();
+                    Console.WriteLine(resp.Content.ToString());
+                }
             }
-
         }
     }
 }
