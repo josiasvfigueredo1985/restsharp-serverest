@@ -8,8 +8,6 @@ using System.IO;
 
 public class DataDrivenHelpers
 {
-    //Install x64: Microsoft Access Database Engine 2010 Redistributable - https://www.microsoft.com/en-us/download/details.aspx?id=13255
-    //Variable "cmdText" reffer your spreadsheet tab that which have testdata, in this case "Tab1" in the NameTelephone.xlsx file
     public List<TestCaseData> RetornaDadosExcel(string excelFilePath, string sheet)
     {
         string cmdText = $"SELECT * FROM [{sheet}$]";
