@@ -65,7 +65,7 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
             //10) Executar testes em paralelo.Pelo menos duas threads (25 testes cada).
             //Configurado nos ambientes de QA
             //11) Testes deverão ser agendados pelo Azure DevOps, Gitlab-CI, Jenkins, CircleCI, TFS ou outra ferramenta de CI que preferir.
-            // Agendamento configurado com envio de email: 
+            // Agendamento configurado com envio de email
         }
     }
 }
