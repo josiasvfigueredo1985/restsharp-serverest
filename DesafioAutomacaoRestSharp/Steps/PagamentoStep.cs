@@ -13,7 +13,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
         public static IRestResponse CriarNovoPagamento(string pix_boleto_cartao)
         {
             // Dados trazidos do carrinho
-            dynamic jsonData1 = JsonConvert.DeserializeObject(CarrinhosStep.ConsultarCarrinho().Content.ToString());
+            dynamic jsonData1 = JsonConvert.DeserializeObject(CarrinhosStep.ConsultarCarrinho().Content);
             string dataPagamento = DateTime.Today.ToShortDateString();
             bool pix = true;
             int prec = Convert.ToInt32(jsonData1.precoTotal.Value);
@@ -86,6 +86,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
                 foreach (var id in jsonData[0].idPagamento.Value)
                 {
+                    Thread.Sleep(1000);
                     DeletePagamento delete = new DeletePagamento(Convert.ToString(id));
                     IRestResponse resp = delete.ExecuteRequest();
                     Console.WriteLine(resp.Content.ToString());
