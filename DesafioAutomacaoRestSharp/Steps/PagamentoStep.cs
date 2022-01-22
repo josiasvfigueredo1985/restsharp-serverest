@@ -80,13 +80,13 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
             Console.WriteLine("Response Delete: " + cont);
 
-            if (response.Content!= "[]")
+            if (response.Content != "[]")
             {
                 dynamic jsonData = JsonConvert.DeserializeObject<dynamic>(cont);
 
                 foreach (var id in jsonData[0].idPagamento.Value)
                 {
-                    DeletePagamento delete = new DeletePagamento(id);
+                    DeletePagamento delete = new DeletePagamento(Convert.ToString(id));
                     IRestResponse resp = delete.ExecuteRequest();
                     Console.WriteLine(resp.Content.ToString());
                 }
