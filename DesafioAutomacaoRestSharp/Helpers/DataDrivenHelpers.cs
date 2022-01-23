@@ -46,7 +46,8 @@ public class DataDrivenHelpers
     {
         if (!File.Exists(excelFilePath))
             throw new Exception(string.Format("File name: {0}", excelFilePath), new FileNotFoundException());
-        string connectionStr = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0 Xml;HDR=YES\";", excelFilePath);
+          string connectionStr = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties=\"Excel 8.0;HDR=Yes;IMEX=2\";", excelFilePath);
+        //  string connectionStr = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0 Xml;HDR=YES\";", excelFilePath);
 
         return connectionStr;
     }
