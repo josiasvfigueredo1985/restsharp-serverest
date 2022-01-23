@@ -338,3 +338,4 @@ C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.pdb
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.genruntimeconfig.cache
+C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.csproj.AssemblyReference.cache

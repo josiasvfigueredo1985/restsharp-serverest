@@ -12,78 +12,64 @@ Produto excluído: {
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "uXVCO8LPgFztrfzD"
+    "_id": "J0iqx0xO3CsubXk9"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "79tL6PIZBAdI1DzS"
+    "_id": "0YoRlegPKptTAnXW"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "MmTuKHP1eyvpDldB"
+    "_id": "EsjSNToH2WnJ4zn6"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "pj9HrwCFNxUSPfGp"
+    "_id": "xdTtvqI2wwOz9TgF"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "WVjsXXeLZpe0YImp"
+    "_id": "8UOPma3bTBeavoca"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "BXrePGala2Tfa2TM"
+    "_id": "L4XaxlO0bgngK6jn"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "3Px6PMNtuyC5lbLJ"
+    "_id": "UDUir6AEk1Qo4Fzc"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "ktD4ujiBRyaRsTf6"
+    "_id": "fSHJPOwLRmOxrSQZ"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "cQ3LNq19WUV1wUd3"
+    "_id": "uhv9GArYiwCdS9HK"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "2R6ZKRuqiZTK9ied"
+    "_id": "Krg0EJgsoZfzZK6a"
 }
 Response Produtos criados: {
     "message": "Cadastro realizado com sucesso",
-    "_id": "f3GH6vskKfIWqbRJ"
+    "_id": "M3n8cjHJhuR8Vwo2"
 }
 {
     "quantidade": 13,
     "produtos": [
         {
-            "nome": "SSD externo 250 gb ProData modelo 4404",
-            "preco": 120,
-            "descricao": "SSD externo",
-            "quantidade": 50,
-            "_id": "2R6ZKRuqiZTK9ied"
-        },
-        {
-            "nome": "Desktop gamer AMD Fighter modelo 9496",
-            "preco": 3500,
-            "descricao": "PC Fighter gamer",
-            "quantidade": 5,
-            "_id": "3Px6PMNtuyC5lbLJ"
-        },
-        {
-            "nome": "LG monitor curvo WS modelo 6038",
+            "nome": "LG monitor curvo WS modelo 2843",
             "preco": 2500,
             "descricao": "Monitor",
             "quantidade": 10,
-            "_id": "79tL6PIZBAdI1DzS"
+            "_id": "0YoRlegPKptTAnXW"
         },
         {
-            "nome": "Caixa de som PC Sound modelo 103",
-            "preco": 520,
-            "descricao": "Caixa de som PC",
-            "quantidade": 320,
-            "_id": "BXrePGala2Tfa2TM"
+            "nome": "Headset gamer RZR modelo 9522",
+            "preco": 180,
+            "descricao": "Headset gamer",
+            "quantidade": 280,
+            "_id": "8UOPma3bTBeavoca"
         },
         {
             "nome": "Logitech MX Vertical",
@@ -93,6 +79,20 @@ Response Produtos criados: {
             "_id": "BeeJh5lz3k6kSIzA"
         },
         {
+            "nome": "Teclado Gamer TX  modelo 7378",
+            "preco": 150,
+            "descricao": "Teclado gamer",
+            "quantidade": 50,
+            "_id": "EsjSNToH2WnJ4zn6"
+        },
+        {
+            "nome": "Logitech MX Vertical modelo 9853",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 200,
+            "_id": "J0iqx0xO3CsubXk9"
+        },
+        {
             "nome": "Samsung 60 polegadas",
             "preco": 5240,
             "descricao": "TV",
@@ -100,53 +100,53 @@ Response Produtos criados: {
             "_id": "K6leHdftCeOJj8BJ"
         },
         {
-            "nome": "Teclado Gamer TX  modelo 3346",
-            "preco": 150,
-            "descricao": "Teclado gamer",
+            "nome": "SSD externo 250 gb ProData modelo 4517",
+            "preco": 120,
+            "descricao": "SSD externo",
             "quantidade": 50,
-            "_id": "MmTuKHP1eyvpDldB"
+            "_id": "Krg0EJgsoZfzZK6a"
         },
         {
-            "nome": "Headset gamer RZR modelo 9490",
-            "preco": 180,
-            "descricao": "Headset gamer",
-            "quantidade": 280,
-            "_id": "WVjsXXeLZpe0YImp"
+            "nome": "Caixa de som PC Sound modelo 3673",
+            "preco": 520,
+            "descricao": "Caixa de som PC",
+            "quantidade": 320,
+            "_id": "L4XaxlO0bgngK6jn"
         },
         {
-            "nome": "Câmera fullhd ViewAll PC modelo 6914",
-            "preco": 180,
-            "descricao": "Câmera video chamada full hd",
-            "quantidade": 40,
-            "_id": "cQ3LNq19WUV1wUd3"
-        },
-        {
-            "nome": "Kit Home Office 2022 modelo 583",
+            "nome": "Kit Home Office 2022 modelo 7107",
             "preco": 450,
             "descricao": "Kit completo câmera, teclado, apoio de mão e headset básico",
             "quantidade": 250,
-            "_id": "f3GH6vskKfIWqbRJ"
+            "_id": "M3n8cjHJhuR8Vwo2"
         },
         {
-            "nome": "Desktop office AMD Basix modelo 4143",
+            "nome": "Desktop gamer AMD Fighter modelo 7474",
+            "preco": 3500,
+            "descricao": "PC Fighter gamer",
+            "quantidade": 5,
+            "_id": "UDUir6AEk1Qo4Fzc"
+        },
+        {
+            "nome": "Desktop office AMD Basix modelo 8935",
             "preco": 2500,
             "descricao": "AMD Basix pc básico",
             "quantidade": 15,
-            "_id": "ktD4ujiBRyaRsTf6"
+            "_id": "fSHJPOwLRmOxrSQZ"
         },
         {
-            "nome": "Fone bluetooth Master modelo 6077",
+            "nome": "Câmera fullhd ViewAll PC modelo 2276",
+            "preco": 180,
+            "descricao": "Câmera video chamada full hd",
+            "quantidade": 40,
+            "_id": "uhv9GArYiwCdS9HK"
+        },
+        {
+            "nome": "Fone bluetooth Master modelo 7201",
             "preco": 250,
             "descricao": "Fone bluetooth",
             "quantidade": 150,
-            "_id": "pj9HrwCFNxUSPfGp"
-        },
-        {
-            "nome": "Logitech MX Vertical modelo 8791",
-            "preco": 470,
-            "descricao": "Mouse",
-            "quantidade": 200,
-            "_id": "uXVCO8LPgFztrfzD"
+            "_id": "xdTtvqI2wwOz9TgF"
         }
     ]
 }
