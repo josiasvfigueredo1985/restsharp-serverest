@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DesafioAutomacaoAPIBase2.Steps
 {
@@ -37,7 +38,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             // DeletarCarrinhoConcluirCompra();
 
             //Pegar o id gerado
-            dynamic jsonData = JsonConvert.DeserializeObject(ProdutosStep.CriarProduto().Content.ToString());
+            dynamic jsonData = JsonConvert.DeserializeObject(ProdutosStep.CriarProduto().Content);
             string idProduto = jsonData._id.Value;
 
             //Criar o novo carrinho com o id do produto
@@ -45,7 +46,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             carrinho.SetJsonBody(idProduto, 1);
 
             IRestResponse response = carrinho.ExecuteRequest();
-
+            Thread.Sleep(1000);
             //Console.WriteLine(response.Content.ToString());
 
             return response;
@@ -89,7 +90,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             string id = jsonData._id.Value;
             GetCarrinhoPorId get = new GetCarrinhoPorId(id);
             IRestResponse response = get.ExecuteRequest();
-
+            Thread.Sleep(1000);
             // Console.WriteLine(response.Content.ToString());
 
             return response;

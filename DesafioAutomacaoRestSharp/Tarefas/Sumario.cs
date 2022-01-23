@@ -26,7 +26,7 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
             //Em outras palavras, implementar 50 CTs usando data-driven não é a mesma coisa que implementar 50 scripts.
 
             //4) O projeto deve tratar autenticação.Exemplo: OAuth2.
-            //Método implementado para retornar um Bearer Token no headers da Request Base .
+            //Método implementado para retornar um Bearer Token na Request Base.
             LoginStep.RetornaBearerToken();
 
             //5) Pelo menos um teste deve fazer a validação usando REGEX(Expressões Regulares).

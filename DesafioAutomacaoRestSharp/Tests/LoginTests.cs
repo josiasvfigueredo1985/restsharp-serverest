@@ -44,7 +44,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             PostLogin post = new PostLogin();
             post.SetJsonBody(email, password);
             IRestResponse response = post.ExecuteRequest();
-            
+
             //  Console.WriteLine(response.Content.ToString());
 
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
