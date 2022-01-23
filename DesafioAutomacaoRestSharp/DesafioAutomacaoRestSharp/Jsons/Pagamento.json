@@ -1,0 +1,16 @@
+{
+  "dataPagamento": "$dataPagamento",
+  "formaPagamento": {
+    "pix": "$pix",
+    "boleto": "$boleto",
+    "credito": {
+      "credito_status": "$credito_status",
+      "qteParcelas": "$qteParcelas",
+      "juros": "$juros"
+    }
+  },
+  "precoTotal": "$precoTotal",
+  "quantidadeTotal": "$quantidadeTotal",
+  "idUsuario": "$idUsuario",
+  "_id": "$_id"
+}
