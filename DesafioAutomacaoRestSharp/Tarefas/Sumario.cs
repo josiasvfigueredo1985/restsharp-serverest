@@ -33,14 +33,13 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
             // Método estático implementado para realizar asserção de status code com sucesso para 200 e 201
             GeneralHelpers.RegexStatusCodesSucesso("OK");
             GeneralHelpers.RegexStatusCodesSucesso("Created");
-            GeneralHelpers.RegexStatusCodesSucesso("Accepted");
 
             //6) Pelo menos um script deve usar código Groovy / Node.js ou outra linguagem para fazer scripts.
             // Não implementado
 
             // 800 Pontos (Metas 1 até 4 + as metas abaixo)
             //7) O projeto deverá gerar um relatório de testes automaticamente.
-            // Caminho do report gerado: DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Reports
+            // Caminho do report gerado: DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\Reports
 
             //8) Implementar pelo menos dois ambientes(desenvolvimento / homologação)
             // Dev
@@ -48,7 +47,7 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
             // QA
             // https://josiasvfigueredo.visualstudio.com/Praticas_De_Testes/_git/DesafioAutomacaoRestSharp?path=%2F&version=GBQA&_a=contents
             // Stage
-            // https://josiasvfigueredo.visualstudio.com/Praticas_De_Testes/_git/DesafioAutomacaoRestSharp?path=%2F&version=GBSTAGE&_a=contents
+            //https://josiasvfigueredo.visualstudio.com/Praticas_De_Testes/_git/DesafioAutomacaoRestSharp?path=%2F&version=GBSTAGE&_a=contents
 
             //9) A massa de testes deve ser preparada neste projeto, seja com scripts carregando massa nova no BD ou com restore de banco de dados.
             // Massa de dados inseridas no banco de dados MySQL hospedado em https://www.freemysqlhosting.net/
@@ -66,7 +65,7 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
             //10) Executar testes em paralelo.Pelo menos duas threads (25 testes cada).
             //Configurado nos ambientes de QA
             //11) Testes deverão ser agendados pelo Azure DevOps, Gitlab-CI, Jenkins, CircleCI, TFS ou outra ferramenta de CI que preferir.
-            // Agendamento configurado com envio de email
+            // Agendamento configurado com envio de email: 
         }
     }
 }

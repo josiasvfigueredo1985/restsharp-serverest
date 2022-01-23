@@ -163,8 +163,8 @@ C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBas
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.csproj.CoreCompileInputs.cache
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.pdb
-C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\testhost.exe
-C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\testhost.x86.exe
+C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\testhost.x86.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
@@ -213,6 +213,7 @@ C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\testhost.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
