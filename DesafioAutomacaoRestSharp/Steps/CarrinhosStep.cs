@@ -47,7 +47,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
             IRestResponse response = carrinho.ExecuteRequest();
             Thread.Sleep(1000);
-            //Console.WriteLine(response.Content.ToString());
+            Console.WriteLine(response.Content.ToString());
 
             return response;
         }

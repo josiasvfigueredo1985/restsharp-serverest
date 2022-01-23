@@ -322,7 +322,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             string id = JsonBuilder.ReturnParameterAppSettings("USER_ID");
 
             // Criar carrinho
-            dynamic jsonCar = JsonConvert.DeserializeObject(CarrinhosStep.CriarCarrinhoUnicoProduto().Content.ToString());
+            dynamic jsonCar = JsonConvert.DeserializeObject(CarrinhosStep.CriarCarrinhoUnicoProduto().Content);
             string idCar = jsonCar._id.Value;
 
             // Tentar excluir o usuário
