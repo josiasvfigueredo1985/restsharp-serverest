@@ -1,0 +1,152 @@
+Produto excluído: {
+    "message": "Não é permitido excluir produto que faz parte de carrinho",
+    "idCarrinhos": [
+        "qbMqntef4iTOwWfg"
+    ]
+}
+Produto excluído: {
+    "message": "Não é permitido excluir produto que faz parte de carrinho",
+    "idCarrinhos": [
+        "qbMqntef4iTOwWfg"
+    ]
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "dGjOtzfpE6bYar8T"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "nrW9DVkFMezO1jwA"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "3zr81V7NuuDFtaAo"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "6KSboV2gMNjUGGgG"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "a3TuYHp91aNB9NYp"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "87pT4jX3bd2CGTjn"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "3rFJSmYccczbOLcR"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "QUq596mz3LByuGEw"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "ag7nJX4NzgvWj30s"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "vbk3bgBVntkcOnO1"
+}
+Response Produtos criados: {
+    "message": "Cadastro realizado com sucesso",
+    "_id": "1XCRhk7BLkAJhHUC"
+}
+{
+    "quantidade": 13,
+    "produtos": [
+        {
+            "nome": "Kit Home Office 2022 modelo 5874",
+            "preco": 450,
+            "descricao": "Kit completo câmera, teclado, apoio de mão e headset básico",
+            "quantidade": 250,
+            "_id": "1XCRhk7BLkAJhHUC"
+        },
+        {
+            "nome": "Desktop gamer AMD Fighter modelo 2037",
+            "preco": 3500,
+            "descricao": "PC Fighter gamer",
+            "quantidade": 5,
+            "_id": "3rFJSmYccczbOLcR"
+        },
+        {
+            "nome": "Teclado Gamer TX  modelo 8804",
+            "preco": 150,
+            "descricao": "Teclado gamer",
+            "quantidade": 50,
+            "_id": "3zr81V7NuuDFtaAo"
+        },
+        {
+            "nome": "Fone bluetooth Master modelo 9295",
+            "preco": 250,
+            "descricao": "Fone bluetooth",
+            "quantidade": 150,
+            "_id": "6KSboV2gMNjUGGgG"
+        },
+        {
+            "nome": "Caixa de som PC Sound modelo 6198",
+            "preco": 520,
+            "descricao": "Caixa de som PC",
+            "quantidade": 320,
+            "_id": "87pT4jX3bd2CGTjn"
+        },
+        {
+            "nome": "Logitech MX Vertical",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 382,
+            "_id": "BeeJh5lz3k6kSIzA"
+        },
+        {
+            "nome": "Samsung 60 polegadas",
+            "preco": 5240,
+            "descricao": "TV",
+            "quantidade": 49977,
+            "_id": "K6leHdftCeOJj8BJ"
+        },
+        {
+            "nome": "Desktop office AMD Basix modelo 3488",
+            "preco": 2500,
+            "descricao": "AMD Basix pc básico",
+            "quantidade": 15,
+            "_id": "QUq596mz3LByuGEw"
+        },
+        {
+            "nome": "Headset gamer RZR modelo 7697",
+            "preco": 180,
+            "descricao": "Headset gamer",
+            "quantidade": 280,
+            "_id": "a3TuYHp91aNB9NYp"
+        },
+        {
+            "nome": "Câmera fullhd ViewAll PC modelo 6870",
+            "preco": 180,
+            "descricao": "Câmera video chamada full hd",
+            "quantidade": 40,
+            "_id": "ag7nJX4NzgvWj30s"
+        },
+        {
+            "nome": "Logitech MX Vertical modelo 8666",
+            "preco": 470,
+            "descricao": "Mouse",
+            "quantidade": 200,
+            "_id": "dGjOtzfpE6bYar8T"
+        },
+        {
+            "nome": "LG monitor curvo WS modelo 7440",
+            "preco": 2500,
+            "descricao": "Monitor",
+            "quantidade": 10,
+            "_id": "nrW9DVkFMezO1jwA"
+        },
+        {
+            "nome": "SSD externo 250 gb ProData modelo 4093",
+            "preco": 120,
+            "descricao": "SSD externo",
+            "quantidade": 50,
+            "_id": "vbk3bgBVntkcOnO1"
+        }
+    ]
+}
