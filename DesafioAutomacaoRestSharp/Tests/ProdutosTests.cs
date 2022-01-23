@@ -7,6 +7,7 @@ using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using RestSharp;
 using System;
+using System.Threading;
 
 namespace DesafioAutomacaoAPIBase2.Tests
 {
@@ -24,7 +25,9 @@ namespace DesafioAutomacaoAPIBase2.Tests
             post.SetJsonBody(nome, int.Parse(preco), descricao, int.Parse(quantidade));
             IRestResponse response = post.ExecuteRequest();
 
-            dynamic jsonData = JObject.Parse(response.Content.ToString());
+            Thread.Sleep(1000);
+
+            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
             // Inserção do ID gerado em cada response na tabela "produto" no banco de dados
             SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);

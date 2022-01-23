@@ -13,7 +13,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
         {
             get
             {
-                string folha = "Produtos";
+                int folha = 1;
                 var testCases = new List<TestCaseData>();
                 testCases = new DataDrivenHelpers().RetornaDadosExcel(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xlsx", folha);
 
@@ -27,7 +27,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
         {
             get
             {
-                string folha = "Usuarios";
+                int folha = 2;
                 var testCases = new List<TestCaseData>();
                 testCases = new DataDrivenHelpers().RetornaDadosExcel(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xlsx", folha);
 

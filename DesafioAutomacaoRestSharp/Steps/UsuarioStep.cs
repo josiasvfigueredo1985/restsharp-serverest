@@ -21,7 +21,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             var xls = new XLWorkbook(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xlsx");
             var planilha = xls.Worksheets.First(w => w.Name == "Usuarios");
             var totalLinhas = planilha.Rows().Count();
-
+            var totalColunas = planilha.ColumnsUsed().Count();
             PostUsuario usuario = new PostUsuario();
             IRestResponse response;
 
@@ -30,12 +30,14 @@ namespace DesafioAutomacaoAPIBase2.Steps
             {
                 for (int l = 2; l <= totalLinhas; l++)
                 {
-                    var nome = planilha.Cell($"A{l}").Value.ToString();
-                    var email = planilha.Cell($"B{l}").Value.ToString();
-                    var password = planilha.Cell($"C{l}").Value.ToString();
-                    var administrador = planilha.Cell($"D{l}").Value.ToString().ToLower();
-
-                    usuario.SetJsonBody(nome, email, password, Convert.ToBoolean(administrador));
+                    string[] colunas = { "A", "B", "C", "D", "E", "F" };
+                    int i = 0;
+                    var nome = planilha.Cell($"{colunas[i++]}{l}").Value.ToString();
+                    var email = planilha.Cell($"{colunas[i++]}{l}").Value.ToString();
+                    var password = planilha.Cell($"{colunas[i++]}{l}").Value.ToString();
+                    var administrador = planilha.Cell($"{colunas[i++]}{l}").Value.ToString().ToLower();
+                   
+                        usuario.SetJsonBody(nome, email, password, Convert.ToBoolean(administrador));
                     response = usuario.ExecuteRequest();
 
                     dynamic jsonData = JObject.Parse(response.Content.ToString());
