@@ -13,9 +13,9 @@ namespace DesafioAutomacaoAPIBase2.Steps
         {
             get
             {
-                string folha = "Produtos";
+                int folha = 1;
                 var testCases = new List<TestCaseData>();
-                testCases = new DataDrivenHelpers().RetornaDadosExcel(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xls", folha);
+                testCases = new DataDrivenHelpers().RetornaDadosExcel(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xlsx", folha);
 
                 if (testCases != null)
                     foreach (TestCaseData testCaseData in testCases)
@@ -27,9 +27,9 @@ namespace DesafioAutomacaoAPIBase2.Steps
         {
             get
             {
-                string folha = "Usuarios";
+                int folha = 2;
                 var testCases = new List<TestCaseData>();
-                testCases = new DataDrivenHelpers().RetornaDadosExcel(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xls", folha);
+                testCases = new DataDrivenHelpers().RetornaDadosExcel(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xlsx", folha);
 
                 if (testCases != null)
                     foreach (TestCaseData testCaseData in testCases)
