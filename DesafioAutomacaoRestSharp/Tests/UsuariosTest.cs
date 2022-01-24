@@ -318,13 +318,16 @@ namespace DesafioAutomacaoAPIBase2.Tests
         [Test]
         public void ExcluirUsuarioComCarrinhoCadastrado()
         {
+            // Exclui todos os usuários cadastrados (Ao realizar o login, será criado um novo usuário e o id será gurdado no appsettings)
+            UsuarioStep.DeletarUsuariosCriados();
+
             string msg = "Não é permitido excluir usuário com carrinho cadastrado";
-            string id = JsonBuilder.ReturnParameterAppSettings("USER_ID");
 
             // Criar carrinho
             dynamic jsonCar = JsonConvert.DeserializeObject(CarrinhosStep.CriarCarrinhoUnicoProduto().Content.ToString());
             string idCar = jsonCar._id.Value;
 
+            string id = JsonBuilder.ReturnParameterAppSettings("USER_ID");
             // Tentar excluir o usuário
             DeleteUsuario delete = new DeleteUsuario(id);
             IRestResponse response = delete.ExecuteRequest();
