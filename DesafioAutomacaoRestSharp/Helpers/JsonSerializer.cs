@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RestSharp.Serializers;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
     public class JsonSerializer : ISerializer
     {

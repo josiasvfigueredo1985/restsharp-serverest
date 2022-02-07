@@ -1,17 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <ApplicationIcon />
-    <OutputType>WinExe</OutputType>
-    <StartupObject />
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<ApplicationIcon />
+		<OutputType>WinExe</OutputType>
+		<StartupObject />
+		<SignAssembly>false</SignAssembly>
+	</PropertyGroup>
 
+	<PropertyGroup>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Win32Resource />
+	</PropertyGroup>
+	
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG</DefineConstants>
     <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
 
   <ItemGroup>

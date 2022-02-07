@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
     public class GeneralHelpers
     {
@@ -150,7 +150,7 @@ namespace DesafioAutomacaoAPIBase2.Helpers
             string randomNumber = _random.Next(min, max).ToString();
             return randomNumber;
         }
-
+        // Regex para validação de status codes com sucesso
         public static bool RegexStatusCodesSucesso(string statusCode)
         {
             Regex rgx = new Regex(@"[OK,Created,Accepted]$");
@@ -159,7 +159,7 @@ namespace DesafioAutomacaoAPIBase2.Helpers
 
         public static bool ValidaContrato(string modelo, string response)
         {
-            try
+            if (!IsAJsonArray(response))
             {
                 JSchema schema = JSchema.Parse(modelo);
 
@@ -169,17 +169,16 @@ namespace DesafioAutomacaoAPIBase2.Helpers
 
                 return valid;
             }
-            catch (Exception)
+            else
             {
                 JSchema schema = JSchema.Parse(modelo);
 
-               JArray json = JArray.Parse(response);
+                JArray json = JArray.Parse(response);
 
                 bool valid = json.IsValid(schema);
 
                 return valid;
             }
-      
         }
     }
 

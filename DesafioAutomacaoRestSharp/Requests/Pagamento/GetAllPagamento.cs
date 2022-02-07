@@ -1,8 +1,8 @@
-﻿using DesafioAutomacaoAPIBase2.Bases;
-using DesafioAutomacaoAPIBase2.Helpers;
+﻿using DesafioAutomacaoRestSharp.Bases;
+using DesafioAutomacaoRestSharp.Helpers;
 using RestSharp;
 
-namespace DesafioAutomacaoAPIBase2.Requests.Pagamento
+namespace DesafioAutomacaoRestSharp.Requests.Pagamento
 {
     public class GetAllPagamento : RequestBase
     {

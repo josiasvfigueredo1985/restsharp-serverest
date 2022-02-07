@@ -1,18 +1,20 @@
-﻿using DesafioAutomacaoAPIBase2.DBSteps;
-using DesafioAutomacaoAPIBase2.Helpers;
-using DesafioAutomacaoAPIBase2.Requests.Carrinhos;
+﻿using DesafioAutomacaoRestSharp.DBSteps;
+using DesafioAutomacaoRestSharp.Helpers;
+using DesafioAutomacaoRestSharp.Requests.Carrinhos;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace DesafioAutomacaoAPIBase2.Steps
+namespace DesafioAutomacaoRestSharp.Steps
 {
+    // As Thread.Sleep adicionadas foram necessárias para executar os testes em paralelo, devido ao uso simultâneo de recursos do appsettings.json
     public class CarrinhosStep
     {
-        public static IRestResponse CriarCarrinhoComProdutosDataSet()
+        public static IRestResponse<dynamic> CriarCarrinhoComProdutosDataSet()
         {
             string jsonPath = GeneralHelpers.ReturnProjectPath() + "Jsons/CarrinhoDataSet.json";
 
@@ -25,72 +27,72 @@ namespace DesafioAutomacaoAPIBase2.Steps
             //Executa a requisição passando somente o json já criado
             PostCarrinho post = new PostCarrinho();
             post.SetJsonBody(jsonPath);
-            IRestResponse response = post.ExecuteRequest();
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             // Console.WriteLine(response.Content.ToString());
 
             return response;
         }
 
-        public static IRestResponse CriarCarrinhoUnicoProduto()
+        public static IRestResponse<dynamic> CriarCarrinhoUnicoProduto()
         {
             DeletarCarrinhoCancelarCompra();
-            // DeletarCarrinhoConcluirCompra();
 
             //Pegar o id gerado
-            dynamic jsonData = JsonConvert.DeserializeObject(ProdutosStep.CriarProduto().Content);
-            string idProduto = jsonData._id.Value;
+            string idProduto = ProdutosStep.CriarProduto().Data._id;
 
             //Criar o novo carrinho com o id do produto
             PostCarrinho carrinho = new PostCarrinho();
             carrinho.SetJsonBody(idProduto, 1);
 
-            IRestResponse response = carrinho.ExecuteRequest();
-            Thread.Sleep(1000);
-            Console.WriteLine("Carrinho criado: "+response.Content.ToString());
+            IRestResponse<dynamic> response = carrinho.ExecuteRequest();
+
+            Console.WriteLine("Carrinho criado: " + response.Content.ToString());
 
             return response;
         }
 
-        public static IRestResponse CriarCarrinhoUnicoProduto(string idProduto)
+        public static IRestResponse<dynamic> CriarCarrinhoUnicoProduto(string idProduto)
         {
             //Criar o novo carrinho com o id do produto informado
             PostCarrinho carrinho = new PostCarrinho();
             carrinho.SetJsonBody(idProduto, 1);
-            IRestResponse response = carrinho.ExecuteRequest();
+            IRestResponse<dynamic> response = carrinho.ExecuteRequest();
 
             // Console.WriteLine(response.Content.ToString());
 
             return response;
         }
 
-        public static IRestResponse DeletarCarrinhoConcluirCompra()
+        public static IRestResponse<dynamic> DeletarCarrinhoConcluirCompra()
         {
             DeleteConcluirCompra delCompra = new DeleteConcluirCompra();
-            IRestResponse response = delCompra.ExecuteRequest();
+            IRestResponse<dynamic> response = delCompra.ExecuteRequest();
 
             // Console.WriteLine("Carrinho deletado - Concluir compra: {0}", response.Content.ToString());
-
+            Thread.Sleep(1000);
             return response;
         }
 
-        public static IRestResponse DeletarCarrinhoCancelarCompra()
+        public static IRestResponse<dynamic> DeletarCarrinhoCancelarCompra()
         {
+            Thread.Sleep(1000);
             DeleteCancelarCompra delCancel = new DeleteCancelarCompra();
-            IRestResponse response = delCancel.ExecuteRequest();
+            IRestResponse<dynamic> response = delCancel.ExecuteRequest();
 
             // Console.WriteLine("Carrinho deletado - Cancelar compra: {0}", response.Content.ToString());
 
             return response;
         }
 
-        public static IRestResponse ConsultarCarrinho()
+        public static IRestResponse<dynamic> ConsultarCarrinho()
         {
-            dynamic jsonData = JsonConvert.DeserializeObject(CriarCarrinhoUnicoProduto().Content);
-            string id = jsonData._id.Value;
-            GetCarrinhoPorId get = new GetCarrinhoPorId(id);
-            IRestResponse response = get.ExecuteRequest();
-            Thread.Sleep(1000);
+            // Exemplo da otimização de código utilizando o atributo Data do objeto dinâmico tratado no método Executerequest (RestSharpHelpers)
+            //dynamic jsonData = JsonConvert.DeserializeObject(CriarCarrinhoUnicoProduto().Content);
+            //string id = jsonData._id.Value;
+            GetCarrinhoPorId get = new GetCarrinhoPorId(CriarCarrinhoUnicoProduto().Data.id);
+            IRestResponse<dynamic> response = get.ExecuteRequest();
+
             // Console.WriteLine(response.Content.ToString());
 
             return response;

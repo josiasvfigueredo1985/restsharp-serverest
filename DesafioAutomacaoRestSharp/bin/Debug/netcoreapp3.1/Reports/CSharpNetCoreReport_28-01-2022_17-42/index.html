@@ -1,0 +1,1618 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+
+
+<body class="test-view  standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Extent Framework</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">28/01/2022 17:42:08</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+									<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-exclamation-circle"></i>
+										</a>
+										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																																																		<div class="dropdown-divider"></div>
+											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+										</ul>
+									</li>
+																		<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-tag"></i>
+										</a>
+										<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+												<a class="dropdown-item" href="#">LoginTests</a>
+										</ul>
+                                    </li>
+									                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+										<li class="test-item" status="pass" author="" device="" tag="LoginTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">LoginComSucesso</p> 
+													<p class="duration text-sm">0h:0m:20s+938ms</p> 
+													<span class="datetime">17:42:08 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">LoginComSucesso</h5>
+															<span class='badge badge-success'>28/01/2022 17:42:08</span>
+															<span class='badge badge-danger'>28/01/2022 17:42:29</span>
+															<span class='badge badge-default'>0h:0m:20s+938ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> LoginTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>17:42:08</td>
+				<td>
+DeletarTodosUsuariosCriados || PARAMETERS: Query executada: delete from usuarios;									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>17:42:19</td>
+				<td>
+InserirIdUsuarioCriadoDB || PARAMETERS: Dados do usuário: 
+Nome: Pleonário Silvestre
+ID: ML8664w36mFPjJa3									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>17:42:21</td>
+				<td>
+DeletarTodosUsuariosCriados || PARAMETERS: Query executada: delete from usuarios;									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>17:42:29</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - usuarios</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:10</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:10</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:10</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:10</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTE2LCJleHAiOjE2NDM0MDMxMTZ9.yWNb5Z20in4zE-OaskuD865DzTvSP1i11ezdRqOJAZ0
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:10</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:10</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=880e9abf-3c05-479c-b102-f6102a57d019
+X-Cloud-Trace-Context=51d12c32431050d79f2bddba9116f20a
+Date=Fri, 28 Jan 2022 20:42:10 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=1132</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:10</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  5,
+    
+    "usuarios":  [
+        
+        {
+            
+            "nome":  "Usuario Três",
+            
+            "email":  "usuario3@qa.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "BVT5wriIxApCH0JT"
+        
+        },
+        
+        {
+            
+            "nome":  "Campeao da Silva",
+            
+            "email":  "campeao@teste123.com",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "ZL7qdgfERJlpNyl8"
+        
+        },
+        
+        {
+            
+            "nome":  "Josias Valentim",
+            
+            "email":  "josias_testes_automatizados@base2.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "gRLwoFM4MGl0Y8md"
+        
+        },
+        
+        {
+            
+            "nome":  "Novo Usuario25",
+            
+            "email":  "novousuario25@qa.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "u1QRzcabG0Mu1dK9"
+        
+        },
+        
+        {
+            
+            "nome":  "Novo Usuario 7",
+            
+            "email":  "novousuario7@qa.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "x4Bw1bbrL8ElG4rZ"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/BVT5wriIxApCH0JT</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:11</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:11</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/BVT5wriIxApCH0JT</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:11</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:11</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTE2LCJleHAiOjE2NDM0MDMxMTZ9.yWNb5Z20in4zE-OaskuD865DzTvSP1i11ezdRqOJAZ0
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:11</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:11</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=3c1f164f-9c70-4d50-9e3a-39127ec55c74
+X-Cloud-Trace-Context=9ff65caee522b825d1ac0d72c00b873e
+Date=Fri, 28 Jan 2022 20:42:11 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=117</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:11</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir usuário com carrinho cadastrado",
+    
+    "idCarrinho":  "HfRQbXdyWcBKhmGZ"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/ZL7qdgfERJlpNyl8</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:12</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:12</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/ZL7qdgfERJlpNyl8</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:12</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:12</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTE2LCJleHAiOjE2NDM0MDMxMTZ9.yWNb5Z20in4zE-OaskuD865DzTvSP1i11ezdRqOJAZ0
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:12</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:12</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=7cf1e914-2d35-4682-a9b1-c3fe2dd08f6e
+X-Cloud-Trace-Context=1055dcb02511cf8e4400846ace1cb12e
+Date=Fri, 28 Jan 2022 20:42:12 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=117</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:12</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir usuário com carrinho cadastrado",
+    
+    "idCarrinho":  "OKZY7pxJaBqM4j1t"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/gRLwoFM4MGl0Y8md</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:13</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:13</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/gRLwoFM4MGl0Y8md</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:13</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:13</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTE2LCJleHAiOjE2NDM0MDMxMTZ9.yWNb5Z20in4zE-OaskuD865DzTvSP1i11ezdRqOJAZ0
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:13</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:13</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=3d46b30a-ed2f-462c-98a4-e9127de44ebe
+X-Cloud-Trace-Context=9f4b25fda1e9dc2cc2786dea3e6dc245
+Date=Fri, 28 Jan 2022 20:42:13 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:13</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/u1QRzcabG0Mu1dK9</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:16</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:16</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/u1QRzcabG0Mu1dK9</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:16</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:16</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:16</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:16</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=7aa91038-3ae3-43a6-b4e2-d3f5a5278c10
+X-Cloud-Trace-Context=e489df39fb4c4d989fe54ec6777d2ccb
+Date=Fri, 28 Jan 2022 20:42:16 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:16</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/x4Bw1bbrL8ElG4rZ</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:17</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:17</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/x4Bw1bbrL8ElG4rZ</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:17</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:17</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:17</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:17</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=60d8447e-dbd2-4831-b85c-9a606848ff3f
+X-Cloud-Trace-Context=e090adfe8350b0cb1254253109f07da8
+Date=Fri, 28 Jan 2022 20:42:17 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:17</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - usuarios</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Pleonário Silvestre",
+  "email": "pleo_8446@globo.com",
+  "password": "w1nn3r_1982",
+  "administrador": "true"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=e163f8e0-81d7-4687-a22d-e33e758534ef
+X-Cloud-Trace-Context=cb09115858ea3b341533a383ed22d10a
+Date=Fri, 28 Jan 2022 20:42:18 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:18</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "ML8664w36mFPjJa3"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - usuarios/ML8664w36mFPjJa3</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:20</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:20</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/ML8664w36mFPjJa3</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:20</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:20</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:20</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:20</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=fcefdb28-ffbb-4dd0-8d1c-5ca29d598bbc
+X-Cloud-Trace-Context=80af85f6d240dbec01c929c30ef6b4dd
+Date=Fri, 28 Jan 2022 20:42:20 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=165</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:20</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "nome":  "Pleonário Silvestre",
+    
+    "email":  "pleo_8446@globo.com",
+    
+    "password":  "w1nn3r_1982",
+    
+    "administrador":  "true",
+    
+    "_id":  "ML8664w36mFPjJa3"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - login</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>REQUEST: </b>login</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "email": "pleo_8446@globo.com",
+  "password": "w1nn3r_1982"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=a0e03846-1ee8-4bfe-a3af-dac8cfad4899
+X-Cloud-Trace-Context=e4cecc5820a849f830ad8b0e342b3f92
+Date=Fri, 28 Jan 2022 20:42:21 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=281</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:21</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Login realizado com sucesso",
+    
+    "authorization":  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBsZW9fODQ0NkBnbG9iby5jb20iLCJwYXNzd29yZCI6Incxbm4zcl8xOTgyIiwiaWF0IjoxNjQzNDAyNTQxLCJleHAiOjE2NDM0MDMxNDF9.Qdxl35GusJQMf8S4WQVrpn0pZI4i8J8IVudmfIt_CAo"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - usuarios</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:22</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:22</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:22</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:22</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:22</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:22</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=405a4b3f-72b7-40b0-9f43-e5d38b44ad3c
+X-Cloud-Trace-Context=dce517d334fc764950135240e74996e2
+Date=Fri, 28 Jan 2022 20:42:22 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=926</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:22</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  4,
+    
+    "usuarios":  [
+        
+        {
+            
+            "nome":  "Usuario Três",
+            
+            "email":  "usuario3@qa.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "BVT5wriIxApCH0JT"
+        
+        },
+        
+        {
+            
+            "nome":  "Josias Valentim",
+            
+            "email":  "josias_testes_automatizados@base2.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "DbFmTalmUAbJ5kML"
+        
+        },
+        
+        {
+            
+            "nome":  "Pleonário Silvestre",
+            
+            "email":  "pleo_8446@globo.com",
+            
+            "password":  "w1nn3r_1982",
+            
+            "administrador":  "true",
+            
+            "_id":  "ML8664w36mFPjJa3"
+        
+        },
+        
+        {
+            
+            "nome":  "Campeao da Silva",
+            
+            "email":  "campeao@teste123.com",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "ZL7qdgfERJlpNyl8"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/BVT5wriIxApCH0JT</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:24</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:24</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/BVT5wriIxApCH0JT</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:24</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:24</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:24</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:24</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=d0d6b37d-5af7-424d-a149-a92a89c02cce
+X-Cloud-Trace-Context=8e60877098c2fad7aaf5fcb66d89ea70
+Date=Fri, 28 Jan 2022 20:42:23 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=117</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:24</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir usuário com carrinho cadastrado",
+    
+    "idCarrinho":  "HfRQbXdyWcBKhmGZ"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/DbFmTalmUAbJ5kML</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:25</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:25</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/DbFmTalmUAbJ5kML</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:25</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:25</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTM1LCJleHAiOjE2NDM0MDMxMzV9.Gpllz7BweHPbWO3hMdh_4TxlzKnv-e2ExMiwQWtLxpQ
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:25</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:25</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=ab40e4a8-7552-41da-a3d4-ab64aae4ada7
+X-Cloud-Trace-Context=c1dda47b277678cafb9f0e5d44f6c177
+Date=Fri, 28 Jan 2022 20:42:25 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:25</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/ML8664w36mFPjJa3</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:28</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:28</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/ML8664w36mFPjJa3</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:28</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:28</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTQ3LCJleHAiOjE2NDM0MDMxNDd9.h6OUZPE3GMXOf50gZ0-lc-zGxvDEOITCpxtKvV6H0yI
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:28</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:28</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=ff04abb8-2909-459e-abb5-f99361a44872
+X-Cloud-Trace-Context=7d8f8d9045cee3832c751f4a0fa134af
+Date=Fri, 28 Jan 2022 20:42:27 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:28</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/ZL7qdgfERJlpNyl8</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:29</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:29</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/ZL7qdgfERJlpNyl8</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:29</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:29</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNDAyNTQ3LCJleHAiOjE2NDM0MDMxNDd9.h6OUZPE3GMXOf50gZ0-lc-zGxvDEOITCpxtKvV6H0yI
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:29</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:29</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=447a3c3d-21fb-496e-a529-7bb9d46d5161
+X-Cloud-Trace-Context=e009c4b703b6c29b726fae35db699f1f
+Date=Fri, 28 Jan 2022 20:42:29 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=117</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>17:42:29</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir usuário com carrinho cadastrado",
+    
+    "idCarrinho":  "OKZY7pxJaBqM4j1t"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,5783 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+
+
+<body class="test-view  standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Extent Framework</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">06/02/2022 12:19:55</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+									<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-exclamation-circle"></i>
+										</a>
+										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>											<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																																																							<div class="dropdown-divider"></div>
+											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+										</ul>
+									</li>
+																		<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-tag"></i>
+										</a>
+										<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+												<a class="dropdown-item" href="#">.CarrinhosTests</a>
+										</ul>
+                                    </li>
+									                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+										<li class="test-item" status="pass" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">BuscarCarrinhoPorID</p> 
+													<p class="duration text-sm">0h:0m:18s+729ms</p> 
+													<span class="datetime">12:19:55 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">BuscarCarrinhoPorID</h5>
+															<span class='badge badge-success'>06/02/2022 12:19:55</span>
+															<span class='badge badge-danger'>06/02/2022 12:20:13</span>
+															<span class='badge badge-default'>0h:0m:18s+729ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:19:57</td>
+				<td>
+InserirProdutoCriadoDB || PARAMETERS: produto_id = 3vBNGlRTtP58SjgU									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:13</td>
+				<td>
+DeletarTodosIdsProdutos || PARAMETERS: Coluna: produto_id									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:14</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Notebook Asus Ryzen 5 f_tcDi",
+  "preco": "2300",
+  "descricao": "Notebook Gamer MOdNZ1",
+  "quantidade": "1"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=47523385-727d-4111-b20b-bfec94685ec7
+X-Cloud-Trace-Context=fe91edfaed332c4755e996dd318495a8
+Date=Sun, 06 Feb 2022 15:19:55 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:19:56</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "3vBNGlRTtP58SjgU"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:01</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:01</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:01</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:01</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:01</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:01</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=49e0b123-7b50-4374-9a25-10ab74778514
+X-Cloud-Trace-Context=a8717f1b2b90af7c427418a169178a5b
+Date=Sun, 06 Feb 2022 15:19:59 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=86</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:01</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso. Estoque dos produtos reabastecido"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/concluir-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:02</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:02</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/concluir-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:02</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:02</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:02</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:02</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=bde281b6-55a9-4394-9ebe-f517efc143b2
+X-Cloud-Trace-Context=0aae4b95dc1fce8737f197da00296009
+Date=Sun, 06 Feb 2022 15:20:00 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:02</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "3vBNGlRTtP58SjgU",
+      "quantidade": "1"
+    }
+  ]
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=f49de610-0985-433b-817c-75f9b7809632
+X-Cloud-Trace-Context=11d734135eb78b551405639be4c274cd
+Date=Sun, 06 Feb 2022 15:20:03 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:05</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "HrDk98Uzlst6KhLz"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - carrinhos/HrDk98Uzlst6KhLz</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:06</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:06</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/HrDk98Uzlst6KhLz</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:06</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:06</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:06</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:06</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=6f010981-a9f2-4fda-8dc0-0cf08776bec5
+X-Cloud-Trace-Context=6560814b903b2169acfe7043a576b16b
+Date=Sun, 06 Feb 2022 15:20:04 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=273</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:06</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "produtos":  [
+        
+        {
+            
+            "idProduto":  "3vBNGlRTtP58SjgU",
+            
+            "quantidade":  1,
+            
+            "precoUnitario":  2300
+        
+        }
+    
+    ],
+    
+    "precoTotal":  2300,
+    
+    "quantidadeTotal":  1,
+    
+    "idUsuario":  "IoU9SRbmOWVCp6gK",
+    
+    "_id":  "HrDk98Uzlst6KhLz"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:08</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:08</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:08</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:08</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:08</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:08</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=80c20019-b0d2-4018-bbed-7692370d8d6c
+X-Cloud-Trace-Context=0eb48761010a0921185a7e056fefd78b
+Date=Sun, 06 Feb 2022 15:20:06 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=86</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:08</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso. Estoque dos produtos reabastecido"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:09</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:09</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:09</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:09</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:09</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:09</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=31b45a02-e6f4-4542-9d77-2bb034f535c6
+X-Cloud-Trace-Context=89d9626f348d2df83d91a2f941724f3d
+Date=Sun, 06 Feb 2022 15:20:07 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=869</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:09</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  4,
+    
+    "produtos":  [
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 f_tcDi",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer MOdNZ1",
+            
+            "quantidade":  1,
+            
+            "_id":  "3vBNGlRTtP58SjgU"
+        
+        },
+        
+        {
+            
+            "nome":  "Logitech MX Vertical",
+            
+            "preco":  470,
+            
+            "descricao":  "Mouse",
+            
+            "quantidade":  382,
+            
+            "_id":  "BeeJh5lz3k6kSIzA"
+        
+        },
+        
+        {
+            
+            "nome":  "Samsung 60 polegadas",
+            
+            "preco":  5240,
+            
+            "descricao":  "TV",
+            
+            "quantidade":  49977,
+            
+            "_id":  "K6leHdftCeOJj8BJ"
+        
+        },
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 ckXd3L",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer 17PQ4m",
+            
+            "quantidade":  1,
+            
+            "_id":  "oGmVcQXQBWTaQ9Zb"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/3vBNGlRTtP58SjgU</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:10</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:10</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/3vBNGlRTtP58SjgU</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:10</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:10</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:10</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:10</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=a357839d-b1c4-4b46-a2aa-db3c9a461a95
+X-Cloud-Trace-Context=7c381f96c364a657ac3e3af96cbb87b1
+Date=Sun, 06 Feb 2022 15:20:09 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:10</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/BeeJh5lz3k6kSIzA</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:11</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:11</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/BeeJh5lz3k6kSIzA</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:11</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:11</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:11</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:11</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=ab764b77-0c35-41bc-9ed8-66d82e454ff8
+X-Cloud-Trace-Context=7fb60da566509e898e585b50d9ed9e72
+Date=Sun, 06 Feb 2022 15:20:10 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:11</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/K6leHdftCeOJj8BJ</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:12</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:12</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/K6leHdftCeOJj8BJ</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:12</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:12</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:12</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:12</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=63b66ee4-bfe8-446b-8f35-a83ec5139c22
+X-Cloud-Trace-Context=a1062ca0805b35a88ac5c94b827a741e
+Date=Sun, 06 Feb 2022 15:20:11 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:12</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/oGmVcQXQBWTaQ9Zb</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:13</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:13</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/oGmVcQXQBWTaQ9Zb</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:13</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:13</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:13</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:13</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=3ff4aca4-5b32-4c31-bde8-460a164eeb65
+X-Cloud-Trace-Context=5ea3283f30f2bb055cbc4384ae3510c7
+Date=Sun, 06 Feb 2022 15:20:12 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:13</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">BuscarCarrinhoPorIDInexistente</p> 
+													<p class="duration text-sm">0h:0m:1s+098ms</p> 
+													<span class="datetime">12:20:14 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">BuscarCarrinhoPorIDInexistente</h5>
+															<span class='badge badge-success'>06/02/2022 12:20:14</span>
+															<span class='badge badge-danger'>06/02/2022 12:20:16</span>
+															<span class='badge badge-default'>0h:0m:1s+098ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:16</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - carrinhos/idInexistente</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:16</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:16</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/idInexistente</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:16</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:16</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:16</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:16</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=ac12fcd1-18ef-4f3e-a3b7-96188bad98f8
+X-Cloud-Trace-Context=6ee09cf0624a08a2f694d6b844afee24
+Date=Sun, 06 Feb 2022 15:20:14 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=45</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:16</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Carrinho não encontrado"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CadastrarCarrinho</p> 
+													<p class="duration text-sm">0h:0m:8s+873ms</p> 
+													<span class="datetime">12:20:16 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CadastrarCarrinho</h5>
+															<span class='badge badge-success'>06/02/2022 12:20:16</span>
+															<span class='badge badge-danger'>06/02/2022 12:20:24</span>
+															<span class='badge badge-default'>0h:0m:8s+873ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:17</td>
+				<td>
+InserirProdutoCriadoDB || PARAMETERS: produto_id = eBcBm8Ej1m6cvpMF									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:24</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Notebook Asus Ryzen 5 aaD0Mj",
+  "preco": "2300",
+  "descricao": "Notebook Gamer SmRVfE",
+  "quantidade": "1"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=859ebeb5-8f76-47d9-884a-e2d35caca0a7
+X-Cloud-Trace-Context=d4ff433c2a0b5b37984abc72e2ab7618
+Date=Sun, 06 Feb 2022 15:20:16 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:17</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "eBcBm8Ej1m6cvpMF"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:21</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:21</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:21</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:21</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:21</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:21</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=801559a1-2ae5-4b4f-8f6e-5f01fdfb80f4
+X-Cloud-Trace-Context=cf6b33bb31277aaa75bb495374abb648
+Date=Sun, 06 Feb 2022 15:20:19 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:21</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/concluir-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:22</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:22</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/concluir-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:22</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:22</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:22</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:22</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=61e5b6c8-de9c-49c8-bbc3-243ca1276a4b
+X-Cloud-Trace-Context=e288d7d41c1a5930f31ab6c069e7a364
+Date=Sun, 06 Feb 2022 15:20:20 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:22</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "eBcBm8Ej1m6cvpMF",
+      "quantidade": "1"
+    }
+  ]
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=7f5f4e7f-2427-4f1b-93bb-0ad187f76bcc
+X-Cloud-Trace-Context=a84720424399de87a6a33cb1a1cf46a9
+Date=Sun, 06 Feb 2022 15:20:23 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:24</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "j14Sb1i5bk32TaNq"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CadastrarCarrinhoComProdutoDuplicado</p> 
+													<p class="duration text-sm">0h:0m:9s+648ms</p> 
+													<span class="datetime">12:20:24 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CadastrarCarrinhoComProdutoDuplicado</h5>
+															<span class='badge badge-success'>06/02/2022 12:20:24</span>
+															<span class='badge badge-danger'>06/02/2022 12:20:34</span>
+															<span class='badge badge-default'>0h:0m:9s+648ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:31</td>
+				<td>
+InserirProdutoCriadoDB || PARAMETERS: produto_id = bDtXkqsSCrNCst2m									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:34</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:27</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:27</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:27</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:27</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:27</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:27</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=432c4728-2ab2-443f-9a30-73232f4c757b
+X-Cloud-Trace-Context=a62801999f786107b9efe6688334dcf2
+Date=Sun, 06 Feb 2022 15:20:25 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=86</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:27</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso. Estoque dos produtos reabastecido"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/concluir-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:28</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:28</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/concluir-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:28</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:28</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:28</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:28</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=3d3d7bce-4a66-42ca-bf13-a63668c02763
+X-Cloud-Trace-Context=ea2c518b09769148d715ff60e71a5f03
+Date=Sun, 06 Feb 2022 15:20:26 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:28</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Notebook Asus Ryzen 5 pO12uU",
+  "preco": "2300",
+  "descricao": "Notebook Gamer TbZrkU",
+  "quantidade": "1"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=6f78dad4-ca49-4228-8424-f0ba6d13824b
+X-Cloud-Trace-Context=b5e126ce9c4942e2e40d3b90f99b7d3d
+Date=Sun, 06 Feb 2022 15:20:29 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:31</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "bDtXkqsSCrNCst2m"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "bDtXkqsSCrNCst2m",
+      "quantidade": 1
+    },
+    {
+      "idProduto": "bDtXkqsSCrNCst2m",
+      "quantidade": 1
+    }
+  ]
+}
+</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=17e16d08-577e-4faa-92a9-c0fc4eae3fcc
+X-Cloud-Trace-Context=a9db87e67b7992d1216da0bdd82f9bd7
+Date=Sun, 06 Feb 2022 15:20:33 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=128</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:34</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido possuir produto duplicado",
+    
+    "idProdutosDuplicados":  [
+        
+        "bDtXkqsSCrNCst2m"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CadastrarCarrinhoDuplicado</p> 
+													<p class="duration text-sm">0h:0m:5s+146ms</p> 
+													<span class="datetime">12:20:34 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CadastrarCarrinhoDuplicado</h5>
+															<span class='badge badge-success'>06/02/2022 12:20:34</span>
+															<span class='badge badge-danger'>06/02/2022 12:20:39</span>
+															<span class='badge badge-default'>0h:0m:5s+146ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:36</td>
+				<td>
+InserirProdutoCriadoDB || PARAMETERS: produto_id = jcHozhjSaejRFhZi									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:39</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Notebook Asus Ryzen 5 BscB0m",
+  "preco": "2300",
+  "descricao": "Notebook Gamer JHRUUC",
+  "quantidade": "1"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=995d8802-5562-489e-a46b-ba05ba448576
+X-Cloud-Trace-Context=56a74a853af3819d42d0cca346dfee2f
+Date=Sun, 06 Feb 2022 15:20:35 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:36</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "jcHozhjSaejRFhZi"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "jcHozhjSaejRFhZi",
+      "quantidade": "1"
+    }
+  ]
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=7bcfb27d-260d-4ea5-8c58-81c9e65a476d
+X-Cloud-Trace-Context=279160208e47e57fda6082c80568a761
+Date=Sun, 06 Feb 2022 15:20:37 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "xTydndQVZPmTocaa"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "jcHozhjSaejRFhZi",
+      "quantidade": "1"
+    }
+  ]
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=5ba73aae-43d4-431e-b026-2b5e6d65aed4
+X-Cloud-Trace-Context=8b53aa90046f4b9c21b878de2eb5b7a2
+Date=Sun, 06 Feb 2022 15:20:38 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=61</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:39</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido ter mais de 1 carrinho"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">ExcluirCarrinhoCancelarCompra</p> 
+													<p class="duration text-sm">0h:0m:14s+487ms</p> 
+													<span class="datetime">12:20:39 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">ExcluirCarrinhoCancelarCompra</h5>
+															<span class='badge badge-success'>06/02/2022 12:20:39</span>
+															<span class='badge badge-danger'>06/02/2022 12:20:54</span>
+															<span class='badge badge-default'>0h:0m:14s+487ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:41</td>
+				<td>
+InserirProdutoCriadoDB || PARAMETERS: produto_id = QBHAT3N8cZ1qu5Km									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:50</td>
+				<td>
+DeletarTodosIdsProdutos || PARAMETERS: Coluna: produto_id									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:54</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Notebook Asus Ryzen 5 o36R0G",
+  "preco": "2300",
+  "descricao": "Notebook Gamer kjZxM5",
+  "quantidade": "1"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=95e077a5-c7ef-4aca-8f6c-8e59b3c74271
+X-Cloud-Trace-Context=8a094ebaa719c3fa02ce439c669a19a5
+Date=Sun, 06 Feb 2022 15:20:39 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:41</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "QBHAT3N8cZ1qu5Km"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:43</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:43</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:43</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:43</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:43</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:43</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=e9a09c9e-48ad-40d4-845b-a93ecddb2064
+X-Cloud-Trace-Context=e646abc42ef80e99c8d6e6a000e759af
+Date=Sun, 06 Feb 2022 15:20:42 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=1303</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:43</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  6,
+    
+    "produtos":  [
+        
+        {
+            
+            "nome":  "Logitech MX Vertical",
+            
+            "preco":  470,
+            
+            "descricao":  "Mouse",
+            
+            "quantidade":  382,
+            
+            "_id":  "BeeJh5lz3k6kSIzA"
+        
+        },
+        
+        {
+            
+            "nome":  "Samsung 60 polegadas",
+            
+            "preco":  5240,
+            
+            "descricao":  "TV",
+            
+            "quantidade":  49977,
+            
+            "_id":  "K6leHdftCeOJj8BJ"
+        
+        },
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 o36R0G",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer kjZxM5",
+            
+            "quantidade":  1,
+            
+            "_id":  "QBHAT3N8cZ1qu5Km"
+        
+        },
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 pO12uU",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer TbZrkU",
+            
+            "quantidade":  1,
+            
+            "_id":  "bDtXkqsSCrNCst2m"
+        
+        },
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 aaD0Mj",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer SmRVfE",
+            
+            "quantidade":  1,
+            
+            "_id":  "eBcBm8Ej1m6cvpMF"
+        
+        },
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 BscB0m",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer JHRUUC",
+            
+            "quantidade":  0,
+            
+            "_id":  "jcHozhjSaejRFhZi"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/BeeJh5lz3k6kSIzA</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:44</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:44</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/BeeJh5lz3k6kSIzA</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:44</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:44</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:44</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:44</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=510d1494-2b7f-430c-8c7d-29b98fc29b00
+X-Cloud-Trace-Context=ea5d09bf5784bf9de36ff8364d3ebac5
+Date=Sun, 06 Feb 2022 15:20:43 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:44</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/K6leHdftCeOJj8BJ</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:45</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:45</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/K6leHdftCeOJj8BJ</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:45</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:45</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:45</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:45</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=bd316d80-9c0b-49eb-af8c-108025d609c6
+X-Cloud-Trace-Context=0f6a64df5b23374519270dfd13f91964
+Date=Sun, 06 Feb 2022 15:20:44 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:45</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/QBHAT3N8cZ1qu5Km</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:47</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:47</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/QBHAT3N8cZ1qu5Km</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:47</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:47</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:47</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:47</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=aa7f506c-cbaf-4c40-9784-1336b98dbd97
+X-Cloud-Trace-Context=0764ad02e555efdc64f4172df3ceac65
+Date=Sun, 06 Feb 2022 15:20:45 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:47</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/bDtXkqsSCrNCst2m</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:48</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:48</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/bDtXkqsSCrNCst2m</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:48</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:48</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:48</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:48</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=6ecc1162-38c8-4bda-ae7e-2b96067d8419
+X-Cloud-Trace-Context=3704d0a6d4ca25c69f03c481ca74515a
+Date=Sun, 06 Feb 2022 15:20:46 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:48</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/eBcBm8Ej1m6cvpMF</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:49</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:49</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/eBcBm8Ej1m6cvpMF</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:49</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:49</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:49</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:49</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=95cfa247-7bc2-4036-af43-a0b22f07a090
+X-Cloud-Trace-Context=aaf9d839117f27a1abd0a6d8df9b8d32
+Date=Sun, 06 Feb 2022 15:20:47 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:49</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/jcHozhjSaejRFhZi</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:50</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:50</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/jcHozhjSaejRFhZi</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:50</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:50</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:50</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:50</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=b1c26cb2-a476-4362-a091-246a16c85e5b
+X-Cloud-Trace-Context=b3db5ff9dca97fd80bd4bd9a98b84e21
+Date=Sun, 06 Feb 2022 15:20:48 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:50</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "xTydndQVZPmTocaa"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "QBHAT3N8cZ1qu5Km",
+      "quantidade": "1"
+    }
+  ]
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=51304640-fcb6-4c90-8c4f-1abed3922f20
+X-Cloud-Trace-Context=eafdcb9c694c0361311a599b55aea996
+Date=Sun, 06 Feb 2022 15:20:51 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=61</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:53</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido ter mais de 1 carrinho"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:54</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:54</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:54</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:54</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:54</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:54</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=5f617c4e-4b3e-4f62-af47-b2505857c40f
+X-Cloud-Trace-Context=89b86d653a7382170804d02b2987b7ef
+Date=Sun, 06 Feb 2022 15:20:52 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=86</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:54</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso. Estoque dos produtos reabastecido"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="fail" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar fail-bg">
+												<i class="fa fa-times text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">ExcluirCarrinhoConcluirCompra</p> 
+													<p class="duration text-sm">0h:0m:12s+020ms</p> 
+													<span class="datetime">12:20:54 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-fail">ExcluirCarrinhoConcluirCompra</h5>
+															<span class='badge badge-success'>06/02/2022 12:20:54</span>
+															<span class='badge badge-danger'>06/02/2022 12:21:06</span>
+															<span class='badge badge-default'>0h:0m:12s+020ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:20:55</td>
+				<td>
+InserirProdutoCriadoDB || PARAMETERS: produto_id = 40XPRYRGuD4NHCpN									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:21:02</td>
+				<td>
+DeletarTodosIdsProdutos || PARAMETERS: Coluna: produto_id									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>12:21:06</td>
+				<td>
+Test Result: Fail<pre>Message:   Expected: True
+  But was:  False
+</pre><pre>Stack Trace:    at DesafioAutomacaoRestSharp.Tests.CarrinhosTests.ExcluirCarrinhoConcluirCompra() in C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\Tests\CarrinhosTests.cs:line 146
+</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Notebook Asus Ryzen 5 bF1vp8",
+  "preco": "2300",
+  "descricao": "Notebook Gamer HfhCG_",
+  "quantidade": "1"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=ce980275-bb8a-4855-a607-8d36bbed90c7
+X-Cloud-Trace-Context=e8462d79aa710691132537c2c7b065f0
+Date=Sun, 06 Feb 2022 15:20:54 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:55</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "40XPRYRGuD4NHCpN"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:58</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:58</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:58</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:58</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:58</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:58</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=96402c42-0445-4adb-a308-3d21c90e00c3
+X-Cloud-Trace-Context=a1f4c52eef4eb27afa1bad884962da7f
+Date=Sun, 06 Feb 2022 15:20:56 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=869</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:58</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  4,
+    
+    "produtos":  [
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 bF1vp8",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer HfhCG_",
+            
+            "quantidade":  1,
+            
+            "_id":  "40XPRYRGuD4NHCpN"
+        
+        },
+        
+        {
+            
+            "nome":  "Logitech MX Vertical",
+            
+            "preco":  470,
+            
+            "descricao":  "Mouse",
+            
+            "quantidade":  382,
+            
+            "_id":  "BeeJh5lz3k6kSIzA"
+        
+        },
+        
+        {
+            
+            "nome":  "Samsung 60 polegadas",
+            
+            "preco":  5240,
+            
+            "descricao":  "TV",
+            
+            "quantidade":  49977,
+            
+            "_id":  "K6leHdftCeOJj8BJ"
+        
+        },
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 BscB0m",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer JHRUUC",
+            
+            "quantidade":  1,
+            
+            "_id":  "jcHozhjSaejRFhZi"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/40XPRYRGuD4NHCpN</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:59</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:59</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/40XPRYRGuD4NHCpN</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:59</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:59</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:59</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:59</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=1760afbf-fc87-4617-b9db-641e1e4a9ac2
+X-Cloud-Trace-Context=9c0852572fe6c58b01e62cde89451ed4
+Date=Sun, 06 Feb 2022 15:20:57 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:20:59</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/BeeJh5lz3k6kSIzA</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:00</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:00</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/BeeJh5lz3k6kSIzA</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:00</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:00</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:00</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:00</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=3f739e91-7137-46f9-a8f2-de9a199007f9
+X-Cloud-Trace-Context=1347c94ae63676e858688f69291af016
+Date=Sun, 06 Feb 2022 15:20:58 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:00</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/K6leHdftCeOJj8BJ</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:01</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:01</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/K6leHdftCeOJj8BJ</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:01</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:01</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:01</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:01</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=2acc0705-bfb0-40fb-9b09-221e18979f26
+X-Cloud-Trace-Context=0dba81ec56967d88fb04f84d2182ae99
+Date=Sun, 06 Feb 2022 15:21:00 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:01</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/jcHozhjSaejRFhZi</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:02</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:02</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/jcHozhjSaejRFhZi</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:02</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:02</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:02</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:02</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=f76f2891-1404-46c2-b1fb-c61f0fd43b8d
+X-Cloud-Trace-Context=a85a4f878eb46b705c401951a637f84e;o=1
+Date=Sun, 06 Feb 2022 15:21:01 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:02</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "40XPRYRGuD4NHCpN",
+      "quantidade": "1"
+    }
+  ]
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=64e03b6e-1c25-4978-b84f-4fe2f13df458
+X-Cloud-Trace-Context=3af2409723325c3439d0c9f89d88211f
+Date=Sun, 06 Feb 2022 15:21:03 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=150</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:05</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Produto não encontrado",
+    
+    "item":  {
+        
+        "index":  0,
+        
+        "idProduto":  "40XPRYRGuD4NHCpN",
+        
+        "quantidade":  1
+    
+    }
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/concluir-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:06</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:06</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/concluir-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:06</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:06</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:06</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:06</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=7428e01a-3b7b-48cd-a864-4d30f61df806
+X-Cloud-Trace-Context=824059b163707321ec11a55a7a909b78
+Date=Sun, 06 Feb 2022 15:21:04 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:06</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=".CarrinhosTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">ListarCarrinhosCadastrados</p> 
+													<p class="duration text-sm">0h:0m:20s+437ms</p> 
+													<span class="datetime">12:21:06 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">ListarCarrinhosCadastrados</h5>
+															<span class='badge badge-success'>06/02/2022 12:21:06</span>
+															<span class='badge badge-danger'>06/02/2022 12:21:26</span>
+															<span class='badge badge-default'>0h:0m:20s+437ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> .CarrinhosTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:21:15</td>
+				<td>
+InserirProdutoCriadoDB || PARAMETERS: produto_id = ZnPiKJYx81sn08DL									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:21:23</td>
+				<td>
+DeletarTodosIdsProdutos || PARAMETERS: Coluna: produto_id									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>12:21:26</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:08</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:08</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:08</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:08</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:08</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:08</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=dfcbd2b3-f93c-4327-a084-2fc82049d191
+X-Cloud-Trace-Context=e946beb8e5d2c5411198535083f5427a
+Date=Sun, 06 Feb 2022 15:21:07 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:08</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/concluir-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:10</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:10</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/concluir-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:10</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:10</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:10</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:10</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=adb9ae4a-f154-4360-ad49-7226641ccc3d
+X-Cloud-Trace-Context=387190f61262f38daf22f73ea3b78a2c
+Date=Sun, 06 Feb 2022 15:21:08 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:10</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:13</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:13</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:13</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:13</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:13</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:13</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=f44174e7-ff08-4371-96f3-4d36c280b670
+X-Cloud-Trace-Context=4e92acad9c87491afa3790651569a642
+Date=Sun, 06 Feb 2022 15:21:12 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:13</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Notebook Asus Ryzen 5 6sDkXZ",
+  "preco": "2300",
+  "descricao": "Notebook Gamer ZvNXN7",
+  "quantidade": "1"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=a3b274c2-703f-4593-a00c-8ccda4b2ec65
+X-Cloud-Trace-Context=46c8c79785106092e79fb40229dca3fa
+Date=Sun, 06 Feb 2022 15:21:13 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:15</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "ZnPiKJYx81sn08DL"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "produtos": [
+    {
+      "idProduto": "ZnPiKJYx81sn08DL",
+      "quantidade": "1"
+    }
+  ]
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=3747de8e-c489-4b09-93da-7d31c3a8cee4
+X-Cloud-Trace-Context=1406b5b476bae6cfc09cd08d50975172
+Date=Sun, 06 Feb 2022 15:21:16 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:17</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "YGUidtPfMgelYV2U"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - carrinhos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:18</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:18</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:18</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:18</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:18</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:18</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=371a5e53-d6f4-4444-a0fe-b61d2f009225
+X-Cloud-Trace-Context=71ad9b7c1a79baabc73418fd6dbbe154
+Date=Sun, 06 Feb 2022 15:21:16 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=974</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:18</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  2,
+    
+    "carrinhos":  [
+        
+        {
+            
+            "produtos":  [
+                
+                {
+                    
+                    "idProduto":  "ZnPiKJYx81sn08DL",
+                    
+                    "quantidade":  1,
+                    
+                    "precoUnitario":  2300
+                
+                }
+            
+            ],
+            
+            "precoTotal":  2300,
+            
+            "quantidadeTotal":  1,
+            
+            "idUsuario":  "IoU9SRbmOWVCp6gK",
+            
+            "_id":  "YGUidtPfMgelYV2U"
+        
+        },
+        
+        {
+            
+            "produtos":  [
+                
+                {
+                    
+                    "idProduto":  "BeeJh5lz3k6kSIzA",
+                    
+                    "quantidade":  2,
+                    
+                    "precoUnitario":  470
+                
+                },
+                
+                {
+                    
+                    "idProduto":  "K6leHdftCeOJj8BJ",
+                    
+                    "quantidade":  1,
+                    
+                    "precoUnitario":  5240
+                
+                }
+            
+            ],
+            
+            "precoTotal":  6180,
+            
+            "quantidadeTotal":  3,
+            
+            "idUsuario":  "oUb7aGkMtSEPf6BZ",
+            
+            "_id":  "qbMqntef4iTOwWfg"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - produtos</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:19</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:19</td>
+				<td>
+<pre><b>REQUEST: </b>produtos</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:19</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:19</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:19</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:19</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=a60c46e5-4f32-44c2-a59a-2aea843e8602
+X-Cloud-Trace-Context=c4aeb9a758cb2204b4df329451e2481a
+Date=Sun, 06 Feb 2022 15:21:17 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=652</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:19</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  3,
+    
+    "produtos":  [
+        
+        {
+            
+            "nome":  "Logitech MX Vertical",
+            
+            "preco":  470,
+            
+            "descricao":  "Mouse",
+            
+            "quantidade":  382,
+            
+            "_id":  "BeeJh5lz3k6kSIzA"
+        
+        },
+        
+        {
+            
+            "nome":  "Samsung 60 polegadas",
+            
+            "preco":  5240,
+            
+            "descricao":  "TV",
+            
+            "quantidade":  49977,
+            
+            "_id":  "K6leHdftCeOJj8BJ"
+        
+        },
+        
+        {
+            
+            "nome":  "Notebook Asus Ryzen 5 6sDkXZ",
+            
+            "preco":  2300,
+            
+            "descricao":  "Notebook Gamer ZvNXN7",
+            
+            "quantidade":  0,
+            
+            "_id":  "ZnPiKJYx81sn08DL"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/BeeJh5lz3k6kSIzA</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:20</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:20</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/BeeJh5lz3k6kSIzA</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:20</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:20</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:20</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:20</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=d190a2d4-1fab-44e8-aa3d-8d722234c1db
+X-Cloud-Trace-Context=817766ffe9bd0b5055a87c0aef87837a
+Date=Sun, 06 Feb 2022 15:21:19 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:20</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/K6leHdftCeOJj8BJ</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:22</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:22</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/K6leHdftCeOJj8BJ</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:22</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:22</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:22</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:22</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=51b330de-06b6-4945-8526-722afc101fad
+X-Cloud-Trace-Context=709116495872e801b37ee1f8889c5b3e
+Date=Sun, 06 Feb 2022 15:21:20 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:22</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "qbMqntef4iTOwWfg"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - produtos/ZnPiKJYx81sn08DL</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:23</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:23</td>
+				<td>
+<pre><b>REQUEST: </b>produtos/ZnPiKJYx81sn08DL</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:23</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:23</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:23</td>
+				<td>
+<pre><b>STATUS CODE: </b>400 - BadRequest</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:23</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=a933890c-c114-4ebb-9289-5782797d5e88
+X-Cloud-Trace-Context=d1af7f35eddcbbbd6c2c949cb0498adf;o=1
+Date=Sun, 06 Feb 2022 15:21:22 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=135</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:23</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não é permitido excluir produto que faz parte de carrinho",
+    
+    "idCarrinhos":  [
+        
+        "YGUidtPfMgelYV2U"
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:26</td>
+				<td>
+<pre><b>URL: </b>https://serverest.dev/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:26</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:26</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:26</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQ0MTYwNjc3LCJleHAiOjE2NDQxNjEyNzd9.3Mxq5-YGk3Yb6_ndbhOZoYiul8Nv7MYZrBqw41HiaM8
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:26</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:26</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=9ce48de8-a75d-4a7b-ad7a-57e4d848ea7f
+X-Cloud-Trace-Context=a4fcc4edae62c9d35b52d1fc1b2ca5c6
+Date=Sun, 06 Feb 2022 15:21:25 GMT
+Server=Google, Frontend
+Content-Type=application/json; charset=utf-8
+Content-Length=86</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>12:21:26</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso. Estoque dos produtos reabastecido"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System.IO;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
     public class JsonBuilder
     {

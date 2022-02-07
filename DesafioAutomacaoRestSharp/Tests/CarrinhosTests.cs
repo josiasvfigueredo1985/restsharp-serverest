@@ -1,14 +1,15 @@
-﻿using DesafioAutomacaoAPIBase2.Bases;
-using DesafioAutomacaoAPIBase2.Helpers;
-using DesafioAutomacaoAPIBase2.Requests.Carrinhos;
-using DesafioAutomacaoAPIBase2.Steps;
+﻿using DesafioAutomacaoRestSharp.Bases;
+using DesafioAutomacaoRestSharp.Helpers;
+using DesafioAutomacaoRestSharp.Requests.Carrinhos;
+using DesafioAutomacaoRestSharp.Steps;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
-namespace DesafioAutomacaoAPIBase2.Tests
+namespace DesafioAutomacaoRestSharp.Tests
 {
     [TestFixture]
     public class CarrinhosTests : TestBase
@@ -29,54 +30,45 @@ namespace DesafioAutomacaoAPIBase2.Tests
             CarrinhosStep.CriarCarrinhoUnicoProduto();
 
             //Listar o carrinho cadastrado
-            IRestResponse response = get.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = get.ExecuteRequest();
 
             Console.WriteLine("Carrinho(s) cadastrado(s): {0}", response.Content.ToString());
 
             //Deletar produto
             ProdutosStep.DeletarTodosProdutosCriados();
+            //Deletar carrinho
+            CarrinhosStep.DeletarCarrinhoCancelarCompra();
 
             Assert.IsTrue(response.IsSuccessful);
-            Assert.IsTrue(jsonData.quantidade.Value >= quantidade);
+            Assert.IsTrue(response.Data.quantidade >= quantidade);
         }
 
         [Test]
         public void CadastrarCarrinho()
         {
-            string mensagem = "Cadastro realizado com sucesso";
-            //Criar produto para cadastrar no carrinho
-            var responseProd = ProdutosStep.CriarProduto();
-            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content.ToString());
-            var idProd = jsonProd._id.Value;
-
+            Thread.Sleep(800);
             // Deletar carrinhos criados
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            CarrinhosStep.DeletarCarrinhoConcluirCompra();
+
+            string mensagem = "Cadastro realizado com sucesso";
+            //Criar produto para cadastrar no carrinho
+            string idProd = ProdutosStep.CriarProduto().Data._id.Value;
 
             PostCarrinho post = new PostCarrinho();
             post.SetJsonBody(idProd, 1);
-            IRestResponse response = post.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
-            //Deletar carrinho
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            //Deletar produto
-            ProdutosStep.DeletarTodosProdutosCriados();
-
             Assert.IsTrue(response.IsSuccessful);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
+            Assert.IsTrue(response.Data.message == mensagem);
         }
 
         [Test]
         public void BuscarCarrinhoPorID()
         {
             //Criar produto para inserir no carrinho
-            var responseProd = ProdutosStep.CriarProduto();
-            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content.ToString());
-            var idProd = jsonProd._id.Value;
+            string idProd = ProdutosStep.CriarProduto().Data._id;//Utilizando os atributos do objeto dinâmico retornados do ExecuteRequest
 
             // Deletar carrinhos criados
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
@@ -85,12 +77,10 @@ namespace DesafioAutomacaoAPIBase2.Tests
             // Criar novo carrinho
             PostCarrinho post = new PostCarrinho();
             post.SetJsonBody(idProd, 1);
-            IRestResponse responseCarrinho = post.ExecuteRequest();
-
-            dynamic jsonData = JsonConvert.DeserializeObject(responseCarrinho.Content.ToString());
+            IRestResponse<dynamic> responseCarrinho = post.ExecuteRequest();
 
             // Consultar o carrinho criado
-            GetCarrinhoPorId getById = new GetCarrinhoPorId(jsonData._id.Value);
+            GetCarrinhoPorId getById = new GetCarrinhoPorId(Convert.ToString(responseCarrinho.Data._id));
             IRestResponse response = getById.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
@@ -107,15 +97,12 @@ namespace DesafioAutomacaoAPIBase2.Tests
         [Test]
         public void ExcluirCarrinhoCancelarCompra()
         {
+            //Deletar produto
+            ProdutosStep.DeletarTodosProdutosCriados();
+
             string mensagem = "Registro excluído com sucesso. Estoque dos produtos reabastecido";
             //Criar produto para inserir no carrinho
-            var responseProd = ProdutosStep.CriarProduto();
-            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content.ToString());
-            var idProd = jsonProd._id.Value;
-
-            // Deletar carrinhos criados anteriormente
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            CarrinhosStep.DeletarCarrinhoConcluirCompra();
+            string idProd = ProdutosStep.CriarProduto().Data._id;
 
             // Criar novo carrinho
             PostCarrinho post = new PostCarrinho();
@@ -124,32 +111,24 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             //Deletar carrinho
             DeleteCancelarCompra cancelarCompra = new DeleteCancelarCompra();
-            IRestResponse response = cancelarCompra.ExecuteRequest();
+            IRestResponse<dynamic> response = cancelarCompra.ExecuteRequest();
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
-
-            Console.WriteLine("Response cancelar compra carrinho: " + jsonData);
-
-            //Deletar produto
-            ProdutosStep.DeletarTodosProdutosCriados();
+            Console.WriteLine("Response cancelar compra carrinho: " + response.Data);
 
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.IsTrue(response.IsSuccessful);
-            Assert.IsTrue(mensagem == jsonData.message.Value);
+            Assert.IsTrue(mensagem == (string)response.Data.message);
         }
 
         [Test]
         public void ExcluirCarrinhoConcluirCompra()
         {
+            //Deletar produto
+            ProdutosStep.DeletarTodosProdutosCriados();
+
             string mensagem = "Registro excluído com sucesso";
             //Criar produto para inserir no carrinho
-            var responseProd = ProdutosStep.CriarProduto();
-            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content.ToString());
-            var idProd = jsonProd._id.Value;
-
-            // Deletar carrinhos criados anteriormente
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            CarrinhosStep.DeletarCarrinhoConcluirCompra();
+            string idProd = ProdutosStep.CriarProduto().Data._id;
 
             // Criar novo carrinho
             PostCarrinho post = new PostCarrinho();
@@ -158,18 +137,13 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             //Deletar carrinho
             DeleteConcluirCompra concluiCompra = new DeleteConcluirCompra();
-            IRestResponse response = concluiCompra.ExecuteRequest();
+            IRestResponse<dynamic> response = concluiCompra.ExecuteRequest();
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
-
-            Console.WriteLine("Response concluir compra carrinho: " + jsonData);
-
-            //Deletar produto
-            ProdutosStep.DeletarTodosProdutosCriados();
+            Console.WriteLine("Response concluir compra carrinho: " + response.Data);
 
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.IsTrue(response.IsSuccessful);
-            Assert.IsTrue(mensagem == jsonData.message.Value);
+            Assert.IsTrue(mensagem == (string)response.Data.message);
         }
 
         #endregion Testes Positivos
@@ -179,51 +153,39 @@ namespace DesafioAutomacaoAPIBase2.Tests
         [Test]
         public void CadastrarCarrinhoDuplicado()
         {
+            Thread.Sleep(800);
             string mensagem = "Não é permitido ter mais de 1 carrinho";
-            var responseProd = ProdutosStep.CriarProduto();
-            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content.ToString());
-            var idProd = jsonProd._id.Value;
-
-            // Deletar carrinhos criados
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            CarrinhosStep.DeletarCarrinhoConcluirCompra();
-
+            string idProd = ProdutosStep.CriarProduto().Data._id;
+       
             PostCarrinho post = new PostCarrinho();
             post.SetJsonBody(idProd, 1);
+
             post.ExecuteRequest();
-            IRestResponse response = post.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
-            //Deletar carrinho
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            //Deletar produto
-            ProdutosStep.DeletarTodosProdutosCriados();
-
             Assert.IsTrue((int)response.StatusCode == 400);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
+            Assert.IsTrue(response.Data.message == mensagem);
         }
 
         [Test]
         public void CadastrarCarrinhoComProdutoDuplicado()
         {
+            Thread.Sleep(600);
+            // Deletar carrinhos criados
+            CarrinhosStep.DeletarCarrinhoCancelarCompra();
+            CarrinhosStep.DeletarCarrinhoConcluirCompra();
+
             string mensagem = "Não é permitido possuir produto duplicado";
             string jsonPath = GeneralHelpers.ReturnProjectPath() + "Jsons/CarrinhoDataSet.json";
             List<string> carrinhoDup = new List<string>();
-
             //Cadastrar novo produto
-            var responseProd = ProdutosStep.CriarProduto();
-            dynamic jsonProd = JsonConvert.DeserializeObject(responseProd.Content.ToString());
-            var idProd = jsonProd._id.Value;
+            string idProd = ProdutosStep.CriarProduto().Data._id;
 
             // Criando lista com o mesmo produto
             carrinhoDup.Add(idProd);
             carrinhoDup.Add(idProd);
-
-            // Deletar carrinhos criados
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            CarrinhosStep.DeletarCarrinhoConcluirCompra();
 
             //Criando json com o produto duplicado
             CarrinhoDataSet.CriarJsonDatSet(carrinhoDup, 1);
@@ -231,19 +193,12 @@ namespace DesafioAutomacaoAPIBase2.Tests
             //Criar novo carrinho inserindo produtos duplicados
             PostCarrinho post = new PostCarrinho();
             post.SetJsonBody(jsonPath);
-            IRestResponse response = post.ExecuteRequest();
-
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
-            //Deletar carrinho
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            //Deletar produto
-            ProdutosStep.DeletarTodosProdutosCriados();
-
             Assert.IsTrue((int)response.StatusCode == 400);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
+            Assert.IsTrue(response.Data.message == mensagem);
         }
 
         [Test]
@@ -253,14 +208,13 @@ namespace DesafioAutomacaoAPIBase2.Tests
             string mensagem = "Carrinho não encontrado";
 
             GetCarrinhoPorId get = new GetCarrinhoPorId(id);
-            IRestResponse response = get.ExecuteRequest();
+            IRestResponse<dynamic> response = get.ExecuteRequest();
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
             Console.WriteLine("Response buscar carrinho por id inexistente: " + response.Content.ToString());
 
             Assert.False(response.IsSuccessful);
             Assert.IsTrue((int)response.StatusCode == 400);
-            Assert.IsTrue(mensagem == jsonData.message.Value);
+            Assert.IsTrue(mensagem == (string)response.Data.message);
         }
 
         #endregion Testes Negativos

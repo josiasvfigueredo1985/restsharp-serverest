@@ -1,12 +1,13 @@
-﻿using DesafioAutomacaoAPIBase2.Helpers;
+﻿using DesafioAutomacaoRestSharp.Helpers;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace DesafioAutomacaoAPIBase2.Steps
+namespace DesafioAutomacaoRestSharp.Steps
 {
     public class LoginStep
     {
         // Execução em hardcode para evitar erros de objetos não instanciados pela arquitetura
+        // O RetornaBearerToken é chamado na RequestBase, por isso não pode ser utilizada as requisições que passam os argumentos para a RequestBase
         public static string RetornaBearerToken()
         {
             //Executa delete para verificar a validade do token

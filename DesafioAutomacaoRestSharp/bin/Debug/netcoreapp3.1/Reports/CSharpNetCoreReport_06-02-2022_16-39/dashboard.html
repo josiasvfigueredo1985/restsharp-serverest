@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+	<body class="dashboard-view standard">
+		<div class="app header-dark side-nav-folded">
+			<div class="layout">
+				<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Extent Framework</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">06/02/2022 16:39:59</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+				<div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+				<div class="page-container">
+					<div class="main-content">
+						<div class="container-fluid p-4">
+							<div class="row">
+								<div class="col-sm-12 col-md-6">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Tests</h6>
+										</div>
+										<div class="card-body">
+	                                        <div class="">
+	                                            <canvas id='parent-analysis' width='115' height='90'></canvas>
+	                                        </div>
+	                                    </div>
+	                                    <div class="card-footer">
+	                                    	<div><small data-tooltip='98,0392156862745%'>
+	                                    		<b>50</b> tests passed
+                                    		</small></div>
+	                                    	<div>
+	                                    		<small data-tooltip='1,9607843137254901%'><b>1</b> tests failed, 
+	                                    		<b data-tooltip='0%'>0</b> others
+	                                    		</small>
+                                    		</div>
+	                                    </div>
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-6">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Steps</h6>
+										</div>
+										<div class="card-body">
+	                                        <div class="">
+	                                            <canvas id='child-analysis' width='115' height='90'></canvas>
+	                                        </div>
+	                                    </div>
+	                                    <div class="card-footer">
+	                                    	<div><small data-tooltip='100%'><b>309</b> steps passed</small></div>
+	                                    	<div>
+	                                    		<small data-tooltip='0%'><b>0</b> steps failed, 
+	                                    		<b data-tooltip='0%'>0</b> others
+	                                    		</small>
+                                    		</div>
+	                                    </div>
+									</div>
+								</div>
+															</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">Tests</p>
+													<h2 class="font-size-28 font-weight-light">51</h2>
+													<span class="text-semibold text-success font-size-15">
+													<i class="ti-arrow-up font-size-11"></i> 
+														<span>98,04%</span>
+													</span>
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-align-left font-size-70 opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">Steps</p>
+													<h2 class="font-size-28 font-weight-light">309</h2>
+													<span class="text-semibold text-success font-size-15">
+													<i class="ti-arrow-up font-size-11"></i> 
+														<span>100%</span>
+													</span>
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-align-left font-size-70 opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">Start</p>
+													<h6 class="font-weight-light">06/02/2022 16:39:59</h6>
+													<span class="text-semibold text-success font-size-15">
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">End</p>
+													<h6 class="font-weight-light">06/02/2022 16:44:45</h6>
+													<span class="text-semibold text-danger font-size-15">
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card timeline">
+										<div class="card-header">
+											<h6 class="card-title">Timeline</h6>
+										</div>
+										<div class="card-body">
+	                                        <div class="">
+	                                            <canvas id="timeline" height="120"></canvas>
+	                                        </div>
+	                                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+																<div class="col-md-6">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Tags</h6>
+										</div>
+										<div class="table-overflow">
+											<table class="table table-sm">
+												<thead>
+													<tr class="bg-gray">
+														<th>Name</th>
+														<th>Passed</th>
+														<th>Failed</th>
+														<th>Others</th>
+														<th>Passed %</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>.CarrinhosTests</td>
+														<td>8</td>
+														<td>0</td>
+														<td>0</td>
+														<td>100%</td>
+													</tr>
+													<tr>
+														<td>.LoginTests</td>
+														<td>3</td>
+														<td>0</td>
+														<td>0</td>
+														<td>100%</td>
+													</tr>
+													<tr>
+														<td>.PagamentoTests</td>
+														<td>16</td>
+														<td>1</td>
+														<td>0</td>
+														<td>94,12%</td>
+													</tr>
+													<tr>
+														<td>.ProdutosTests</td>
+														<td>22</td>
+														<td>0</td>
+														<td>0</td>
+														<td>100%</td>
+													</tr>
+													<tr>
+														<td>.UsuariosTests</td>
+														<td>1</td>
+														<td>0</td>
+														<td>0</td>
+														<td>100%</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+																							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var statusGroup = {
+                parentCount: 51,
+				passParent: 50,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 309,
+				passChild: 309,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+			<script>
+				var timeline = { "BuscarCarrinhoPorID":4,2E-06,"LoginComSucesso":16,9344655,"LoginEmailInvalido":4,3347948,"BuscarCarrinhoPorIDInexistente":1,0577354,"CadastrarCarrinho":9,0167193,"CadastrarCarrinhoComProdutoDuplicado":8,4660885,"CadastrarCarrinhoDuplicado":0,9588721,"LoginSenhaInvalida":5,0792281,"ExcluirCarrinhoCancelarCompra":13,9097387,"AtualizarPagamentoPorIdInexistente":1,3253946,"BuscarPagamentoPorIDBoleto":4,2557247,"ExcluirCarrinhoConcluirCompra":11,1810742,"BuscarPagamentoPorIDCartao":2,0291348,"ListarCarrinhosCadastrados":13,2256032,"BuscarPagamentoPorIdInexistente":1,3176885,"BuscarPagamentoPorIDPix":7,9873925,"BuscarProdutoPorID":7,3033705,"CadastrarPagamentoBoleto":5,0060758,"BuscarProdutoPorIDInexistente":1,3471472,"CadastrarProduto":7,2296816,"CadastrarPagamentoCartaoCredito":2,8813372,"CadastrarProdutoDuplicado":3,6322338,"CadastrarProdutosDataDrivenCSV":1,2232226,"CadastrarProdutosDataDrivenCSV":2,3027443,"CadastrarProdutosDataDrivenCSV":1,2658917,"CadastrarPagamentoPix":1,1009555,"CadastrarProdutosDataDrivenCSV":1,9405208,"CadastrarProdutosDataDrivenCSV":1,9528725,"CadastrarProdutosDataDrivenCSV":1,6937107,"CadastrarProdutosDataDrivenCSV":1,1630887,"CadastrarProdutosDataDrivenCSV":1,1733576,"CadastrarProdutosDataDrivenCSV":1,2407829,"EditarPagamentoBoletoParaCartao":0,9865645,"CadastrarProdutosDataDrivenCSV":1,7135963,"CadastrarProdutosDataDrivenCSV":1,8024651,"EditarProduto":12,0939576,"EditarPagamentoBoletoParaPix":16,513123,"EditarPagamentoCartaoParaBoleto":1,9835745,"EditarProdutoComIdInexistente":13,2485792,"EditarProdutoDuplicado":0,1572596,"EditarPagamentoCartaoParaPix":16,3176753,"EditarPagamentoPixParaBoleto":2,7467868,"ExcluirProduto":12,9049971,"ExcluirProdutoDeUmCarrinho":0,6611383,"EditarPagamentoPixParaCartao":17,0544084,"ExcluirProdutoIdInexistente":1,3754667,"ListarProdutosCadastrados":2,1554195,"ExcluirPagamento":16,9775352,"ExcluirPagamentoPorIdInexistente":0,694908,"BuscarUsuarioPorID":0,4411929,"ListarPagamentosCadastrados":7,2369777 };
+			</script>
+		<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+		<script>
+			/* -- [ chart options ] -- */
+			var options = {
+			  responsive: true,
+			  maintainAspectRatio: false,
+			  legend: {
+				  position: "right",
+				  labels: {
+					  boxWidth: 10,
+					  fontSize: 11,
+					  lineHeight: 1,
+					  fontFamily: "Source Sans Pro",
+					  padding: 1
+				  }
+			  },
+			  cutoutPercentage: 65
+			};
+
+			function drawChart(ctx, config) {
+				ctx.width = 100;
+				ctx.height = 80;
+				new Chart(ctx, config);
+			}
+
+			/* -- [ parent chart ] -- */
+			(function drawParentChart() {
+				if (typeof statusGroup !== "undefined") {
+					var config = {
+						type: 'doughnut',
+							data: {
+								datasets: [{
+									borderColor: 'transparent',
+									data: [
+										statusGroup.passParent, statusGroup.failParent, statusGroup.fatalParent, statusGroup.errorParent, statusGroup.warningParent, statusGroup.skipParent
+									],
+									backgroundColor: [
+										"#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff"
+									]
+								}],
+								labels: [ "Pass", "Fail", "Fatal", "Error", "Warning", "Skip" ]
+							},
+							options: options
+						};
+
+						var ctx = document.getElementById("parent-analysis").getContext('2d');
+						drawChart(ctx, config);
+				}
+			})();
+
+			/* -- [ children chart ] -- */
+			(function drawChildChart() {
+				if (typeof statusGroup !== "undefined" && statusGroup.childCount > 0) {
+					var config = {
+						type: 'doughnut',
+						data: {
+							datasets: [{
+								borderColor: 'transparent',
+								data: [
+									statusGroup.passChild, statusGroup.failChild, statusGroup.fatalChild, statusGroup.errorChild, statusGroup.warningChild, statusGroup.skipChild,statusGroup.infoChild
+								],
+								backgroundColor: [
+									"#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff", "#46BFBD"
+								]
+							}],
+							labels: [ "Pass", "Fail", "Fatal", "Error", "Warning", "Skip", "Info" ]
+						},
+						options: options
+					};
+
+					var ctx = document.getElementById("child-analysis").getContext('2d');
+					drawChart(ctx, config);
+				}
+			})();
+
+			/* -- [ grand-children chart ] -- */
+			(function drawGrandChildChart() {
+				if ($('#grandchild-analysis').length > 0 && typeof statusGroup !== "undefined" && statusGroup.grandChildCount > 0) {
+					var config = {
+						type: 'doughnut',
+						data: {
+							datasets: [{
+								borderColor: 'transparent',
+								data: [
+									statusGroup.passGrandChild, statusGroup.failGrandChild, statusGroup.fatalGrandChild, statusGroup.errorGrandChild, statusGroup.warningGrandChild, statusGroup.skipGrandChild, statusGroup.infoGrandChild
+								],
+								backgroundColor: [
+									"#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff", "#46BFBD"
+								]
+							}],
+							labels: [ "Pass", "Fail", "Fatal", "Error", "Warning", "Skip", "Info" ]
+						},
+						options: options
+					};
+
+					var ctx = document.getElementById("grandchild-analysis").getContext('2d');
+					drawChart(ctx, config);
+				}
+			})();
+
+			/* -- [ timeline ] -- */
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF';
+				var color = '#';
+				for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+
+			(function drawTimelineChart() {
+				if (typeof timeline !== "undefined") {
+					var datasets = [];
+					for (var key in timeline) {
+						datasets.push({ label:key, data:[timeline[key]], backgroundColor: getRandomColor(), borderWidth: 1 });
+					}
+					var ctx = document.getElementById('timeline').getContext('2d');
+
+					new Chart(ctx, {
+						type: 'horizontalBar',
+						data: {
+							datasets: datasets
+						},
+						options: {
+							responsive: true,
+							maintainAspectRatio: false,
+							tooltips: {
+								mode: 'point'
+							},
+							scales: {
+								xAxes: [{
+									stacked: true,
+									gridLines: false
+								}],
+								yAxes: [{
+									stacked: true,
+									gridLines: false,
+									barThickness: 25
+								}]
+							},
+							legend: {
+								display: false
+							}
+						}
+					});
+				}
+			})();
+		</script>
+	</body>
+</html>

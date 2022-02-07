@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Threading;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
+    // Esta classe é responsável pela criação de um Json DataSet que recebe dados adicionados dinamicamente,
+    // evitando o uso de vários templates de jsons
     public class CarrinhoDataSet
     {
         public static void CriarJsonDatSet(List<string> idProdutos, int quantidade)
@@ -35,7 +38,7 @@ namespace DesafioAutomacaoAPIBase2.Helpers
             StreamWriter sw = new StreamWriter(path);
             sw.WriteLine(json);
             sw.Close();
-
+            Thread.Sleep(500);
             Console.WriteLine(json);
         }
     }

@@ -1,0 +1,1645 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+
+
+<body class="test-view  standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Extent Framework</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">29/01/2022 22:18:26</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+									<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-exclamation-circle"></i>
+										</a>
+										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																																																		<div class="dropdown-divider"></div>
+											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+										</ul>
+									</li>
+																		<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-tag"></i>
+										</a>
+										<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+												<a class="dropdown-item" href="#">LoginTests</a>
+										</ul>
+                                    </li>
+									                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+										<li class="test-item" status="pass" author="" device="" tag="LoginTests"> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">LoginComSucesso</p> 
+													<p class="duration text-sm">0h:0m:8s+690ms</p> 
+													<span class="datetime">22:18:29 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">LoginComSucesso</h5>
+															<span class='badge badge-success'>29/01/2022 22:18:29</span>
+															<span class='badge badge-danger'>29/01/2022 22:18:38</span>
+															<span class='badge badge-default'>0h:0m:8s+690ms</span>
+														</div>
+														<div class="m-t-15">
+		                                        				<div class="attributes">
+						<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> LoginTests</span> 	
+			</div>
+
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:18:31</td>
+				<td>
+DeletarTodosUsuariosCriados || PARAMETERS: Query executada: delete from usuarios;									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:18:35</td>
+				<td>
+InserirIdUsuarioCriadoDB || PARAMETERS: Dados do usuário: 
+Nome: Pleonário Silvestre
+ID: CFyhVPBPXxqjJ2jD									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:18:35</td>
+				<td>
+InserirIdUsuarioCriadoDB || PARAMETERS: Dados do usuário: 
+Nome: Pleonário Silvestre
+ID: sg50gRh70VbBI5JK									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:18:35</td>
+				<td>
+DeletarTodosUsuariosCriados || PARAMETERS: Query executada: delete from usuarios;									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:18:38</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<div class="mt-4">
+	
+	<div class="accordion">
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:32</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:32</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:32</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:32</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTAwNjYzLCJleHAiOjE2NDM1MDEyNjN9.WbnoUnfVxTUAdUZTJjdg5cHhpqDrTDRGJGSJKc3U1O4
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:32</td>
+				<td>
+<pre><b>STATUS CODE: </b>0 - 0</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:32</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b></pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:32</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/concluir-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:33</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:33</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/concluir-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:33</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:33</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTEzLCJleHAiOjE2NDM1MDYxMTN9.8NcGUO2ZRBEcvnd_ICIznFfMzx0DVsnKDCx-w5pKH7E
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:33</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:33</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=93f43317-2ff3-4b4f-abd4-875a7e5362cd
+Date=Sun, 30 Jan 2022 01:18:33 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:33</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - usuarios</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTEzLCJleHAiOjE2NDM1MDYxMTN9.8NcGUO2ZRBEcvnd_ICIznFfMzx0DVsnKDCx-w5pKH7E
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=233c1583-6b22-4ff2-8904-d871baf44c7a
+Date=Sun, 30 Jan 2022 01:18:34 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=486</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  2,
+    
+    "usuarios":  [
+        
+        {
+            
+            "nome":  "Josias Valentim",
+            
+            "email":  "josias_testes_automatizados@base2.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "04y2DkDQqoBNfiUe"
+        
+        },
+        
+        {
+            
+            "nome":  "Fulano da Silva",
+            
+            "email":  "fulano@qa.com",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "0uxuPY0cbmQhpEz1"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/04y2DkDQqoBNfiUe</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/04y2DkDQqoBNfiUe</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTEzLCJleHAiOjE2NDM1MDYxMTN9.8NcGUO2ZRBEcvnd_ICIznFfMzx0DVsnKDCx-w5pKH7E
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=4a148222-365f-4aaa-8e07-0d8a30069556
+Date=Sun, 30 Jan 2022 01:18:34 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/0uxuPY0cbmQhpEz1</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/0uxuPY0cbmQhpEz1</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=1962e46d-6384-4ca8-a8b8-7102dba5d1e5
+Date=Sun, 30 Jan 2022 01:18:34 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:34</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - usuarios</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Pleonário Silvestre",
+  "email": "pleo_1574@abril.com",
+  "password": "w1nn3r_1982",
+  "administrador": "true"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=cfdefa04-b0c9-46f0-83d9-792fab7458c1
+Date=Sun, 30 Jan 2022 01:18:35 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "CFyhVPBPXxqjJ2jD"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - usuarios</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "nome": "Pleonário Silvestre",
+  "email": "pleo_5362@bol.com",
+  "password": "w1nn3r_1982",
+  "administrador": "true"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>STATUS CODE: </b>201 - Created</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=092f08f1-f7c8-4a5d-a91b-e2edf3325acf
+Date=Sun, 30 Jan 2022 01:18:35 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=82</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Cadastro realizado com sucesso",
+    
+    "_id":  "sg50gRh70VbBI5JK"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - usuarios/sg50gRh70VbBI5JK</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/sg50gRh70VbBI5JK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=a90009b8-03eb-423d-9523-5213df9d32ed
+Date=Sun, 30 Jan 2022 01:18:35 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=163</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "nome":  "Pleonário Silvestre",
+    
+    "email":  "pleo_5362@bol.com",
+    
+    "password":  "w1nn3r_1982",
+    
+    "administrador":  "true",
+    
+    "_id":  "sg50gRh70VbBI5JK"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - POST - login</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>REQUEST: </b>login</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>METHOD: </b>POST</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>JSON BODY: </b>
+{
+  "email": "pleo_5362@bol.com",
+  "password": "w1nn3r_1982"
+}</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=4a590950-f787-4cc4-9eff-9b458bffc1f1
+Date=Sun, 30 Jan 2022 01:18:35 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=279</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:35</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Login realizado com sucesso",
+    
+    "authorization":  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBsZW9fNTM2MkBib2wuY29tIiwicGFzc3dvcmQiOiJ3MW5uM3JfMTk4MiIsImlhdCI6MTY0MzUwNTUxNSwiZXhwIjoxNjQzNTA2MTE1fQ.WeY-BHv4gc533-Mf9hC5asNhkebx4TiUHTqrJSU1xzw"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/cancelar-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:36</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:36</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/cancelar-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:36</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:36</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:36</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:36</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=97af6cc9-4df4-4616-b94a-ce07d3a2c924
+Date=Sun, 30 Jan 2022 01:18:36 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:36</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - carrinhos/concluir-compra</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:37</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:37</td>
+				<td>
+<pre><b>REQUEST: </b>carrinhos/concluir-compra</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:37</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:37</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:37</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:37</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=c9a44cc9-a551-4266-b4d6-9c8677851381
+Date=Sun, 30 Jan 2022 01:18:37 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=68</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:37</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Não foi encontrado carrinho para esse usuário"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - GET - usuarios</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>METHOD: </b>GET</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=2033b6ec-0325-4f7d-8751-93c7029b68e4
+Date=Sun, 30 Jan 2022 01:18:38 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=724</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "quantidade":  3,
+    
+    "usuarios":  [
+        
+        {
+            
+            "nome":  "Pleonário Silvestre",
+            
+            "email":  "pleo_1574@abril.com",
+            
+            "password":  "w1nn3r_1982",
+            
+            "administrador":  "true",
+            
+            "_id":  "CFyhVPBPXxqjJ2jD"
+        
+        },
+        
+        {
+            
+            "nome":  "Josias Valentim",
+            
+            "email":  "josias_testes_automatizados@base2.com.br",
+            
+            "password":  "teste",
+            
+            "administrador":  "true",
+            
+            "_id":  "KdfhhCkrVvXAtmHi"
+        
+        },
+        
+        {
+            
+            "nome":  "Pleonário Silvestre",
+            
+            "email":  "pleo_5362@bol.com",
+            
+            "password":  "w1nn3r_1982",
+            
+            "administrador":  "true",
+            
+            "_id":  "sg50gRh70VbBI5JK"
+        
+        }
+    
+    ]
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/CFyhVPBPXxqjJ2jD</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/CFyhVPBPXxqjJ2jD</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=e4762f76-68c7-4df5-b87b-7cd4184e90d3
+Date=Sun, 30 Jan 2022 01:18:38 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/KdfhhCkrVvXAtmHi</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/KdfhhCkrVvXAtmHi</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE0LCJleHAiOjE2NDM1MDYxMTR9.Q9gTRE8-XqhLj2msvu_wr1_gqi69okvNRDcf1RTT-YY
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=130f0a73-78a0-4a2f-8192-2af4dc02e28a
+Date=Sun, 30 Jan 2022 01:18:38 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" role="tab">
+					<h5 class="card-title">
+						<div class="node">&#128640; Request - DELETE - usuarios/sg50gRh70VbBI5JK</div>
+						<div class="status-avatar float-right pass-bg">
+							<i class="fa fa-check text-white"></i>
+                        </div>
+					</h5>
+				</div>
+				<div class="collapse">
+					<div class="card-body">
+						
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>URL: </b> http://localhost:3000/</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>REQUEST: </b>usuarios/sg50gRh70VbBI5JK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>METHOD: </b>DELETE</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>HEADERS: </b>
+<i>Authorization</i> = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impvc2lhc190ZXN0ZXNfYXV0b21hdGl6YWRvc0BiYXNlMi5jb20uYnIiLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjQzNTA1NTE4LCJleHAiOjE2NDM1MDYxMTh9.RXVrwdG8T6MHDXBW9kgKavPF45InABDktB7lp2Pnc98
+<i>Content-Type</i> = application/json</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>STATUS CODE: </b>200 - OK</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>RESPONSE HEADERS: </b>
+Access-Control-Allow-Origin=*
+x-dns-prefetch-control=off
+X-Frame-Options=SAMEORIGIN
+Strict-Transport-Security=max-age=15552000; includeSubDomains
+x-download-options=noopen
+X-Content-Type-Options=nosniff
+x-xss-protection=1; mode=block
+x-moesif-transaction-id=ddb24f56-4c68-49d3-a478-92eabbb6ee08
+Date=Sun, 30 Jan 2022 01:18:38 GMT
+Connection=keep-alive
+Keep-Alive=timeout=5
+Content-Type=application/json; charset=utf-8
+Content-Length=51</pre>									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>22:18:38</td>
+				<td>
+<pre><b>PAYLOAD: </b>
+{
+    
+    "message":  "Registro excluído com sucesso"
+
+}</pre>									</td>
+			</tr>
+	</tbody>
+</table>
+											</div>
+				</div>
+			</div>
+	</div>
+
+</div>
+											</div>
+										</li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+
+</html>

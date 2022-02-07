@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
     public class DBHelpers
     {

@@ -2,7 +2,7 @@
 using RestSharp;
 using RestSharp.Deserializers;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
     public class JsonDeserializer : IDeserializer
     {

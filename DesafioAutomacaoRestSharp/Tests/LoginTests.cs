@@ -1,19 +1,19 @@
 ﻿using NUnit.Framework;
-using DesafioAutomacaoAPIBase2.Bases;
-using DesafioAutomacaoAPIBase2.Helpers;
+using DesafioAutomacaoRestSharp.Bases;
+using DesafioAutomacaoRestSharp.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using DesafioAutomacaoAPIBase2.Requests.Login;
-using DesafioAutomacaoAPIBase2.Steps;
+using DesafioAutomacaoRestSharp.Requests.Login;
+using DesafioAutomacaoRestSharp.Steps;
 using System.IO;
 using System.Net;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using RestSharp;
-using DesafioAutomacaoAPIBase2.Requests.Usuarios;
+using DesafioAutomacaoRestSharp.Requests.Usuarios;
 
-namespace DesafioAutomacaoAPIBase2.Tests
+namespace DesafioAutomacaoRestSharp.Tests
 {
     [TestFixture]
     class LoginTests : TestBase
@@ -29,32 +29,24 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             // Criar novo usuário 
             dynamic jsonData1 = JsonConvert.DeserializeObject(UsuarioStep.CriarUsuario().Content.ToString());
-            string id = jsonData1._id.Value;
+            string id = UsuarioStep.CriarUsuario().Data._id;
 
             // Buscar pelo id do usuário
             GetUsuarioPorId get = new GetUsuarioPorId(id);
             var responseGet = get.ExecuteRequest();
-            dynamic jsonData2 = JsonConvert.DeserializeObject(responseGet.Content.ToString());
 
             // pegar o nome e password do usuário criado
-            string email = jsonData2.email.Value;
-            string password = jsonData2.password.Value;
+            string email = responseGet.Data.email;
+            string password = responseGet.Data.password;
 
             //fazer login com o usuário criado
             PostLogin post = new PostLogin();
             post.SetJsonBody(email, password);
-            IRestResponse response = post.ExecuteRequest();
-
-            //  Console.WriteLine(response.Content.ToString());
-
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
-
-            //Deletar o usuário
-            UsuarioStep.DeletarUsuariosCriados();
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.True(response.IsSuccessful);
-            Assert.AreEqual(mensagem,jsonData.message.Value);
+            Assert.AreEqual(mensagem, (string)response.Data.message);
             Assert.IsTrue(response.Content.Contains("authorization"));
         }
         #endregion
@@ -69,31 +61,28 @@ namespace DesafioAutomacaoAPIBase2.Tests
             UsuarioStep.DeletarUsuariosCriados();
 
             // Criar novo usuário 
-            dynamic jsonData1 = JsonConvert.DeserializeObject(UsuarioStep.CriarUsuario().Content.ToString());
-            string id = jsonData1._id.Value;
+            string id = UsuarioStep.CriarUsuario().Data._id.Value;
 
             // Buscar pelo id do usuário
             GetUsuarioPorId get = new GetUsuarioPorId(id);
             var responseGet = get.ExecuteRequest();
-            dynamic jsonData2 = JsonConvert.DeserializeObject(responseGet.Content.ToString());
 
             // pegar o nome e password do usuário criado
             string email = "emailInvalido";
-            string password = jsonData2.password.Value;
+            string password = responseGet.Data.password;
 
             //fazer login com o usuário criado
             PostLogin post = new PostLogin();
             post.SetJsonBody(email, password);
-            IRestResponse response = post.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
-            //Deletar o usuário
+            //Deletar o usuário criado
             UsuarioStep.DeletarUsuariosCriados();
 
             Assert.IsTrue((int)response.StatusCode == 400);
-            Assert.AreEqual(mensagem, jsonData.email.Value);
+            Assert.AreEqual(mensagem, response.Data.email.Value);
         }
 
         [Test]
@@ -101,27 +90,21 @@ namespace DesafioAutomacaoAPIBase2.Tests
         {
             string mensagem = "Email e/ou senha inválidos";
 
-            //Deletar o usuário
-            UsuarioStep.DeletarUsuariosCriados();
-
             // Criar novo usuário 
-            dynamic jsonData1 = JsonConvert.DeserializeObject(UsuarioStep.CriarUsuario().Content.ToString());
-            string id = jsonData1._id.Value;
+            string id = UsuarioStep.CriarUsuario().Data._id;
 
             // Buscar pelo id do usuário
             GetUsuarioPorId get = new GetUsuarioPorId(id);
             var responseGet = get.ExecuteRequest();
-            dynamic jsonData2 = JsonConvert.DeserializeObject(responseGet.Content.ToString());
 
             // pegar o nome e password do usuário criado
-            string email = jsonData2.email.Value;
+            string email = responseGet.Data.email;
             string password = "senhaInvalida";
 
             //Fazer login com o usuário criado
             PostLogin post = new PostLogin();
             post.SetJsonBody(email, password);
-            IRestResponse response = post.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
@@ -129,7 +112,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             UsuarioStep.DeletarUsuariosCriados();
 
             Assert.IsTrue((int)response.StatusCode == 401);
-            Assert.AreEqual(mensagem, jsonData.message.Value);
+            Assert.AreEqual(mensagem, (string)response.Data.message);
         }
         #endregion
     }

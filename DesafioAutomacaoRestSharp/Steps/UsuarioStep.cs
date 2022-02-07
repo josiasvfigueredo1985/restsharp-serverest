@@ -1,15 +1,16 @@
 ﻿using ClosedXML.Excel;
-using DesafioAutomacaoAPIBase2.DBSteps;
-using DesafioAutomacaoAPIBase2.Helpers;
-using DesafioAutomacaoAPIBase2.Requests.Usuarios;
+using DesafioAutomacaoRestSharp.DBSteps;
+using DesafioAutomacaoRestSharp.Helpers;
+using DesafioAutomacaoRestSharp.Requests.Usuarios;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
-namespace DesafioAutomacaoAPIBase2.Steps
+namespace DesafioAutomacaoRestSharp.Steps
 {
     public class UsuarioStep
     {
@@ -23,7 +24,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             var totalLinhas = planilha.Rows().Count();
             var totalColunas = planilha.ColumnsUsed().Count();
             PostUsuario usuario = new PostUsuario();
-            IRestResponse response;
+            IRestResponse<dynamic> response;
 
             //A primeira linha é o cabecalho, o contador das linhas dos itens se inicia na linha 1
             try
@@ -36,15 +37,12 @@ namespace DesafioAutomacaoAPIBase2.Steps
                     var email = planilha.Cell($"{colunas[i++]}{l}").Value.ToString();
                     var password = planilha.Cell($"{colunas[i++]}{l}").Value.ToString();
                     var administrador = planilha.Cell($"{colunas[i++]}{l}").Value.ToString().ToLower();
-                   
-                        usuario.SetJsonBody(nome, email, password, Convert.ToBoolean(administrador));
+
+                    usuario.SetJsonBody(nome, email, password, Convert.ToBoolean(administrador));
                     response = usuario.ExecuteRequest();
 
-                    dynamic jsonData = JObject.Parse(response.Content.ToString());
-                    string idUsuario = jsonData._id;
-
                     // Inserção dos dados do usuário criado em cada response na tabela "usuarios" no banco de dados
-                    SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador, idUsuario);
+                    SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador, Convert.ToString(response.Data._id));
 
                     // Lista para armazenar cada status code gerado pela requisição
                     responses.Add(response);
@@ -55,7 +53,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
                 Console.WriteLine("Erro na execução das requisições: {0}", erro);
                 throw;
             }
-            var result = statusCodes;//.ToArray();
+            var result = statusCodes;
             return responses;
         }
 
@@ -64,17 +62,22 @@ namespace DesafioAutomacaoAPIBase2.Steps
             //Deleta os ids salvos do banco de dados
             SolicitacaoDBSteps.DeletarTodosUsuariosCriados();
 
+            Thread.Sleep(1000);
+
             //Deletar todos os usuários criados
             DeletarTodosUsuarios();
-            //   return responses;
+
+            Thread.Sleep(500);
         }
 
-        public static IRestResponse DeletarUsuarioPorId(string id)
+        public static IRestResponse<dynamic> DeletarUsuarioPorId(string id)
         {
             DeleteUsuario delete = new DeleteUsuario(id);
-            IRestResponse response = delete.ExecuteRequest();
+            IRestResponse<dynamic> response = delete.ExecuteRequest();
+
             // Deletar usuário do banco de dados
             SolicitacaoDBSteps.DeletarUsuarioById(id);
+
             return response;
         }
 
@@ -84,8 +87,9 @@ namespace DesafioAutomacaoAPIBase2.Steps
             SolicitacaoDBSteps.DeletarUsuarioById(id);
         }
 
-        public static IRestResponse CriarUsuario()
+        public static IRestResponse<dynamic> CriarUsuario()
         {
+            // Exemplo de uso de criação de emails dinâmicos
             Random r = new Random();
             string[] emails = { "yahoo", "bol", "ig", "globo", "gov", "gmail", "ambev", "abril", "msn", "outlook", "hotmail" };
 
@@ -96,45 +100,42 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
             PostUsuario post = new PostUsuario();
             post.SetJsonBody(nome, email, password, administrador);
-            IRestResponse response = post.ExecuteRequest();
-
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
-            string idUsuario = jsonData._id.Value;
+            IRestResponse<dynamic> response = post.ExecuteRequest();
 
             // Inserção dos dados do usuário criado em cada response na tabela "usuarios" no banco de dados
-            SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador.ToString().ToLower(), idUsuario);
+            SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador.ToString().ToLower(), Convert.ToString(response.Data._id.Value));
 
             return response;
         }
 
         public static void DeletarTodosUsuarios()
         {
-     
+            CarrinhosStep.DeletarCarrinhoCancelarCompra();
+            CarrinhosStep.DeletarCarrinhoConcluirCompra();
+
             GetUsuarios get = new GetUsuarios();
-            IRestResponse response = get.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = get.ExecuteRequest();
+            int data = response.Data.quantidade;
 
-            int data = Convert.ToInt32(jsonData.quantidade.Value);
-
-            for (int i = 0; i < data;i++)
+            for (int i = 0; i < data; i++)
             {
-                string id = jsonData.usuarios[i]._id.Value;
+                DeleteUsuario del = new DeleteUsuario(response.Data.usuarios[i]._id.Value);
+                var response2 = del.ExecuteRequest();
 
-                DeleteUsuario del = new DeleteUsuario(id);
-                response = del.ExecuteRequest();
-                Console.WriteLine(response.Content.ToString());
+                if (!response2.IsSuccessful)
+                {
+                    i++;
+                }
+                Console.WriteLine(response2.Data);
             }
         }
 
         public static string RetornaEmailUsuario(string idUsuario)
         {
             GetUsuarioPorId get = new GetUsuarioPorId(idUsuario);
-            IRestResponse response = get.ExecuteRequest();
+            IRestResponse<dynamic> response = get.ExecuteRequest();
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
-
-            string email = jsonData.email.Value;
-            return email;
+            return response.Data.email;
         }
     }
 }

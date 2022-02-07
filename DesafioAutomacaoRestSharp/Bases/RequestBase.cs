@@ -1,9 +1,9 @@
-﻿using DesafioAutomacaoAPIBase2.Helpers;
-using DesafioAutomacaoAPIBase2.Steps;
+﻿using DesafioAutomacaoRestSharp.Helpers;
+using DesafioAutomacaoRestSharp.Steps;
 using RestSharp;
 using System.Collections.Generic;
 
-namespace DesafioAutomacaoAPIBase2.Bases
+namespace DesafioAutomacaoRestSharp.Bases
 {
     public class RequestBase
     {

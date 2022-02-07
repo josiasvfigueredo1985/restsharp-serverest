@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<body class="attributes-view standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Extent Framework</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">06/02/2022 13:20:32</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tags</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-primary">4</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">.CarrinhosTests</p>
+      <p class="duration text-sm">8 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>7</span>          <span class='badge badge-danger'>1</span>                       </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>.CarrinhosTests</h4>
+ <span class='badge badge-success'>7 passed</span>        <span class='badge badge-danger'>1 failed</span>                 </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:20:32</td>
+          <td class='linked' test-id='1'>
+            BuscarCarrinhoPorID
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:20:52</td>
+          <td class='linked' test-id='27'>
+            BuscarCarrinhoPorIDInexistente
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar fail-bg'>
+              <i class="fa fa-times text-white"></i>
+            </div>
+          </td>
+          <td>13:20:54</td>
+          <td class='linked' test-id='29'>
+            CadastrarCarrinho
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:21:02</td>
+          <td class='linked' test-id='37'>
+            CadastrarCarrinhoComProdutoDuplicado
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:21:12</td>
+          <td class='linked' test-id='47'>
+            CadastrarCarrinhoDuplicado
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:21:19</td>
+          <td class='linked' test-id='55'>
+            ExcluirCarrinhoCancelarCompra
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:21:39</td>
+          <td class='linked' test-id='75'>
+            ExcluirCarrinhoConcluirCompra
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:21:50</td>
+          <td class='linked' test-id='89'>
+            ListarCarrinhosCadastrados
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">.LoginTests</p>
+      <p class="duration text-sm">3 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>3</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>.LoginTests</h4>
+ <span class='badge badge-success'>3 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:20:32</td>
+          <td class='linked' test-id='2'>
+            LoginComSucesso
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:20:48</td>
+          <td class='linked' test-id='21'>
+            LoginEmailInvalido
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:21:18</td>
+          <td class='linked' test-id='52'>
+            LoginSenhaInvalida
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">.PagamentoTests</p>
+      <p class="duration text-sm">14 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>12</span>          <span class='badge badge-danger'>2</span>                       </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>.PagamentoTests</h4>
+ <span class='badge badge-success'>12 passed</span>        <span class='badge badge-danger'>2 failed</span>                 </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar fail-bg'>
+              <i class="fa fa-times text-white"></i>
+            </div>
+          </td>
+          <td>13:21:38</td>
+          <td class='linked' test-id='73'>
+            AtualizarPagamentoPorIdInexistente
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar fail-bg'>
+              <i class="fa fa-times text-white"></i>
+            </div>
+          </td>
+          <td>13:21:40</td>
+          <td class='linked' test-id='77'>
+            BuscarPagamentoPorIDBoleto
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:21:55</td>
+          <td class='linked' test-id='96'>
+            BuscarPagamentoPorIDCartao
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:11</td>
+          <td class='linked' test-id='114'>
+            BuscarPagamentoPorIdInexistente
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:12</td>
+          <td class='linked' test-id='118'>
+            BuscarPagamentoPorIDPix
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:27</td>
+          <td class='linked' test-id='138'>
+            CadastrarPagamentoBoleto
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:40</td>
+          <td class='linked' test-id='159'>
+            CadastrarPagamentoCartaoCredito
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:54</td>
+          <td class='linked' test-id='179'>
+            CadastrarPagamentoPix
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:07</td>
+          <td class='linked' test-id='197'>
+            EditarPagamentoBoletoParaCartao
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:24</td>
+          <td class='linked' test-id='222'>
+            EditarPagamentoBoletoParaPix
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:41</td>
+          <td class='linked' test-id='246'>
+            EditarPagamentoCartaoParaBoleto
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:58</td>
+          <td class='linked' test-id='270'>
+            EditarPagamentoCartaoParaPix
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:24:15</td>
+          <td class='linked' test-id='292'>
+            EditarPagamentoPixParaBoleto
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:24:31</td>
+          <td class='linked' test-id='314'>
+            EditarPagamentoPixParaCartao
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+<li class="test-item">
+  <div class="open-test">
+    <div class="test-detail">
+      <p class="name">.ProdutosTests</p>
+      <p class="duration text-sm">22 tests</p>
+      <span class="datetime">
+ <span class='badge badge-success'>22</span>                               </span>
+    </div>
+  </div>
+  <div class="test-contents d-none">
+    <div class="info">
+      <h4>.ProdutosTests</h4>
+ <span class='badge badge-success'>22 passed</span>                       </div>
+    <table class='table table-sm mt-4'>
+      <thead>
+        <tr>
+          <th class="status-col">Status</th>
+          <th class="timestamp-col">Timestamp</th>
+          <th>TestName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:11</td>
+          <td class='linked' test-id='116'>
+            BuscarProdutoPorID
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:22</td>
+          <td class='linked' test-id='130'>
+            BuscarProdutoPorIDInexistente
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:24</td>
+          <td class='linked' test-id='133'>
+            CadastrarProduto
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:33</td>
+          <td class='linked' test-id='146'>
+            CadastrarProdutoDuplicado
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:36</td>
+          <td class='linked' test-id='152'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:39</td>
+          <td class='linked' test-id='155'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:41</td>
+          <td class='linked' test-id='160'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:43</td>
+          <td class='linked' test-id='163'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:45</td>
+          <td class='linked' test-id='166'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:48</td>
+          <td class='linked' test-id='169'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:50</td>
+          <td class='linked' test-id='172'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:52</td>
+          <td class='linked' test-id='175'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:54</td>
+          <td class='linked' test-id='180'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:57</td>
+          <td class='linked' test-id='183'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:22:59</td>
+          <td class='linked' test-id='186'>
+            CadastrarProdutosDataDrivenCSV
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:01</td>
+          <td class='linked' test-id='189'>
+            EditarProduto
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:28</td>
+          <td class='linked' test-id='227'>
+            EditarProdutoComIdInexistente
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:41</td>
+          <td class='linked' test-id='244'>
+            EditarProdutoDuplicado
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:23:59</td>
+          <td class='linked' test-id='271'>
+            ExcluirProduto
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:24:09</td>
+          <td class='linked' test-id='282'>
+            ExcluirProdutoDeUmCarrinho
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:24:24</td>
+          <td class='linked' test-id='302'>
+            ExcluirProdutoIdInexistente
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class='status-avatar pass-bg'>
+              <i class="fa fa-check text-white"></i>
+            </div>
+          </td>
+          <td>13:24:25</td>
+          <td class='linked' test-id='304'>
+            ListarProdutosCadastrados
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+</html> 

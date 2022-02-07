@@ -1,7 +1,7 @@
-﻿using DesafioAutomacaoAPIBase2.Bases;
-using DesafioAutomacaoAPIBase2.DBSteps;
-using DesafioAutomacaoAPIBase2.Requests.Produtos;
-using DesafioAutomacaoAPIBase2.Steps;
+﻿using DesafioAutomacaoRestSharp.Bases;
+using DesafioAutomacaoRestSharp.DBSteps;
+using DesafioAutomacaoRestSharp.Requests.Produtos;
+using DesafioAutomacaoRestSharp.Steps;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
@@ -9,15 +9,15 @@ using RestSharp;
 using System;
 using System.Threading;
 
-namespace DesafioAutomacaoAPIBase2.Tests
+namespace DesafioAutomacaoRestSharp.Tests
 {
     [TestFixture]
     public class ProdutosTests : TestBase
     {
         #region Testes Positivos
 
-        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosNovosProduto")]
-        public void CadastrarProdutosDataDrivenExcel(string nome, string preco, string descricao, string quantidade)
+        [TestCaseSource(typeof(DataDrivenStep), "RetornaDadosProdutos")]
+        public void CadastrarProdutosDataDrivenCSV(string nome, string preco, string descricao, string quantidade)
         {
             PostProduto post = new PostProduto();
             Random r = new Random();
@@ -53,9 +53,6 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine(response.Content.ToString());
 
-            //Deleta novamente os dados criados
-            //ProdutosStep.DeletarTodosProdutosCriados();
-
             Assert.Multiple(() =>
             {
                 Assert.IsTrue(response.IsSuccessful);
@@ -82,6 +79,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
         [Test]
         public void BuscarProdutoPorID()
         {
+            Thread.Sleep(200);
             //Criar produto a ser buscado
             IRestResponse response1 = ProdutosStep.CriarProduto();
             dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content.ToString());
@@ -168,23 +166,20 @@ namespace DesafioAutomacaoAPIBase2.Tests
             string mensagem = "Registro excluído com sucesso";
 
             //Criar produto
-            IRestResponse response1 = ProdutosStep.CriarProduto();
-            dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content.ToString());
-            var idProduto = jsonData1._id.Value;
+            var response1 = ProdutosStep.CriarProduto();
+            var idProduto = response1.Data._id.Value;
 
             //Deletar produto criado
             DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response2 = delete.ExecuteRequest();
-
-            dynamic jsonData2 = JsonConvert.DeserializeObject(response2.Content.ToString());
+            IRestResponse<dynamic> response2 = delete.ExecuteRequest();
 
             Console.WriteLine(response2.Content.ToString());
 
             // Deletar todos os produtos já criados
-            //ProdutosStep.DeletarTodosProdutosCriados();
+            ProdutosStep.DeletarTodosProdutosCriados();
 
             Assert.IsTrue(response2.IsSuccessful);
-            Assert.IsTrue(mensagem == jsonData2.message.Value);
+            Assert.IsTrue(mensagem == response2.Data.message.Value);
         }
 
         #endregion Testes Positivos
@@ -217,13 +212,11 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Console.WriteLine("Segundo cadastro: " + response2.Content.ToString());
 
-            dynamic jsonData2 = JsonConvert.DeserializeObject(response2.Content.ToString());
-
             // Deletar produto criado
             ProdutosStep.DeletarProdutoById(idProduto);
 
             Assert.IsTrue(response2.StatusCode.ToString() == "BadRequest");
-            Assert.IsTrue(mensagem == jsonData2.message.Value);
+            Assert.IsTrue(mensagem == response2.Data.message.Value);
         }
 
         [Test]
@@ -251,9 +244,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             //Atualizar produto com nome do produto criado anteriormente
             PutProduto put = new PutProduto(idProduto);
             put.SetJsonBody(nome, preco, desc, qtde);
-            IRestResponse response2 = put.ExecuteRequest();
-
-            dynamic jsonData2 = JsonConvert.DeserializeObject(response2.Content.ToString());
+            IRestResponse<dynamic> response2 = put.ExecuteRequest();
 
             Console.WriteLine(response2.Content.ToString());
 
@@ -262,7 +253,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             // Deletar todos os produtos já criados
             ProdutosStep.DeletarTodosProdutosCriados();
 
-            Assert.IsTrue(mensagem == jsonData2.message.Value);
+            Assert.IsTrue(mensagem == response2.Data.message.Value);
             Assert.AreEqual("BadRequest", response2.StatusCode.ToString());
         }
 
@@ -273,13 +264,12 @@ namespace DesafioAutomacaoAPIBase2.Tests
             string mensagem = "Produto não encontrado";
 
             GetProdutoPorId get = new GetProdutoPorId(idInexistente);
-            IRestResponse response = get.ExecuteRequest();
+            IRestResponse<dynamic> response = get.ExecuteRequest();
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
             Console.WriteLine(response.Content.ToString());
 
             Assert.IsTrue((int)response.StatusCode == 400);
-            Assert.IsTrue(jsonData.message == mensagem);
+            Assert.IsTrue(response.Data.message.Value == mensagem);
         }
 
         [Test]
@@ -289,19 +279,18 @@ namespace DesafioAutomacaoAPIBase2.Tests
             string mensagem = "Nenhum registro excluído";
 
             DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response = delete.ExecuteRequest();
-
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = delete.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
             Assert.IsTrue(response.IsSuccessful);
-            Assert.IsTrue(mensagem == jsonData.message.Value);
+            Assert.IsTrue(mensagem == response.Data.message.Value);
         }
 
         [Test]
         public void ExcluirProdutoDeUmCarrinho()
         {
+            Thread.Sleep(200);
             string mensagem = "Não é permitido excluir produto que faz parte de carrinho";
 
             // Deletar todos os produtos já criados
@@ -310,27 +299,20 @@ namespace DesafioAutomacaoAPIBase2.Tests
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
 
             // Criar produto
-            IRestResponse response1 = ProdutosStep.CriarProduto();
-            dynamic jsonData1 = JsonConvert.DeserializeObject(response1.Content.ToString());
-            var idProduto = jsonData1._id.Value;
+            IRestResponse<dynamic> response1 = ProdutosStep.CriarProduto();
+            var idProduto = response1.Data._id.Value;
 
             //Criar um carrinho com o produto cadastrado
             CarrinhosStep.CriarCarrinhoUnicoProduto(idProduto);
 
             //Tentar excluir o produto que foi inserido no carrinho
             DeleteProduto delete = new DeleteProduto(idProduto);
-            IRestResponse response = delete.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = delete.ExecuteRequest();
 
             Console.WriteLine("Mensagem ao tentar excluir produto: " + response.Content.ToString());
 
-            //Excluir carrinho
-            CarrinhosStep.DeletarCarrinhoCancelarCompra();
-            // Deletar todos os produtos já criados
-            ProdutosStep.DeletarTodosProdutosCriados();
-
             Assert.IsTrue((int)response.StatusCode == 400);
-            Assert.IsTrue(jsonData.message.Value == mensagem);
+            Assert.IsTrue(response.Data.message.Value == mensagem);
         }
 
         #endregion Testes Negativos

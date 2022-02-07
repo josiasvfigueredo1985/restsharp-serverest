@@ -1,8 +1,8 @@
-﻿using DesafioAutomacaoAPIBase2.Bases;
-using DesafioAutomacaoAPIBase2.Helpers;
+﻿using DesafioAutomacaoRestSharp.Bases;
+using DesafioAutomacaoRestSharp.Helpers;
 using RestSharp;
 
-namespace DesafioAutomacaoAPIBase2.Requests.Carrinhos
+namespace DesafioAutomacaoRestSharp.Requests.Carrinhos
 {
     public class GetCarrinhoPorId : RequestBase
     {

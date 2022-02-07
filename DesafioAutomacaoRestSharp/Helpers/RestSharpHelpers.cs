@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
     public class RestSharpHelpers
     {

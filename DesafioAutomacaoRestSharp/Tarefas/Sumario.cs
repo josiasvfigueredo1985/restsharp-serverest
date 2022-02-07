@@ -1,8 +1,8 @@
-﻿using DesafioAutomacaoAPIBase2.Helpers;
-using DesafioAutomacaoAPIBase2.Requests.Pagamento;
-using DesafioAutomacaoAPIBase2.Steps;
+﻿using DesafioAutomacaoRestSharp.Helpers;
+using DesafioAutomacaoRestSharp.Requests.Pagamento;
+using DesafioAutomacaoRestSharp.Steps;
 
-namespace DesafioAutomacaoAPIBase2.Tarefas
+namespace DesafioAutomacaoRestSharp.Tarefas
 {
     public class Sumario
     {
@@ -18,10 +18,10 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
             // 51 testes implementados nas classe de testes
 
             //2) Alguns scripts devem ler dados de uma planilha Excel para implementar Data-Driven.
-            //Planilha Serverest.xlsx
-            //Método estático implementado para inserir produtos:
-            ProdutosStep.CriarProdutosPlanilhaExcel();
-
+            //Planilhas DataDriven/Produtos.csv e DataDriven/Usuarios
+            //Método estático implementado para testes datadriven de usuários e produtos:
+            _ = DataDrivenStep.RetornaDadosProdutos;
+            _ = DataDrivenStep.RetornaDadosUsuarios;
             //3) --Notem que 50 scripts podem cobrir mais de 50 casos de testes se usarmos Data-Driven.
             //Em outras palavras, implementar 50 CTs usando data-driven não é a mesma coisa que implementar 50 scripts.
 
@@ -39,18 +39,18 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
 
             // 800 Pontos (Metas 1 até 4 + as metas abaixo)
             //7) O projeto deverá gerar um relatório de testes automaticamente.
-            // Caminho do report gerado: DesafioAutomacaoAPIBase2_DEV\DesafioAutomacaoAPIBase2\bin\Debug\netcoreapp3.1\Reports
+            // Caminho do report gerado: DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\Reports\
 
-            //8) Implementar pelo menos dois ambientes(desenvolvimento / homologação)
-            // Dev
-            // https://josiasvfigueredo.visualstudio.com/Praticas_De_Testes/_git/DesafioAutomacaoRestSharp?path=%2F&version=GBDEV&_a=contents
-            // QA
-            // https://josiasvfigueredo.visualstudio.com/Praticas_De_Testes/_git/DesafioAutomacaoRestSharp?path=%2F&version=GBQA&_a=contents
-            // Stage
-            //https://josiasvfigueredo.visualstudio.com/Praticas_De_Testes/_git/DesafioAutomacaoRestSharp?path=%2F&version=GBSTAGE&_a=contents
+            //8) Implementar pelo menos dois ambientes
+            //Local e Online, o local deve ser alterado no appsettings, o método SetURL realiza as alterações e executa a bat
+            // que iniciar o ServeRest local.
+            Ambiente_Step.SetURL();
 
             //9) A massa de testes deve ser preparada neste projeto, seja com scripts carregando massa nova no BD ou com restore de banco de dados.
             // Massa de dados inseridas no banco de dados MySQL hospedado em https://www.freemysqlhosting.net/
+            // Outro método adicionado para gerar massa de dados:
+            ProdutosStep.CriarProdutosPlanilhaExcel();
+            UsuarioStep.CriarUsuariosPlanilhaExcel();
 
             // Se usar WireMock(http://wiremock.org/) a massa será tratada implicitamente.
             // API´s mockadas em https://mockapi.io/projects/61b52c030e84b70017331a8a
@@ -63,9 +63,10 @@ namespace DesafioAutomacaoAPIBase2.Tarefas
             UpdatePagamento update = new UpdatePagamento("");
 
             //10) Executar testes em paralelo.Pelo menos duas threads (25 testes cada).
-            //Configurado nos ambientes de QA
+            //Configurado em Propertires/AssemblyInfo.cs
             //11) Testes deverão ser agendados pelo Azure DevOps, Gitlab-CI, Jenkins, CircleCI, TFS ou outra ferramenta de CI que preferir.
             // Agendamento configurado com envio de email: 
+            // https://josiasvfigueredo.visualstudio.com/Praticas_De_Testes/_apps/hub/ms.vss-ciworkflow.build-ci-hub?_a=edit-build-definition&id=14
         }
     }
 }

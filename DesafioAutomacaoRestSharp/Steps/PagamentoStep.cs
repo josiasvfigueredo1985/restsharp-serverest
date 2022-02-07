@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using RestSharp;
-using DesafioAutomacaoAPIBase2.Requests.Pagamento;
+using DesafioAutomacaoRestSharp.Requests.Pagamento;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Threading;
 
-namespace DesafioAutomacaoAPIBase2.Steps
+namespace DesafioAutomacaoRestSharp.Steps
 {
     class PagamentoStep
     {
-        public static IRestResponse CriarNovoPagamento(string pix_boleto_cartao)
+        public static IRestResponse<dynamic> CriarNovoPagamento(string pix_boleto_cartao)
         {
             // Dados trazidos do carrinho
-            dynamic jsonData1 = JsonConvert.DeserializeObject(CarrinhosStep.ConsultarCarrinho().Content);
+            dynamic jsonData1 = CarrinhosStep.ConsultarCarrinho().Data;
             string dataPagamento = DateTime.Today.ToShortDateString();
             bool pix = true;
-            int prec = Convert.ToInt32(jsonData1.precoTotal.Value);
-            int qtd = Convert.ToInt32(jsonData1.quantidadeTotal.Value);
+            int prec = Convert.ToInt32(jsonData1.precoTotal);
+            int qtd = Convert.ToInt32(jsonData1.quantidadeTotal);
             int precoTotal = Convert.ToInt32(prec);
             int quantidadeTotal = Convert.ToInt32(qtd);
-            string idUsuario = jsonData1.idUsuario.Value;
-            string idCarrinho = jsonData1._id.Value;
+            string idUsuario = jsonData1.idUsuario;
+            string idCarrinho = jsonData1._id;
             bool boleto = true;
             bool cartao = true;
             int parcelas = 2;
@@ -41,20 +41,17 @@ namespace DesafioAutomacaoAPIBase2.Steps
                     create.SetJsonBodyCartao(dataPagamento, cartao, parcelas, juros, precoTotal, quantidadeTotal, idUsuario, idCarrinho);
                     break;
             }
-            IRestResponse response = create.ExecuteRequest();
+            IRestResponse<dynamic> response = create.ExecuteRequest();
 
             // Console.WriteLine(response.Content.ToString());
 
             return response;
         }
 
-        public static IRestResponse ConsultarPagamentoPorId()
+        public static IRestResponse<dynamic> ConsultarPagamentoPorId()
         {
-            dynamic jsonData = JObject.Parse(CriarNovoPagamento("pix").Content.ToString());
-            string idPagamento = jsonData._id;
-
-            GetByIdPagamento get = new GetByIdPagamento(idPagamento);
-            IRestResponse response = get.ExecuteRequest();
+            GetByIdPagamento get = new GetByIdPagamento(CriarNovoPagamento("pix").Data._id);
+            IRestResponse<dynamic> response = get.ExecuteRequest();
 
             return response;
         }
@@ -71,25 +68,21 @@ namespace DesafioAutomacaoAPIBase2.Steps
         public static void DeletarPagamentos()
         {
             // Espera adicionada por conta do rate limit da API
-            Thread.Sleep(1800);
+            Thread.Sleep(1500);
 
             GetAllPagamento get = new GetAllPagamento();
-            IRestResponse response = get.ExecuteRequest();
+            IRestResponse<dynamic> response = get.ExecuteRequest();
 
-            string cont = Convert.ToString(response.Content);
-
-            Console.WriteLine("Response Delete: " + cont);
+            Console.WriteLine("Response Delete: " + response.Data);
 
             if (response.Content != "[]")
             {
-                dynamic jsonData = JsonConvert.DeserializeObject<dynamic>(cont);
-
-                foreach (var id in jsonData[0].idPagamento.Value)
+                foreach (var id in response.Data[0].idPagamento.Value)
                 {
                     Thread.Sleep(1000);
                     DeletePagamento delete = new DeletePagamento(Convert.ToString(id));
                     IRestResponse resp = delete.ExecuteRequest();
-                    Console.WriteLine(resp.Content.ToString());
+                    Console.WriteLine(resp.Content);
                 }
             }
         }

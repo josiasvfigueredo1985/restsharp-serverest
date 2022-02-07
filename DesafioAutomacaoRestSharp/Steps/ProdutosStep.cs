@@ -1,27 +1,33 @@
 ﻿using ClosedXML.Excel;
-using DesafioAutomacaoAPIBase2.DBSteps;
-using DesafioAutomacaoAPIBase2.Helpers;
-using DesafioAutomacaoAPIBase2.Requests.Produtos;
+using DesafioAutomacaoRestSharp.DBSteps;
+using DesafioAutomacaoRestSharp.Helpers;
+using DesafioAutomacaoRestSharp.Requests.Produtos;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using NUnit.Framework;
+using NUnit.Framework.Internal;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
-namespace DesafioAutomacaoAPIBase2.Steps
+namespace DesafioAutomacaoRestSharp.Steps
 {
     public class ProdutosStep
     {
         public static List<string> CriarProdutosPlanilhaExcel()
         {
+            var rnd = TestContext.CurrentContext.Random;
+
             List<string> statusCodes = new List<string>();
             var xls = new XLWorkbook(GeneralHelpers.ReturnProjectPath() + "DataDriven/Serverest.xlsx");
             var planilha = xls.Worksheets.First(w => w.Name == "Produtos");
             var totalLinhas = planilha.Rows().Count();
 
             PostProduto produto = new PostProduto();
-            IRestResponse response;
+            IRestResponse<dynamic> response;
 
             //A primeira linha é o cabecalho, o contador das linhas dos itens se inicia na linha 1
             try
@@ -30,23 +36,20 @@ namespace DesafioAutomacaoAPIBase2.Steps
                 {
                     //Adição de´caracter numérico randômico devido à falta de controle de dados da API
                     //Ex. Os dados podem ser apagados ou dupicados por outros usuários da API
-                    var nome = planilha.Cell($"A{l}").Value.ToString() + " modelo " + GeneralHelpers.ReturnRandomNumbersAsString(99, 9999);
+                    var nome = planilha.Cell($"A{l}").Value.ToString() + " modelo " + rnd.GetString(6);
                     var preco = planilha.Cell($"B{l}").Value.ToString();
                     var descricao = planilha.Cell($"C{l}").Value.ToString();
                     var quantidade = planilha.Cell($"D{l}").Value.ToString();
 
-                    //   string prd = $"{nome} + {preco} + {descricao} + {quantidade}";
-
                     produto.SetJsonBody(nome, int.Parse(preco), descricao, int.Parse(quantidade));
                     response = produto.ExecuteRequest();
 
-                    dynamic jsonData = JObject.Parse(response.Content.ToString());
-                    string idProduto = jsonData._id;
-
                     // Inserção do ID gerado em cada response na tabela "produto" no banco de dados
-                    SolicitacaoDBSteps.InserirProdutoCriadoDB(idProduto);
+                    SolicitacaoDBSteps.InserirProdutoCriadoDB(Convert.ToString(response.Data._id));
                     string sts = response.StatusCode.ToString();
+
                     Console.WriteLine("Response Produtos criados: " + response.Content.ToString());
+
                     // Lista para armazenar cada status code gerado pela requisição
                     statusCodes.Add(sts);
                 }
@@ -57,58 +60,47 @@ namespace DesafioAutomacaoAPIBase2.Steps
                 throw;
             }
 
-            var result = statusCodes;//.ToArray();
+            var result = statusCodes;
             return result;
         }
 
         public static void DeletarTodosProdutosCriados()
         {
-            // Deleção dos produtos através dos Id´s que foram armazenados no banco de dados
-            //Buscar e armazenar todos os ids dos produtos gerados
-            //List<string> idsProdutos = SolicitacaoDBSteps.BuscarIdsProdutos();
-            //List<string> statusCode = new List<string>();
-
-            ////Deletar por cada id criado
-            //foreach (var id in idsProdutos)
-            //{
-            //    DeleteProduto delete = new DeleteProduto(id);
-            //    var response = delete.ExecuteRequest();
-            //    statusCode.Add(response.StatusCode.ToString());
-            //}
-            // Deletar por cada id criado no serverest
             DeleteProdutos();
 
             //Deletar os dados do banco
             SolicitacaoDBSteps.DeletarTodosIdsProdutos();
+            Thread.Sleep(1000);
         }
 
-        public static IRestResponse DeletarProdutoById(string idProduto)
+        public static IRestResponse<dynamic> DeletarProdutoById(string idProduto)
         {
             DeleteProduto delete = new DeleteProduto(idProduto);
             var response = delete.ExecuteRequest();
+
             return response;
         }
-
-        public static IRestResponse CriarProduto()
+        public static IRestResponse<dynamic> CriarProduto()
         {
+            Thread.Sleep(500);
             PostProduto postProduto = new PostProduto();
 
-            Random model = new Random();
-            string nome = "Notebook Asus Ryzen 5 " + model.Next().ToString();
+            var rnd = TestContext.CurrentContext.Random;
+            string nome = "Notebook Asus Ryzen 5 " + rnd.GetString(6);
             int preco = 2300;
-            string descricao = "Notebook Gamer " + model.Next().ToString();
+            string descricao = "Notebook Gamer " + rnd.GetString(6);
             int qtde = 1;
 
             //Criar um produto
             postProduto.SetJsonBody(nome, preco, descricao, qtde);
-            IRestResponse response = postProduto.ExecuteRequest();
+            IRestResponse<dynamic> response = postProduto.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
-
             //Insere o id do produto cadastrado no banco para ser deletado por outros testes
-            SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
+            SolicitacaoDBSteps.InserirProdutoCriadoDB(Convert.ToString(response.Data._id));
+
+            Thread.Sleep(1000);
 
             return response;
         }
@@ -118,13 +110,12 @@ namespace DesafioAutomacaoAPIBase2.Steps
             List<string> ids = new List<string>();
             DeleteProduto delete;
             GetProdutos get = new GetProdutos();
-            IRestResponse response = get.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = get.ExecuteRequest();
 
-            var data = jsonData.quantidade.Value;
+            var data = response.Data.quantidade.Value;
             for (int i = 0; i < data; i++)
             {
-                string id = jsonData.produtos[i]._id.Value;
+                string id = response.Data.produtos[i]._id.Value;
                 ids.Add(id);
             }
             foreach (var item in ids)
@@ -133,9 +124,10 @@ namespace DesafioAutomacaoAPIBase2.Steps
                 var rest = delete.ExecuteRequest();
                 Console.WriteLine("Produto excluído: " + rest.Content.ToString());
             }
+            Thread.Sleep(1000);
         }
 
-        public static IRestResponse CriarProdutoUnico(string nomeAdicional)
+        public static IRestResponse<dynamic> CriarProdutoUnico(string nomeAdicional)
         {
             PostProduto postProduto = new PostProduto();
 
@@ -146,30 +138,27 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
             //Criar um produto
             postProduto.SetJsonBody(nome, preco, desc, qtde);
-            IRestResponse response = postProduto.ExecuteRequest();
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+            IRestResponse<dynamic> response = postProduto.ExecuteRequest();
 
             Console.WriteLine(response.Content.ToString());
 
             //Insere o id do produto cadastrado no banco para ser deletado por outros testes
-            SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
+            SolicitacaoDBSteps.InserirProdutoCriadoDB(response.Data._id.Value);
 
             return response;
         }
 
-        public static IRestResponse AtualizarProduto()
+        public static IRestResponse<dynamic> AtualizarProduto()
         {
-            Random model = new Random();
-            string nome = "Notebook Asus Ryzen 5 Atualizado - Versão " + model.Next().ToString();
+            var rnd = TestContext.CurrentContext.Random;
+            string nome = "Notebook Asus Ryzen 5 Atualizado - Versão " + rnd.GetString(6);
             int preco = 2200;
-            string descricao = "Notebook Gamer Atualizado - Versão " + model.Next().ToString();
+            string descricao = "Notebook Gamer Atualizado - Versão " + rnd.GetString(6);
             int qtde = 1;
 
-            dynamic jsonData = JObject.Parse(CriarProduto().Content.ToString());
-
-            PutProduto put = new PutProduto(jsonData._id);
+            PutProduto put = new PutProduto(CriarProduto().Data._id);
             put.SetJsonBody(nome, preco, descricao, qtde);
-            IRestResponse response = put.ExecuteRequest();
+            IRestResponse<dynamic> response = put.ExecuteRequest();
 
             return response;
         }

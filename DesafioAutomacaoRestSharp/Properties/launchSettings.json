@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "DesafioAutomacaoRestSharp": {
+      "commandName": "Project",
+      "sqlDebugging": false,
+      "nativeDebugging": false
+    }
+  }
+}

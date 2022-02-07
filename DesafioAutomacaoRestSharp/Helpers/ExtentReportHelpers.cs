@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
-namespace DesafioAutomacaoAPIBase2.Helpers
+namespace DesafioAutomacaoRestSharp.Helpers
 {
     public class ExtentReportHelpers
     {

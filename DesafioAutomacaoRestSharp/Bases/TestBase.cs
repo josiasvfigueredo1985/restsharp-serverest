@@ -1,13 +1,16 @@
-﻿using DesafioAutomacaoAPIBase2.Helpers;
+﻿using DesafioAutomacaoRestSharp.Helpers;
+using DesafioAutomacaoRestSharp.Steps;
 using NUnit.Framework;
-
-namespace DesafioAutomacaoAPIBase2.Bases
+using System.Threading;
+namespace DesafioAutomacaoRestSharp.Bases
 {
     public class TestBase
     {
         [OneTimeSetUp]
         public void OneTimeSetUp()
-        {
+        {      
+            // Define qual URL será executada
+            Ambiente_Step.SetURL();
             ExtentReportHelpers.CreateReport();
         }
 

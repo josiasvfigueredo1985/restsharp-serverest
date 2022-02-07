@@ -1,9 +1,9 @@
-﻿using DesafioAutomacaoAPIBase2.Helpers;
+﻿using DesafioAutomacaoRestSharp.Helpers;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace DesafioAutomacaoAPIBase2.DBSteps
+namespace DesafioAutomacaoRestSharp.DBSteps
 {
     public class SolicitacaoDBSteps
     {
@@ -34,16 +34,6 @@ namespace DesafioAutomacaoAPIBase2.DBSteps
 
             ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Coluna: produto_id");
             return DBHelpers.RetornaDadosQueryMySQL(query);
-        }
-
-        public static void DeletarIdProduto(string idProduto)
-        {
-            string query = File.ReadAllText(GeneralHelpers.ReturnProjectPath() + "Queries/DeleteProdutoById.sql", Encoding.UTF8);
-            query = query.Replace("$produto_id", idProduto);
-
-            DBHelpers.ExecuteQueryMySQL(query);
-
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Coluna: produto_id");
         }
 
         #endregion Produtos

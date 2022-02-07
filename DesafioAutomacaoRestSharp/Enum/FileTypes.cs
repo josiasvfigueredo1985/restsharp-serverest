@@ -1,4 +1,4 @@
-namespace DesafioAutomacaoAPIBase2
+namespace DesafioAutomacaoRestSharp
 {
     public enum FileTypes
     {

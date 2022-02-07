@@ -331,10 +331,9 @@ C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.AssemblyInfoInputs.cache
-C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.AssemblyInfo.cs
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.csproj.CoreCompileInputs.cache
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.csproj.CopyComplete
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.dll
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.pdb
 C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.genruntimeconfig.cache
+C:\Users\Josias\source\repos\DesafioAutomacaoRestSharp\DesafioAutomacaoRestSharp\obj\Debug\netcoreapp3.1\DesafioAutomacaoRestSharp.csproj.AssemblyReference.cache
