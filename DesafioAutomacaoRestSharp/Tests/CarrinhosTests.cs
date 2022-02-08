@@ -46,7 +46,7 @@ namespace DesafioAutomacaoRestSharp.Tests
         [Test]
         public void CadastrarCarrinho()
         {
-            Thread.Sleep(800);
+            Thread.Sleep(1000);
             // Deletar carrinhos criados
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
 
@@ -153,7 +153,7 @@ namespace DesafioAutomacaoRestSharp.Tests
         [Test]
         public void CadastrarCarrinhoDuplicado()
         {
-            Thread.Sleep(800);
+            Thread.Sleep(1000);
             string mensagem = "Não é permitido ter mais de 1 carrinho";
             string idProd = ProdutosStep.CriarProduto().Data._id;
        
@@ -170,9 +170,9 @@ namespace DesafioAutomacaoRestSharp.Tests
         }
 
         [Test]
-        public void CadastrarCarrinhoComProdutoDuplicado()
+        public void  CadastrarCarrinhoComProdutoDuplicado()
         {
-            Thread.Sleep(600);
+            Thread.Sleep(500);
             // Deletar carrinhos criados
             CarrinhosStep.DeletarCarrinhoCancelarCompra();
             CarrinhosStep.DeletarCarrinhoConcluirCompra();
