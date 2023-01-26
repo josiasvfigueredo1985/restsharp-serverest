@@ -36,15 +36,15 @@ namespace DesafioAutomacaoAPIBase2.Steps
                     var email = planilha.Cell($"{colunas[i++]}{l}").Value.ToString();
                     var password = planilha.Cell($"{colunas[i++]}{l}").Value.ToString();
                     var administrador = planilha.Cell($"{colunas[i++]}{l}").Value.ToString().ToLower();
-                   
-                        usuario.SetJsonBody(nome, email, password, Convert.ToBoolean(administrador));
+
+                    usuario.SetJsonBody(nome, email, password, Convert.ToBoolean(administrador));
                     response = usuario.ExecuteRequest();
 
                     dynamic jsonData = JObject.Parse(response.Content.ToString());
                     string idUsuario = jsonData._id;
 
                     // Inserção dos dados do usuário criado em cada response na tabela "usuarios" no banco de dados
-                    SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador, idUsuario);
+                    //SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador, idUsuario);
 
                     // Lista para armazenar cada status code gerado pela requisição
                     responses.Add(response);
@@ -62,7 +62,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
         public static void DeletarUsuariosCriados()
         {
             //Deleta os ids salvos do banco de dados
-            SolicitacaoDBSteps.DeletarTodosUsuariosCriados();
+            //SolicitacaoDBSteps.DeletarTodosUsuariosCriados();
 
             //Deletar todos os usuários criados
             DeletarTodosUsuarios();
@@ -74,14 +74,14 @@ namespace DesafioAutomacaoAPIBase2.Steps
             DeleteUsuario delete = new DeleteUsuario(id);
             IRestResponse response = delete.ExecuteRequest();
             // Deletar usuário do banco de dados
-            SolicitacaoDBSteps.DeletarUsuarioById(id);
+            //SolicitacaoDBSteps.DeletarUsuarioById(id);
             return response;
         }
 
         public static void DeletarUsuarioPorIdBancoDados(string id)
         {
             // Deletar usuário do banco de dados
-            SolicitacaoDBSteps.DeletarUsuarioById(id);
+            //SolicitacaoDBSteps.DeletarUsuarioById(id);
         }
 
         public static IRestResponse CriarUsuario()
@@ -102,21 +102,21 @@ namespace DesafioAutomacaoAPIBase2.Steps
             string idUsuario = jsonData._id.Value;
 
             // Inserção dos dados do usuário criado em cada response na tabela "usuarios" no banco de dados
-            SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador.ToString().ToLower(), idUsuario);
+            //SolicitacaoDBSteps.InserirIdUsuarioCriadoDB(nome, email, password, administrador.ToString().ToLower(), idUsuario);
 
             return response;
         }
 
         public static void DeletarTodosUsuarios()
         {
-     
+
             GetUsuarios get = new GetUsuarios();
             IRestResponse response = get.ExecuteRequest();
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
 
             int data = Convert.ToInt32(jsonData.quantidade.Value);
 
-            for (int i = 0; i < data;i++)
+            for (int i = 0; i < data; i++)
             {
                 string id = jsonData.usuarios[i]._id.Value;
 

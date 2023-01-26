@@ -16,13 +16,23 @@ namespace DesafioAutomacaoAPIBase2.Helpers
         public static ExtentTest TEST;
 
         private static string reportName = JsonBuilder.ReturnParameterAppSettings("REPORT_NAME") + "_" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
-
+        private static string deleteReport = JsonBuilder.ReturnParameterAppSettings("DELETE_REPORT_FILES_BEFORE_TESTS").ToString().ToLower();
+        //////
+        // This will get the current WORKING directory (i.e. \bin\Debug)
+        private static string workingDirectory = Environment.CurrentDirectory;
+        // or: Directory.GetCurrentDirectory() gives the same result
+        // This will get the current PROJECT directory
+        private static string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+        //////
         private static string projectBinDebugPath = AppDomain.CurrentDomain.BaseDirectory;
         private static FileInfo fileInfo = new FileInfo(projectBinDebugPath);
         private static DirectoryInfo projectFolder = fileInfo.Directory;
-        private static string projectFolderPath = projectFolder.FullName;
-        private static string reportRootPath = projectFolderPath + "/Reports/";
-        public static string reportPath = projectFolderPath + "/Reports/" + reportName + "/";
+        // private static string projectFolderPath = projectFolder.FullName;
+        private static string projectFolderPath = projectDirectory;
+        //private static string reportRootPath = projectFolderPath + "/Reports/";
+        private static string reportRootPath = projectFolderPath + "/Results/";
+        //public static string reportPath = projectFolderPath + "/Reports/" + reportName + "/";
+        public static string reportPath = projectFolderPath + "/Results/" + reportName + "/";
         private static string fileName = reportName + ".html";
         private static string fullReportFilePath = reportPath + "_" + fileName;
 
@@ -203,6 +213,20 @@ namespace DesafioAutomacaoAPIBase2.Helpers
         public static void GenerateReport()
         {
             EXTENT_REPORT.Flush();
+        }
+
+        public static void DeleteReportFiles()
+        {
+            if (deleteReport == "true")
+            {
+                System.IO.DirectoryInfo di = new DirectoryInfo(reportRootPath);
+
+                foreach (DirectoryInfo dir in di.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
+            }
+
         }
     }
 }

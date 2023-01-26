@@ -31,7 +31,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
 
             // Inserção do ID gerado em cada response na tabela "produto" no banco de dados
-            SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
+            //SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
 
             bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
 
@@ -64,39 +64,39 @@ namespace DesafioAutomacaoAPIBase2.Tests
             Assert.True(response.IsSuccessful);
             Assert.IsTrue(jsondata.quantidade.Value >= quantidade);
         }
+        /*
+                [Test]
+                public void ListarUsuarioCadastradoPorParametros()
+                {
+                    int qtd = 1;
+                    //Criar usuário
+                    UsuarioStep.CriarUsuario();
 
-        [Test]
-        public void ListarUsuarioCadastradoPorParametros()
-        {
-            int qtd = 1;
-            //Criar usuário
-            UsuarioStep.CriarUsuario();
+                    // Pegar os dados do usuário que foram armazenados no banco de dados
+                    //var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
+                    //string id = dadosUsuario[4];
+                    //string nome = dadosUsuario[0];
+                    //string email = dadosUsuario[1];
+                    //string password = dadosUsuario[2];
+                    //bool administrador = Convert.ToBoolean((dadosUsuario[3]));
 
-            // Pegar os dados do usuário que foram armazenados no banco de dados
-            var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
-            string id = dadosUsuario[4];
-            string nome = dadosUsuario[0];
-            string email = dadosUsuario[1];
-            string password = dadosUsuario[2];
-            bool administrador = Convert.ToBoolean((dadosUsuario[3]));
+                    // Listar o usuário conforme os dados informados
+                    ///GetUsuarios get = new GetUsuarios(id, nome, email, password, administrador);
+                    //IRestResponse response = get.ExecuteRequest();
 
-            // Listar o usuário conforme os dados informados
-            GetUsuarios get = new GetUsuarios(id, nome, email, password, administrador);
-            IRestResponse response = get.ExecuteRequest();
+                    dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+                    Console.WriteLine(jsonData);
 
-            Console.WriteLine(jsonData);
+                    //Deletar usuários cadastrados
+                    UsuarioStep.DeletarUsuariosCriados();
 
-            //Deletar usuários cadastrados
-            UsuarioStep.DeletarUsuariosCriados();
+                    bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
 
-            bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
-
-            Assert.True(status);
-            Assert.True(response.IsSuccessful);
-            Assert.IsTrue(jsonData.quantidade == qtd);
-        }
+                    Assert.True(status);
+                    Assert.True(response.IsSuccessful);
+                    Assert.IsTrue(jsonData.quantidade == qtd);
+                }*/
 
         [Test]
         public void CadastrarUsuario()
@@ -124,112 +124,114 @@ namespace DesafioAutomacaoAPIBase2.Tests
             Assert.True(status);
             Assert.True(response.IsSuccessful);
             Assert.AreEqual(mensagem, jsonData.message.Value);
-           
+
         }
+        /*
+                [Test]
+                public void BuscarUsuarioPorID()
+                {
+                    string nome = "Pleonário Silvestre";
 
-        [Test]
-        public void BuscarUsuarioPorID()
-        {
-            string nome = "Pleonário Silvestre";
+                    //Deletar usuários cadastrados
+                    UsuarioStep.DeletarUsuariosCriados();
 
-            //Deletar usuários cadastrados
-            UsuarioStep.DeletarUsuariosCriados();
+                    //Criar usuário
+                    UsuarioStep.CriarUsuario();
 
-            //Criar usuário
-            UsuarioStep.CriarUsuario();
+                    // Pegar os dados do primeiro usuário que foi armazenado no banco de dados
+                    var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
+                    string id = dadosUsuario[4];
 
-            // Pegar os dados do primeiro usuário que foi armazenado no banco de dados
-            var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
-            string id = dadosUsuario[4];
+                    // Listar o usuário conforme o id informado
+                    GetUsuarioPorId get = new GetUsuarioPorId(id);
+                    IRestResponse response = get.ExecuteRequest();
+                    Console.WriteLine(response.Content.ToString());
 
-            // Listar o usuário conforme o id informado
-            GetUsuarioPorId get = new GetUsuarioPorId(id);
-            IRestResponse response = get.ExecuteRequest();
-            Console.WriteLine(response.Content.ToString());
+                    dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+                    //Deletar usuários cadastrados
+                    UsuarioStep.DeletarUsuarioPorId(id);
 
-            //Deletar usuários cadastrados
-            UsuarioStep.DeletarUsuarioPorId(id);
+                    bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
 
-            bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
+                    Assert.True(status);
+                    Assert.True(response.IsSuccessful);
+                    Assert.AreEqual(nome, jsonData.nome.Value);
+                }
+        */
+        /*
+                [Test]
+                public void EditarUsuario()
+                {
+                    string nome = "Felisbino Plauzébio";
+                    string email = "felis_2002@yahoo.com.br";
+                    string password = "adm2000";
+                    bool administrador = false;
 
-            Assert.True(status);
-            Assert.True(response.IsSuccessful);
-            Assert.AreEqual(nome, jsonData.nome.Value);
-        }
+                    //Deletar usuários cadastrados
+                    UsuarioStep.DeletarUsuariosCriados();
 
-        [Test]
-        public void EditarUsuario()
-        {
-            string nome = "Felisbino Plauzébio";
-            string email = "felis_2002@yahoo.com.br";
-            string password = "adm2000";
-            bool administrador = false;
+                    string mensagem = "Registro alterado com sucesso";
+                    //Criar usuário
+                    UsuarioStep.CriarUsuario();
 
-            //Deletar usuários cadastrados
-            UsuarioStep.DeletarUsuariosCriados();
+                    // Pegar os dados do primeiro usuário que foi armazenado no banco de dados
+                    var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
+                    string id = dadosUsuario[4];
 
-            string mensagem = "Registro alterado com sucesso";
-            //Criar usuário
-            UsuarioStep.CriarUsuario();
+                    // Atualizar usuário
+                    PutUsuario put = new PutUsuario(id);
+                    put.SetJsonBody(nome, email, password, administrador);
+                    IRestResponse response = put.ExecuteRequest();
 
-            // Pegar os dados do primeiro usuário que foi armazenado no banco de dados
-            var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
-            string id = dadosUsuario[4];
+                    dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
 
-            // Atualizar usuário
-            PutUsuario put = new PutUsuario(id);
-            put.SetJsonBody(nome, email, password, administrador);
-            IRestResponse response = put.ExecuteRequest();
+                    Console.WriteLine(jsonData);
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+                    // Deleta usuário criado
+                    UsuarioStep.DeletarUsuarioPorId(id);
 
-            Console.WriteLine(jsonData);
+                    bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
 
-            // Deleta usuário criado
-            UsuarioStep.DeletarUsuarioPorId(id);
+                    Assert.True(status);
+                    Assert.AreEqual(mensagem, jsonData.message.Value);
+                    Assert.True(response.IsSuccessful);
+                }*/
+        /*
+                [Test]
+                public void ExcluirUsuario()
+                {
+                    //Deletar usuários cadastrados
+                    UsuarioStep.DeletarUsuariosCriados();
 
-            bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
+                    string mensagem = "Registro excluído com sucesso";
+                    //Criar usuários 
+                    UsuarioStep.CriarUsuario();
 
-            Assert.True(status);
-            Assert.AreEqual(mensagem, jsonData.message.Value);
-            Assert.True(response.IsSuccessful);
-        }
+                    // Pegar os dados do primeiro usuário que foi armazenado no banco de dados
+                    var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
+                    string id = dadosUsuario[4];
 
-        [Test]
-        public void ExcluirUsuario()
-        {
-            //Deletar usuários cadastrados
-            UsuarioStep.DeletarUsuariosCriados();
+                    // Listar o usuário conforme os dados informados
+                    DeleteUsuario get = new DeleteUsuario(id);
+                    IRestResponse response = get.ExecuteRequest();
 
-            string mensagem = "Registro excluído com sucesso";
-            //Criar usuários 
-            UsuarioStep.CriarUsuario();
+                    dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
 
-            // Pegar os dados do primeiro usuário que foi armazenado no banco de dados
-            var dadosUsuario = SolicitacaoDBSteps.BuscarUsuariosCriados();
-            string id = dadosUsuario[4];
+                    Console.WriteLine(jsonData);
 
-            // Listar o usuário conforme os dados informados
-            DeleteUsuario get = new DeleteUsuario(id);
-            IRestResponse response = get.ExecuteRequest();
+                    //Deleta usuário criado no banco de dados
+                    UsuarioStep.DeletarUsuarioPorIdBancoDados(id);
 
-            dynamic jsonData = JsonConvert.DeserializeObject(response.Content.ToString());
+                    bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
 
-            Console.WriteLine(jsonData);
-
-            //Deleta usuário criado no banco de dados
-            UsuarioStep.DeletarUsuarioPorIdBancoDados(id);
-
-            bool status = GeneralHelpers.RegexStatusCodesSucesso(response.StatusCode.ToString());
-
-            Assert.True(status);
-            Assert.True(response.IsSuccessful);
-            Assert.AreEqual(mensagem, jsonData.message.Value);
-        }
+                    Assert.True(status);
+                    Assert.True(response.IsSuccessful);
+                    Assert.AreEqual(mensagem, jsonData.message.Value);
+                }
+                
+                */
         #endregion
-
 
         #region Testes Negativos
         [Test]

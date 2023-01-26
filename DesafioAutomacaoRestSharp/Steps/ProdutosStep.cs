@@ -44,7 +44,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
                     string idProduto = jsonData._id;
 
                     // Inserção do ID gerado em cada response na tabela "produto" no banco de dados
-                    SolicitacaoDBSteps.InserirProdutoCriadoDB(idProduto);
+                    //SolicitacaoDBSteps.InserirProdutoCriadoDB(idProduto);
                     string sts = response.StatusCode.ToString();
                     Console.WriteLine("Response Produtos criados: " + response.Content.ToString());
                     // Lista para armazenar cada status code gerado pela requisição
@@ -79,7 +79,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             DeleteProdutos();
 
             //Deletar os dados do banco
-            SolicitacaoDBSteps.DeletarTodosIdsProdutos();
+            //SolicitacaoDBSteps.DeletarTodosIdsProdutos();
         }
 
         public static IRestResponse DeletarProdutoById(string idProduto)
@@ -108,7 +108,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             dynamic jsonData = JsonConvert.DeserializeObject(response.Content);
 
             //Insere o id do produto cadastrado no banco para ser deletado por outros testes
-            SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
+            //SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
 
             return response;
         }
@@ -152,7 +152,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             Console.WriteLine(response.Content.ToString());
 
             //Insere o id do produto cadastrado no banco para ser deletado por outros testes
-            SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
+            //SolicitacaoDBSteps.InserirProdutoCriadoDB(jsonData._id.Value);
 
             return response;
         }

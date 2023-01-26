@@ -71,7 +71,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
         public static void DeletarPagamentos()
         {
             // Espera adicionada por conta do rate limit da API
-            Thread.Sleep(1800);
+            //Thread.Sleep(1800);
 
             GetAllPagamento get = new GetAllPagamento();
             IRestResponse response = get.ExecuteRequest();
@@ -86,7 +86,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
 
                 foreach (var id in jsonData[0].idPagamento.Value)
                 {
-                    Thread.Sleep(1000);
+                    //Thread.Sleep(1000);
                     DeletePagamento delete = new DeletePagamento(Convert.ToString(id));
                     IRestResponse resp = delete.ExecuteRequest();
                     Console.WriteLine(resp.Content.ToString());

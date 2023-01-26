@@ -8,6 +8,7 @@ namespace DesafioAutomacaoAPIBase2.Bases
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
+            ExtentReportHelpers.DeleteReportFiles();
             ExtentReportHelpers.CreateReport();
         }
 

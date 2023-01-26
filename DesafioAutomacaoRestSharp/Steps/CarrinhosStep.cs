@@ -17,10 +17,10 @@ namespace DesafioAutomacaoAPIBase2.Steps
             string jsonPath = GeneralHelpers.ReturnProjectPath() + "Jsons/CarrinhoDataSet.json";
 
             //Busca os IDs dos produtos inseridos no banco de dados
-            List<string> idProdutos = SolicitacaoDBSteps.BuscarIdsProdutos();
+            //List<string> idProdutos = SolicitacaoDBSteps.BuscarIdsProdutos();
 
             // Cria um json inserindo todos os produtos já cadastrados
-            CarrinhoDataSet.CriarJsonDatSet(idProdutos, 1);
+            //CarrinhoDataSet.CriarJsonDatSet(idProdutos, 1);
 
             //Executa a requisição passando somente o json já criado
             PostCarrinho post = new PostCarrinho();
@@ -46,7 +46,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             carrinho.SetJsonBody(idProduto, 1);
 
             IRestResponse response = carrinho.ExecuteRequest();
-            Thread.Sleep(1000);
+            //Thread.Sleep(1000);
             Console.WriteLine("Carrinho criado: "+response.Content.ToString());
 
             return response;
@@ -90,7 +90,7 @@ namespace DesafioAutomacaoAPIBase2.Steps
             string id = jsonData._id.Value;
             GetCarrinhoPorId get = new GetCarrinhoPorId(id);
             IRestResponse response = get.ExecuteRequest();
-            Thread.Sleep(1000);
+            //Thread.Sleep(1000);
             // Console.WriteLine(response.Content.ToString());
 
             return response;

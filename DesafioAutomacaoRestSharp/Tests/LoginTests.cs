@@ -23,7 +23,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
         public void LoginComSucesso()
         {
             string mensagem = "Login realizado com sucesso";
-
+            
             //Deletar o usuário
             UsuarioStep.DeletarUsuariosCriados();
 
@@ -54,7 +54,7 @@ namespace DesafioAutomacaoAPIBase2.Tests
 
             Assert.IsTrue((int)response.StatusCode == 200);
             Assert.True(response.IsSuccessful);
-            Assert.AreEqual(mensagem,jsonData.message.Value);
+            Assert.AreEqual(mensagem, jsonData.message.Value);
             Assert.IsTrue(response.Content.Contains("authorization"));
         }
         #endregion
